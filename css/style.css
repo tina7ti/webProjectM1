@@ -1,9 +1,10 @@
+/* index + header+ footer*/
 body, header {
     margin: 0%;
 	padding: 0%;
 	font-family: Arial, sans serif;
 }
-nav ul {
+nav ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -110,7 +111,7 @@ nav li div a {
 	text-align: center;
 	font-weight: bold;
 }
-#cours li 
+#cours li
 {
 	width: 14%;
 	margin: 0% 1%;
@@ -169,3 +170,33 @@ footer a:hover
     color: white;
     font-size: 1.3em;
 }
+
+/*cours 3 intro*/
+.contenu
+{
+	display: flex;
+	flex-wrap: wrap;
+}
+.contenu nav
+{
+	  background-color: #3391FF;
+	width: 20%;
+	border-radius: 0px 0px 20px 0px;
+	margin-right: 5%;
+}
+.contenu div
+{
+	
+	width: 70%;
+}
+.contenu nav img
+{
+	width: 50%;
+	margin-left: 20%;
+	margin-top: 5%;
+	background-color: white;
+	padding: 5% 5%;
+	border-radius: 50% 20%;
+}
+
+/*cours 3 chap 1*/
