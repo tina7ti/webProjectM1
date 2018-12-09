@@ -1,76 +1,54 @@
 body, header {
     margin: 0%;
 	padding: 0%;
+	font-family: Arial, sans serif;
 }
-nav
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #3391FF;
+    font-size: 1.1em;
+}
+nav li { float: left;}
+nav li a, button, #brand {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 16px 20px;
+    text-decoration: none;
+}
+button
 {
-	width: 100%;
-	height: 10%;
-	position: relative;
-	background-color: #3391FF;
+	height: 100%;
+	border: none;
+	background-color: transparent;
 }
-nav>ul>li
-{
-	float: left;
+nav li a:hover, #menu:hover button, nav li div a:hover {
+    background-color: #f1f1f1;
+    color: darkblue;
 }
-a
-{
-	text-decoration: none;
-	text-align: center;
-	color: black;
-	
+nav li#menu { display: inline-block;}
+nav li div {
+    display: none;
+    position: absolute;
+    background-color: #3391FF;
+    min-width: 160px;
+    z-index: 1;
 }
-/*
-nav
-{
-	width: 100%;
-	height: 10%;
-	box-shadow: 2px 3px 4px grey;   
-	position: relative;
-	background-color: #3391FF; 
-	color: white;
-	font-size: 1.1em;
-	top: 0;
-	left: 0;
+nav li div a {
+    color: #f1f1f1;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+   /* float: left;*/
 }
-nav>ul
-{
-	display: inline-flex;
-	width: 97%;
+#menu:hover #ssmenu {
+    display: block;
 }
-li{	list-style-type: none;}
-nav>ul>li
-{
-	margin-left: 2%;
-	padding: 0.6%;
-}
-#right
-{
-	margin-left: 65%;
-}
-#right, nav>ul>li:last-child
-{
-	background-color: white;
-	border-radius: 5px / 5px;
-}
-nav ul li ul
-{
-	position: absolute;
- 	display: none;  
- 	background-color: white;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);  
-    border-radius: 5px / 5px;
-    margin: 2% 0%;                 
-}
-nav ul li ul li
-{ 
-	border-bottom: 1px solid grey;
-	margin-left: 0%;
-}
-nav ul #cr:hover ul
-{
-	display: block;
-}*/
+.droite {float: right;}
 #def, #cours h2
 {
 	clear: both;
@@ -125,6 +103,13 @@ nav ul #cr:hover ul
 {
 	width: 100%;
 }
+#cours a
+{
+	text-decoration: none;
+	color: black;
+	text-align: center;
+	font-weight: bold;
+}
 #cours li 
 {
 	width: 14%;
@@ -151,5 +136,36 @@ nav ul #cr:hover ul
 }
 footer
 {
-	clear: both;
+    clear: both;
+    margin-top: 25%;
+	background-color: #3391FF;
+    color: white;
+    text-align: center;
+    height: 100%;
+    padding-top: 1%;
+    bottom: 0;
+}
+footer dl{
+    list-style-type: none;
+}
+footer .informations,footer .contenus ,footer .suivi-nous
+{
+    float: left;
+    margin-left: 12%;
+    width: 18%;
+}
+footer .copyright
+{
+    clear: both;
+}
+footer a
+{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+footer a:hover
+{
+    color: white;
+    font-size: 1.3em;
 }
