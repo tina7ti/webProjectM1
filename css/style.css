@@ -208,7 +208,7 @@ main nav li
 	text-align: center;
 	margin: 2% 0%;
 }
-main nav li a 
+main nav li a, main>button a
 {
 	color: white;
 }
@@ -219,7 +219,7 @@ main nav li:hover
 }
 main nav li:hover a{ color: darkblue; }
 /* chaps*/
-main div a,main nav li a
+main div a,main nav li a, main>button a 
 {
 	text-decoration: none;
 }
@@ -238,7 +238,7 @@ main div a:hover
 	font-size: 1.5em;
 	transition-duration: 1s;
 }
-input[type="button"]
+main>button
 {
 	color: white;
 	background-color: #3391FF;
@@ -281,7 +281,7 @@ input[type="button"]
     transition: max-height 0.2s ease-out;
 }
 /*cours 3 chap 1*/
-code
+p>span
 {
 	background-color: rgba(190,255,255,0.8);
 	border-radius: 6px / 6px;
@@ -299,4 +299,12 @@ main section div .imgMiddle
 	width: 50%;
 	height: 20%;
 	margin: 2% 20%;
+}
+.code
+{
+	background-color: black;
+	color: snow;
+	padding: 1%;
+	margin-bottom: 1%;
+	border-radius: 10px;
 }

@@ -24,85 +24,212 @@
 		</ul>
 	</nav>
 </header>
-<div class="contenu">
+<main>
 	<nav>
 		<img src="..\..\img\python.png" alt="python icon">
 		<dl>
-			<li><a href="#tit1">Installation sous linux and Mac</a></li>
-			<li><a href="#tit2">Installation sous windows</a></li>
-			<li><a href="#tit3">Interpréteur du python</a></li>
+			<li><a href="#tit1">Saisir un nombre</a></li>
+			<li><a href="#tit2">Opérations courantes</a></li>
+			<li><a href="#tit3">C'est quoi, une variable ?</a></li>
+			<li><a href="#tit4">Comment cela fonctionne-t-il ?</a></li>
 		</dl>
 	</nav>	
 	<div >
-		<article>
-			<h1>INSTALLER PYTHON !</h1>
-			<p>
-				L'installation de Python est un jeu d'enfant, aussi bien sous Windows que sous les systèmes Unix. Quel que soit votre système d'exploitation, vous devez vous rendre sur <code><a href="https://www.python.org/">le site officiel de Python</a></code>.
-			</p>
-		</article>
 		<section>
-			<button class="accordion"><span id="tit1">Installation sous linux and Mac</span></button>
+			<h1>Culcules : </h1>
+			<p>
+				C'est assez trivial, quand on y pense, mais je trouve qu'il s'agit d'une excellente manière d'aborder pas à pas la syntaxe de Python. Nous allons donc essayer d'obtenir les résultats de calculs plus ou moins compliqués. Je vous rappelle encore une fois qu'exécuter les tests en même temps que moi sur votre machine est une très bonne façon de vous rendre compte de la syntaxe et surtout, de la retenir.</p>
+			<button class="accordion"><span id="tit1">Saisir un nombre</span></button>
 			<div class="panel">
-				<img src="../../img/linux_python.jpg" alt="linux_python" class="imgRight">
-				<p>Si vous travaillez dans un environnement <code>Linux</code> ou <code>Mac</code> , bonne nouvelle Python déjà installé.</p>
-				
+				<p>Vous avez pu voir sur notre premier (et à ce jour notre dernier) test que Python n'aimait pas particulièrement les suites de lettres qu'il ne comprend pas. Par contre, l'interpréteur adore les nombres. D'ailleurs, il les accepte sans sourciller, sans une seule erreur :</p>
+				<div class="code">
+					<code>
+						>>> 7 <br/>
+						7 <br>
+					>>>
+					</code>
+				</div>
 			</div>
-			<button class="accordion"><span id="tit2">Installation sous windows</span></button>
+			<button class="accordion"><span id="tit2">Opérations courantes</span></button>
 			<div class="panel">
-				<p><img src="../../img/windows.jpg" alt="windows logo" class="imgRight"> Sous Mac et Linux, Python est déjà installé. Par contre, vous allez devoir l'installer si vous tournez sous Windows. Revers de la médaille : sous Mac et Linux, il se peut que la version soit un peu ancienne. En ce cas, il vous faudra installer une version plus récente si vous voulez bénéficier des dernières fonctionnalités.</p>
-			<p>* Système: Python est également souvent utilisé par les admin système pour créer des tâches dites répétitives ou simplement de maintenance. D'ailleurs si vous voulez créer des applications java en codant en python, c'est possible grâce au projet Jython.</p>
-		
-			<ol>
-				<li>
-					<p>Rendez-vous sur le site de Python. En vous rendant à l'adresse <code><a href="https://www.python.org/downloads">python.org/downloads</a></code>, vous
-					allez pouvoir télécharger votre version de Python. Le site détectera que vous êtes sous Windowset la version que vous utilisez : il affichera alors l'installateur Windows approprié.</p>
-					<img src="../../img/download_python.jpg" alt="download_python" class="imgMiddle">
-				</li>
-				<li>
-					<p>
-						Cliquez sur Installer maintenant. Python s'installe alors avec tous ses paramètres par défaut, lesquels sont largement suffisants pour la plupart des utilisateurs.
-						Si vous désirez désactiver certaines fonctions, modifier le répertoire d'installation ou encore installer le débogueur, cliquez sur Installation personnalisée, puis cochez ou décochez les cases en fonction de vos besoins.
-					</p>
-					<img src="../../img/win_installer.png" alt="win_installer" class="imgMiddle">
-				</li>
-				<li>
-					<p>
-						Une fois l'installation terminée, il vous affiche cette fenetre.
-					</p>
-					<img src="../../img/python_install_ok.png" alt="python_install_ok" class="imgMiddle">
+				<p>
+				Bon, il est temps d'apprendre à utiliser les principaux opérateurs de Python, qui vont vous servir pour la grande majorité de vos programmes.
+				<span>Addition, soustraction, multiplication, division</span>
+				Pour effectuer ces opérations, on utilise respectivement les symboles +, -, * et /.</p>
+			<div class="code">
+				<code>
+					>>> 3 + 4 <br>
+				7 <br>
+				>>> -2 + 93 <br>
+				91 <br>
+				>>> 9.5 + 2 <br>
+				11.5 <br>
+				>>> 3.11 + 2.08 <br>
+				5.1899999999999995 <br>
+				>>>
+				</code>
+			</div>
 
-				</li>
-			</ol>
+			<h3>Devision entière et modulo</h3>
+			<p>Si vous avez pris le temps de tester la division, vous vous êtes rendu compte que le résultat est donné avec une virgule flottante.</p>
+			<div class="code">
+				<code>
+					>>> 10 / 5 <br>
+					2.0 <br>
+					>>> 10 / 3 <br>
+					3.3333333333333335 <br>
+					>>>
+				</code>
+			</div>
+			<p>
+				Il existe deux autres opérateurs qui permettent de connaître le résultat d'une division entière et le reste de cette division. <br>
+
+			Le premier opérateur utilise le symbole « // ». Il permet d'obtenir la partie entière d'une division.
+			</p>
+			<div class="code">
+				<code>
+					>>> 10 // 3 <br>
+					3 <br>
+					>>>
+				</code>
+			</div>
+			<p>
+				L'opérateur « % », que l'on appelle le « modulo », permet de connaître le reste de la division.
+			</p>
+			<div class="code">
+				<code>
+					>>> 10%3 <br>
+					1 <br>
+					>>>
+				</code>
+			</div>
+			<p>
+				Ces notions de partie entière et de reste de division ne sont pas bien difficiles à comprendre et vous serviront très probablement par la suite.
+				<br>
+				Si vous avez du mal à en saisir le sens, sachez donc que :
+				<br>
+				La partie entière de la division de 10 par 3 est le résultat de cette division, sans tenir compte des chiffres au-delà de la virgule (en l'occurrence, 3).
+				<br>
+				Pour obtenir le modulo d'une division, on « récupère » son reste. Dans notre exemple, 10/3 = 3 et il reste 1. Une fois que l'on a compris cela, ce n'est pas bien compliqué.
+				<br>
+				Souvenez-vous bien de ces deux opérateurs, et surtout du modulo « % », dont vous aurez besoin dans vos programmes futurs.
+			</p>
 			
 			</div>
-			<button class="accordion"><span id="tit3">Interpréteur du python</span></button>
+			<h1>Les Variables</h1>
+			<button class="accordion"><span id="tit3">C'est quoi, une variable ?</span></button>
 			<div class="panel">
-				<ol>
-					<li>
-						<h3>Sous Linux </h3>
-						<p>
-							Lorsque vous l'avez installé sur votre système, Python a créé un lien vers l'interpréteur sous la forme python3.X (le X étant le numéro de la version installée).
-							lancez un terminal:
-							<img src="../../img/terminal.png" class="imgMiddle" alt="terminal">
-						</p>
-						<p>
-							Si, par exemple, vous avez installé Python 3.4, vous pouvez y accéder grâce à la commande :
-							<img src="../../img/comande.png" class="imgMiddle" alt="commande">
-						</p>
-					</li>
-					<li>
-						<h3>Sous windows</h3>
-						<p>
-							Vous avez plusieurs façons d'accéder à la ligne de commande Python, la plus évidente consistant à passer par les <code>menusDémarrer>Tous les programmes>Python 3.4>Python (Command Line)</code>. Si tout se passe bien, vous devriez obtenir une magnifique console (figure suivante). Il se peut que les informations affichées dans la vôtre ne soient pas les mêmes, mais ne vous en inquiétez pas.
-							<img src="../../img/pyt_win.jpg" class="imgMiddle" alt="python_on_windows">
-						</p>
-					</li>
-				</ol>
+				<p>
+					Une variable est une donnée de votre programme, stockée dans votre ordinateur. C'est un code alpha-numérique que vous allez lier à une donnée de votre programme, afin de pouvoir l'utiliser à plusieurs reprises et faire des calculs un peu plus intéressants avec. C'est bien joli de savoir faire des opérations mais, si on ne peut pas stocker le résultat quelque part, cela devient très vite ennuyeux.
+				</p>
+				<p>
+					Voyez la mémoire de votre ordinateur comme une grosse armoire avec plein de tiroirs. Chaque tiroir peut contenir une donnée ; certaines de ces données seront des variables de votre programme.
+				</p>
 			</div>
-
 		</section>
+		<button class="accordion"><span id="tit4">Comment cela fonctionne-t-il ?</span></button>
+		<div class="panel">
+				<p>
+					Le plus simplement du monde. Vous allez dire à Python : « je veux que, dans une variable que je nommeage, tu stockes mon <span>age</span>, pour que je puisse le retenir (si j'ai la mémoire très courte), l'augmenter (à mon anniversaire) et l'afficher si besoin est ».
+				</p>
+				<p>
+					Comme je vous l'ai dit, on ne peut pas passer à côté des variables. Vous ne voyez peut-être pas encore tout l'intérêt de stocker des informations de votre programme et pourtant, si vous ne stockez rien, vous ne pouvez pratiquement rien faire.
+				</p>
+				<p>
+					En Python, pour donner une valeur à une variable, il suffit <span>d'écrirenom_de_la_variable = valeur</span>.
+					<br>
+					Une variable doit respecter quelques règles de syntaxe incontournables :
+					<br>
+					Le nom de la variable ne peut être composé que de lettres, majuscules ou minuscules, de chiffres et du symbole souligné « _ » (appelé underscore en anglais).
+					<br>
+					Le nom de la variable ne peut pas commencer par un chiffre.
+					<br>
+					Le langage Python est sensible à la casse, ce qui signifie que des lettres majuscules et minuscules ne constituent pas la même variable (la variableAGEest différente deaGe, elle-même différente deage).
+					<br>
+					Au-delà de ces règles de syntaxe incontournables, il existe des conventions définies par les programmeurs eux-mêmes. L'une d'elles, que j'ai tendance à utiliser assez souvent, consiste à écrire la variable en minuscules et à remplacer les espaces éventuels par un espace souligné « _ ». Si je dois créer une variable contenant mon âge, elle se nommera doncmon_age. Une autre convention utilisée consiste à passer en majuscule le premier caractère de chaque mot, à l'exception du premier mot constituant la variable. La variable contenant mon âge se nommerait alors <span>age</span>.
+					<br>
+					Vous pouvez utiliser la convention qui vous plaît, ou même en créer une bien à vous, mais essayez de rester cohérent et de n'utiliser qu'une seule convention d'écriture. En effet, il est essentiel de pouvoir vous repérer dans vos variables dès que vous commencez à travailler sur des programmes volumineux.
+					<br>
+					Ainsi, si je veux associer mon âge à une variable, la syntaxe sera :
+				</p>
+				<div class="code">
+					<code>
+						>>> age = 30 <br>
+						>>> age <br>
+						30 <br>
+						>>>
+					</code>
+				</div>
+				<p>On va ensuite ajouter 10 à la valeur de cette variable:</p>
+				<div class="code">
+					<code>
+						>>> age = 30 <br>
+						>>> age = age + 10 <br>
+						>>> age <br>
+						40 <br>
+						>>>
+					</code>
+				</div>
+				<p>Il est possible de mettre une variable dans une autre variable.</p>
+				<div class="code">
+					<code>
+						>>> age = 30 <br>
+						>>> age2 = age <br>
+						>>> age2 <br>
+						30 <br>
+						>>>
+					</code>
+				</div>
+				<p>Vous pouvez mettre à peu près tout ce que vous voulez dans votre variable, y compris du texte:</p>
+				<div class="code">
+					<code>
+						>>> age = "J'ai 30 ans" <br>
+						>>> age <br>
+						"J'ai 30 ans" <br>
+						>>>
+					</code>
+				</div>
+				<p>Il est possible de concaténer, c'est à dire d'ajouter du texte à du texte:</p>
+				<div class="code">
+					<code>
+						>>> age = age + " et je suis un algerien!" <br>
+						>>> age <br>
+						"J'ai 30 ans et je suis un algerien" <br>
+						>>>
+					</code>
+				</div>
+				<p>Vous pouvez même multiplier une chaine de caractères:</p>
+				<div class="code">
+					<code>
+						>>> age = "trente" <br>
+						>>> age * 3 <br>
+						'trentetrentetrente' <br>
+						>>>
+					</code>
+				</div>
+				<p>
+					Evidemment, si vous essayez de faire des additions avec des variables qui sont des chiffres et d'autres qui sont du texte, l'interpréteur va vous gronder:
+				</p>
+				<div class="code">
+					<code>
+						>>> age = "J'ai 30 ans" <br>
+						>>> age <br>
+						"J'ai 30 ans" <br>
+						>>> age + 1 <br> 
+						Traceback (most recent call last): <br>
+						  File "<stdin>", line 1, in <module> <br>
+						  	TypeError: cannot concatenate 'str' and 'int' objects <br>
+						  	>>>
+					</code>
+				</div>
+				<p>
+					Vous remarquez que l'interpréteur est sympa puisqu'il vous dit ce qui ne va pas: Il ne peut pas concaténer str et int .
+				</p>
+		</div>
 	</div>
-</div>
+	<button><a href="chap1.html"> < Chapitre précédent</a></button>
+	<button><a href="chap3.html">Chapitre suivant > </a></button>
+</main>
 
 <footer>
             <div class="informations">
