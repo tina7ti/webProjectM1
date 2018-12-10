@@ -27,75 +27,216 @@
 <main>
     <nav>
         <img src="..\..\img\python.png" alt="python icon">
+        <span><br>Les listes :</span>
         <dl>
-            <li><a href="#tit1">Installation sous linux and Mac</a></li>
-            <li><a href="#tit2">Installation sous windows</a></li>
-            <li><a href="#tit3">Interpréteur du python</a></li>
+            <li><a href="#tit1">Créer une liste en python</a></li>
+            <li><a href="#tit2">Ajouter une valeur à une liste python</a></li>
+            <li><a href="#tit3">Afficher un item d'une liste</a></li>
+            <li><a href="#tit4">Supprimer une entrée avec un index</a></li>
+        </dl>
+        <span> Les Tuples :</span>
+        <dl>
+            <li><a href="#tit5">Créer un tuple</a></li>
+            <li><a href="#tit6">Ajouter une valeur à un tuple</a></li>
+            <li><a href="#tit7">Afficher une valeur d'un tuple</a></li>
+            <li><a href="#tit8">A quoi sert un tuple alors?</a></li>
         </dl>
     </nav>  
     <div >
         <section>
-            <h1>INSTALLER PYTHON !</h1>
-            <p>
-                L'installation de Python est un jeu d'enfant, aussi bien sous Windows que sous les systèmes Unix. Quel que soit votre système d'exploitation, vous devez vous rendre sur <span><a href="https://www.python.org/">le site officiel de Python</a></span>.
-            </p>
-            <button class="accordion"><span id="tit1">Installation sous linux and Mac</span></button>
+            <h1>Les listes !</h1>
+            <button class="accordion"><span id="tit1">Créer une liste en python</span></button>
             <div class="panel">
-                <img src="../../img/linux_python.jpg" alt="linux_python" class="imgRight">
-                <p>Si vous travaillez dans un environnement <span>Linux</span> ou <span>Mac</span> , bonne nouvelle Python déjà installé.</p>
-                
+                <p>Pour créer une liste , rien de plus simple:</p>
+                <div class="code">
+                    <code>
+                        >>> liste = [] <br>
+                        >>>
+                    </code>
+                </div>
+                <p>Vous pouvez voir le contenu de la liste en l'appelant comme ceci:</p>
+                <div class="code">
+                    <code>
+                        >>> liste <br>
+                        &lt;type 'list'&gt;
+                    </code>
+                </div>
             </div>
-            <button class="accordion"><span id="tit2">Installation sous windows</span></button>
+            <button class="accordion"><span id="tit2">Ajouter une valeur à une liste python</span></button>
             <div class="panel">
-                <p><img src="../../img/windows.jpg" alt="windows logo" class="imgRight"> Sous Mac et Linux, Python est déjà installé. Par contre, vous allez devoir l'installer si vous tournez sous Windows. Revers de la médaille : sous Mac et Linux, il se peut que la version soit un peu ancienne. En ce cas, il vous faudra installer une version plus récente si vous voulez bénéficier des dernières fonctionnalités.</p>
-            <p>* Système: Python est également souvent utilisé par les admin système pour créer des tâches dites répétitives ou simplement de maintenance. D'ailleurs si vous voulez créer des applications java en codant en python, c'est possible grâce au projet Jython.</p>
-        
-            <ol>
-                <li>
-                    <p>Rendez-vous sur le site de Python. En vous rendant à l'adresse <span><a href="https://www.python.org/downloads">python.org/downloads</a></span>, vous
-                    allez pouvoir télécharger votre version de Python. Le site détectera que vous êtes sous Windowset la version que vous utilisez : il affichera alors l'installateur Windows approprié.</p>
-                    <img src="../../img/download_python.jpg" alt="download_python" class="imgMiddle">
-                </li>
-                <li>
-                    <p>
-                        Cliquez sur Installer maintenant. Python s'installe alors avec tous ses paramètres par défaut, lesquels sont largement suffisants pour la plupart des utilisateurs.
-                        Si vous désirez désactiver certaines fonctions, modifier le répertoire d'installation ou encore installer le débogueur, cliquez sur Installation personnalisée, puis cochez ou décochez les cases en fonction de vos besoins.
-                    </p>
-                    <img src="../../img/win_installer.png" alt="win_installer" class="imgMiddle">
-                </li>
-                <li>
-                    <p>
-                        Une fois l'installation terminée, il vous affiche cette fenetre.
-                    </p>
-                    <img src="../../img/python_install_ok.png" alt="python_install_ok" class="imgMiddle">
-
-                </li>
-            </ol>
+                <p>Vous pouvez ajouter les valeurs que vous voulez lors de la création de la liste python :</p>
+                <div class="code">
+                    <code>
+                        >>> liste = [1,2,3] <br>
+                        >>> liste <br> 
+                        [1, 2, 3]
+                    </code>
+                </div>
+                <p>
+                    Ou les ajouter après la création de la liste avec la méthode append (qui signifie "ajouter" en anglais):
+                </p>
+                 <div class="code">
+                    <code>
+                        >>> liste = [] <br>
+                        >>> liste <br>
+                        [] <br>
+                        >>> liste.append(1) <br>
+                        >>> liste <br>
+                        [1] <br>
+                        >>> liste.append("ok") <br>
+                        >>> liste <br>
+                        [1, 'ok']
+                    </code>
+                </div>
+                <p>
+                    On voit qu'il est possible de mélanger dans une même liste des variables de type différent. On peut d'ailleurs mettre une liste dans une liste.
+                </p>
             
             </div>
-            <button class="accordion"><span id="tit3">Interpréteur du python</span></button>
+            <button class="accordion"><span id="tit3">Afficher un item d'une liste</span></button>
             <div class="panel">
-                <ol>
-                    <li>
-                        <h3>Sous Linux </h3>
-                        <p>
-                            Lorsque vous l'avez installé sur votre système, Python a créé un lien vers l'interpréteur sous la forme python3.X (le X étant le numéro de la version installée).
-                            lancez un terminal:
-                            <img src="../../img/terminal.png" class="imgMiddle" alt="terminal">
-                        </p>
-                        <p>
-                            Si, par exemple, vous avez installé Python 3.4, vous pouvez y accéder grâce à la commande :
-                            <img src="../../img/comande.png" class="imgMiddle" alt="commande">
-                        </p>
-                    </li>
-                    <li>
-                        <h3>Sous windows</h3>
-                        <p>
-                            Vous avez plusieurs façons d'accéder à la ligne de commande Python, la plus évidente consistant à passer par les <span>menusDémarrer>Tous les programmes>Python 3.4>Python (Command Line)</span>. Si tout se passe bien, vous devriez obtenir une magnifique console (figure suivante). Il se peut que les informations affichées dans la vôtre ne soient pas les mêmes, mais ne vous en inquiétez pas.
-                            <img src="../../img/pyt_win.jpg" class="imgMiddle" alt="python_on_windows">
-                        </p>
-                    </li>
-                </ol>
+               <p>Pour lire une liste, on peut demander à voir l'index de la valeur qui nous intéresse:</p>
+                <div class="code">
+                    <code>
+                        >>> liste = ["a","d","m"] <br>
+                        >>> liste[0] <br>
+                        'a' <br>
+                        >>> liste[2] <br>
+                        'm'
+                    </code>
+                </div>
+                <p>
+                    Le premier item commence toujours avec l'index 0. Pour lire la premier item on utilise la valeur 0, le deuxième on utilise la valeur 1, etc.
+                    <br> Il est d'ailleurs possible de modifier une valeur avec son index
+                </p>
+                 <div class="code">
+                    <code>
+                        >>> liste = ["a","d","m"] <br>
+                        >>> liste[0] <br>
+                        'a' <br>
+                        >>> liste[2] <br>
+                        'm' <br>
+                        >>> liste[2] = "z" <br>
+                        >>> liste <br>
+                        ['a', 'd', 'z']
+                    </code>
+                </div>
+            </div>
+            <button class="accordion"><span id="tit4">Supprimer une entrée avec un index</span></button>
+            <div class="panel">
+               <p>Il est parfois nécessaire de supprimer une entrée de la liste. Pour cela vous pouvez utiliser la fonction del .</p>
+                <div class="code">
+                    <code>
+                        >>> liste = ["a", "b", "c"] <br>
+                        >>> del liste[1] <br>
+                        >>> liste <br>
+                        ['a', 'c'] 
+                    </code>
+                </div>
+                <h3>Supprimer une entrée avec sa valeur</h3>
+                <p>
+                   Il est possible de supprimer une entrée d'une liste avec sa valeur avec la méthode remove .
+                </p>
+                 <div class="code">
+                    <code>
+                        >>> liste = ["a", "b", "c"] <br>
+                        >>> liste.remove("a") <br>
+                        >>> liste <br>
+                        ['b', 'c']
+                    </code>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h1>Les Tuples !</h1>
+            <p>Un tuple est une liste qui ne peut plus être modifiée.</p>
+            <button class="accordion"><span id="tit5">Créer un tuple</span></button>
+            <div class="panel">
+                <p>Pour créer un tuple , vous pouvez utiliser la syntaxe suivante:</p>
+                <div class="code">
+                    <code>
+                        >>> mon_tuple = ()
+                    </code>
+                </div>
+            </div>
+            <button class="accordion"><span id="tit6">Ajouter une valeur à un tuple</span></button>
+            <div class="panel">
+                <p>Pour créer un tuple avec des valeurs, vous pouvez le faire de cette façon:</p>
+                <div class="code">
+                    <code>
+                        >>> mon_tuple = (1, "ok", "olivier")
+                    </code>
+                </div>
+                <p>
+                    Les parenthèses ne sont pas obligatoires mais facilite la lisibilité du code (rappelons que la force de python est sa simplicité de lecture):
+                </p>
+                 <div class="code">
+                    <code>
+                       >>> mon_tuple = 1, 2, 3 <br>
+                    >>> type(mon_tuple) <br>
+                    &lt; type 'tuple' &gt;
+                    </code>
+                </div>
+                <p>
+                    Lorsque vous créez un tuple avec une seule valeur, n'oubliez pas d'y ajouter une virgule, sinon ce n'est pas un tuple.
+                </p>
+                <div class="code">
+                    <code>
+                        >>> mon_tuple = ("ok") <br>
+                        >>> type(mon_tuple) <br>
+                        &lt; type 'str'&gt; <br>
+                            >>> mon_tuple = ("ok",) <br>
+                            >>> type(mon_tuple) <br>
+                            &lt;type 'tuple'>
+                    </code>
+                </div>
+            </div>
+            <button class="accordion"><span id="tit7">Afficher une valeur d'un tuple</span></button>
+            <div class="panel">
+               <p>Le tuple est une sorte de liste, on peut donc utiliser la même syntaxe pour lire les données du tuple.</p>
+                <div class="code">
+                    <code>
+                        >>> mon_tuple[0] <br>
+                        1
+                    </code>
+                </div>
+                <p>
+                   Et évidemment si on essaie de changer la valeur d'un index, l'interpreteur nous insulte copieusement:
+                </p>
+                 <div class="code">
+                    <code>
+                       >>> mon_tuple[1] = "ok" <br>
+                       Traceback (most recent call last): <br>
+                         File "&lt;stdin>", line 1, in &lt;module> <br>
+                            TypeError: 'tuple' object does not support item assignment 
+                    </code>
+                </div>
+            </div>
+            <button class="accordion"><span id="tit8">A quoi sert un tuple alors?</span></button>
+            <div class="panel">
+               <p>Le tuple permet une affectation multiple:</p>
+                <div class="code">
+                    <code>
+                       >>> v1, v2 = 11, 22 <br>
+                       >>> v1 <br>
+                       11 <br>
+                       >>> v2 <br>
+                       22
+                    </code>
+                </div>
+                <p>
+                  Il permet également de renvoyer plusieurs valeurs lors d'un appel d'une fonction:
+                </p>
+                 <div class="code">
+                    <code>
+                        >>> def donne_moi_ton_nom(): <br>
+                        ...     return "olivier", "engel"<br>
+                        ... <br>
+                        >>> donne_moi_ton_nom() <br>
+                        ('olivier', 'engel') 
+                    </code>
+                </div>
+                <p>On utilisera un tuple pour définir des sortes de constantes qui n'ont donc pas vocation à changer.</p>
             </div>
         </section>
     </div>

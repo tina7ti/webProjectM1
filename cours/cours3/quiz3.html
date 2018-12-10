@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PYTHON-INFOcours</title>
+	<link rel="stylesheet" type="text/css" href="..\..\css\style.css">
+</head>
+<body>
+<header>
+	<nav>
+		<ul>
+		 	<li id="brand"><b>INFOcours</b></li>
+ 			<li id="menu">
+   				<button>Cours<span id="trian"></span></button>
+    			<div id="ssmenu">
+      				<a href="#">JAVA</a>
+      				<a href="#">C</a>
+      				<a href="#">PYTHON</a>
+      				<a href="#">PHP</a>
+      				<a href="#">JS</a>
+    			</div>
+  			</li>
+  			<li class="droite"><a href="#">Insciption</a></li>
+  			<li class="droite"><a href="#">Connexion</a></li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<nav><img src="..\..\img\python.png" alt="python icon"></nav>
+	<div>
+		<h1>Bah, C'est votre 3éme évaluation cher(e) étudiant(e). ^_^</h1>
+		<h2>On commence: (nous croyons que vous avez habitué) mais malgré ça on vous répete nos régles:</h2>
+		<ul>
+			<li>Veuillez choisir 1 seule réponse pour chaque question.</li>
+			<li>Chaque question sera noter sur 1 point.</li>
+			<li>A la fin de quiz on vous affiche votre score ainsi que toutes les bonnes réponses.</li>
+		</ul>
+	</div>
+	<div class="quiz">
+		<form>
+			<div id="q1">
+			<h2>Qustion 1: </h2>
+			<p> Aprés ces instructions, de quel type est la variable <span> c </span> <br>
+			<div class="code">
+				<code>
+					a = 2 <br> b = 3 <br> c = a / b 
+				</code>
+			</div></p>
+			<input type="radio" name="qst1"> <span> int </span> <br><br>
+			<input type="radio" name="qst1"> <span> float </span><br><br>
+			<input type="radio" name="qst1"> <span> string </span><br>
+			<hr>
+			<h2>Qustion 3: </h2>
+			<p> Comment copie-t-on parfaitement une liste : <br><br>
+			On a 2 listes (li1,li2) </p><br><br>
+			<input type="radio" name="qst3"> <span> li2 = li1[ : ] </span> <br><br>
+			<input type="radio" name="qst3"> <span> li2 = li1 </span><br><br>
+			<input type="radio" name="qst3"> <span> li2 = li2+li1 </span><br><br>
+			
+			</div>
+			<div id="q2">
+			<h2>Qustion 2: </h2>
+			<p>Laquelle entre ces variables est de type <span> string </span> <br> </p>
+			<br><br><br><br><br>
+			<input type="radio" name="qst2"> <span> 2 </span> <br><br>
+			<input type="radio" name="qst2"> <span> 2 + 2 </span><br><br>
+			<input type="radio" name="qst2"> <span> "2" </span><br><br>
+			<hr>
+			<h2>Qustion 4: </h2>
+			<p> Que va afficher ce programme ? x =0
+				<div class="code">
+					<code>
+				chr="maison" <br>
+				for car in chr : <br>
+					&nbsp;&nbsp;if car in "aeyuio" : <br>
+						&nbsp;&nbsp;&nbsp;&nbsp;x+=2 <br>
+				print(x)
+				</code>
+				</div>
+			</p>
+			<input type="radio" name="qst4"> <span> 6 </span> <br>
+			<input type="radio" name="qst4"> <span> 9 </span>
+			</div>
+		</form>
+	</div>
+
+
+
+
+	<button><a href="chap3.html"> < Chapitre précédent</a></button>
+	<button><a href="#">Cours suivant > </a></button>
+</main>
+
+<footer>
+            <div class="informations">
+                    <h3>INFORMATIONS</h3>
+                    <dl>
+                        <li><a href="contact.html">Contactez-nous</a></li>
+                        <li><a href="#">A propos de nous</a></li>
+                        <li><a href="#">Aide en ligne</a></li>
+                    </dl>
+                </div>
+                <div class="contenus">
+                    <h3>CONTENUS</h3>
+                    <dl>
+                        <li><a href="#">Titres</a></li>
+                        <li><a href="#">Paragraphes</a></li>
+                        <li><a href="#">Images</a></li>
+                        <li><a href="#">Vidéos</a></li>
+                    </dl>
+                </div>
+                <div class="suivi-nous">
+                    <h3>SUIVI-NOUS</h3>
+                    <dl>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Google+</a></li>
+                    </dl>
+                </div>
+        <p class="copyright">copyright&copy;2018-2019</p>
+    </footer>
+
+    <script type="text/javascript" src="../../js/script.js"></script>
+</body>
+</html>
