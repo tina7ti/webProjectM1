@@ -4,41 +4,42 @@ body, header {
 	padding: 0%;
 	font-family: Arial, sans serif;
 }
-nav ul{
+header nav ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #3391FF;
     font-size: 1.1em;
+  
 }
-nav li { float: left;}
-nav li a, button, #brand {
+header nav li { float: left;}
+header nav li a, button, #brand {
     display: inline-block;
     color: white;
     text-align: center;
     padding: 16px 20px;
     text-decoration: none;
 }
-button
+header button
 {
 	height: 100%;
 	border: none;
 	background-color: transparent;
 }
-nav li a:hover, #menu:hover button, nav li div a:hover {
+header nav li a:hover, #menu:hover button, nav li div a:hover, input[type="button"]:hover {
     background-color: #f1f1f1;
     color: darkblue;
 }
-nav li#menu { display: inline-block;}
-nav li div {
+header nav li#menu { display: inline-block;}
+header nav li div {
     display: none;
     position: absolute;
     background-color: #3391FF;
     min-width: 160px;
     z-index: 1;
 }
-nav li div a {
+header nav li div a {
     color: #f1f1f1;
     padding: 12px 16px;
     text-decoration: none;
@@ -48,6 +49,7 @@ nav li div a {
 }
 #menu:hover #ssmenu {
     display: block;
+    position: fixed;
 }
 .droite {float: right;}
 #def, #cours h2
@@ -146,7 +148,7 @@ footer
     padding-top: 1%;
     bottom: 0;
 }
-footer dl{
+footer dl,main nav dl{
     list-style-type: none;
 }
 footer .informations,footer .contenus ,footer .suivi-nous
@@ -172,31 +174,129 @@ footer a:hover
 }
 
 /*cours 3 intro*/
-.contenu
+main
 {
 	display: flex;
 	flex-wrap: wrap;
 }
-.contenu nav
+main nav
 {
 	  background-color: #3391FF;
 	width: 20%;
-	border-radius: 0px 0px 20px 0px;
+	border-radius: 0px 20px 20px 0px;
 	margin-right: 5%;
+	position: fixed;
+	padding-top: 1%;
 }
-.contenu div
+main div
 {
-	
+	padding-left: 25%;
 	width: 70%;
 }
-.contenu nav img
+main nav img
 {
 	width: 50%;
-	margin-left: 20%;
+	margin-left: 18%;
 	margin-top: 5%;
 	background-color: white;
-	padding: 5% 5%;
+	padding: 7% 7%;
 	border-radius: 50% 20%;
 }
-
+main nav li
+{
+	padding: 6% 4%;
+	text-align: center;
+	margin: 2% 0%;
+}
+main nav li a 
+{
+	color: white;
+}
+main nav li:hover
+{
+	background-color: #f1f1f1;
+    font-size: 1.2em;
+}
+main nav li:hover a{ color: darkblue; }
+/* chaps*/
+main div a,main nav li a
+{
+	text-decoration: none;
+}
+main div a 
+{
+	font-size: 1.1em;
+	color: black;
+}
+main div li { margin: 6% 1%; }
+main div a span 
+{
+	color: #3391FF !important;
+}
+main div a:hover 
+{
+	font-size: 1.5em;
+	transition-duration: 1s;
+}
+input[type="button"]
+{
+	color: white;
+	background-color: #3391FF;
+	border: none;
+	border-radius: 10px/10px;
+	padding: 3% 4%;
+	margin: 4% 20%;
+	font-weight: bold;
+}
+/*titres */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: 0.4s;
+}
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+.active:after {content: "\2212";}
+.panel {
+	width: 100% !important;
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
 /*cours 3 chap 1*/
+code
+{
+	background-color: rgba(190,255,255,0.8);
+	border-radius: 6px / 6px;
+	padding: 0.3% 1%;
+}
+main section div .imgRight
+{
+	float: right;
+	width: 20%;
+	height: 10%;
+	margin-right: 5%;
+}
+main section div .imgMiddle
+{
+	width: 50%;
+	height: 20%;
+	margin: 2% 20%;
+}
