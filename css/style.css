@@ -140,7 +140,7 @@ header nav li div a {
 footer
 {
     clear: both;
-    margin-top: 25%;
+    margin-top: 4%;
 	background-color: #3391FF;
     color: white;
     text-align: center;
@@ -172,7 +172,10 @@ footer a:hover
     color: white;
     font-size: 1.3em;
 }
-
+#foot
+{
+	margin-top: 25%;
+}
 /*cours 3 intro*/
 p:first-letter
 {
@@ -183,6 +186,7 @@ main
 {
 	display: flex;
 	flex-wrap: wrap;
+	line-height: 25px;
 }
 main nav
 {
@@ -191,6 +195,7 @@ main nav
 	border-radius: 0px 20px 20px 0px;
 	margin-right: 5%;
 	padding-top: 1%;
+	height: 100%;
 }
 main div
 {
@@ -241,16 +246,6 @@ main div a:hover
 	font-size: 1.5em;
 	transition-duration: 1s;
 }
-main>button
-{
-	color: white;
-	background-color: #3391FF;
-	border: none;
-	border-radius: 10px/10px;
-	padding: 3% 4%;
-	margin: 4% 20%;
-	font-weight: bold;
-}
 /*titres */
 .accordion {
     background-color: #eee;
@@ -283,10 +278,58 @@ main>button
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
+/*btns bouton suivant et précedent*/
+.btns
+{
+	width: 100%;
+	margin: 5% 20%;
+}
+.btns a
+{
+	color: white;
+	background-color: #3391FF;
+	border: none;
+	padding: 2% 3%;
+	font-weight: bold;
+}
+.prec
+{
+	border-radius: 100% 0 0 100%;
+	float: left;
+}
+.suiv
+{
+	border-radius: 0 100% 100% 0; 
+	float: right;
+}
 /*cours 2 intro */
 code span
 {
 	color: grey !important;
+}
+/* quiz 2*/
+#quiz2
+{
+	padding: 2% 10%;
+}
+#quiz2 h2
+{
+	background-color: #3391FF;
+	color: white;
+	padding: 1%;
+	border-radius: 10px;
+}
+#quiz2 input[type="button"], #quiz3 input[type="button"]
+{
+	border-radius: 10px;
+	background-color: #DDE8DE;
+	box-shadow: 2px 3px 2px grey;
+	padding: 3%;
+}
+#quiz2 input[type="button"]:hover, #quiz3 input[type="button"]:hover
+{
+	background-color: #3199FF;
+	padding: 5%;
 }
 /*cours 3 chap 1*/
 p>span
@@ -324,7 +367,7 @@ main nav span
 	margin-left: 1%;
 }
 /*cours 3 quiz*/
-.quiz
+#quiz3
 {
 	display: block;
 	background-color: #f1f1f1;
@@ -333,7 +376,7 @@ main nav span
 	border-radius: 8px / 8px;
 	box-shadow: 2px 3px 4px grey;
 }
-.quiz div
+#quiz3 div
 {
 	width: 42%;
 	padding: 1% 1%;
@@ -343,7 +386,7 @@ main nav span
 p#dang
 {
 	padding: 1%;
-	background-color: pink;
+	background-color: #FFDAD2;
 	color: red;
 	font-weight: bold;
 	display: none;
@@ -351,6 +394,20 @@ p#dang
 }
 p#score
 {
-	background-color: green;
+	background-color: #91FF7B;
 	font-weight: bolder;
+	padding: 2%;
+	border-radius: 10px;
+	visibility: hidden;
+}
+/* cours 2 chap 1*/
+table
+{
+	border-collapse: collapse;
+	width: 100%;
+}
+table td
+{
+	padding: 2% 2%;
+	width: 30%;
 }

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>C-INFOcours</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+<header>
+	<nav>
+		<ul>
+		 	<li id="brand"><b>INFOcours</b></li>
+ 			<li id="menu">
+   				<button>Cours<span id="trian"></span></button>
+    			<div id="ssmenu">
+      				<a href="#">JAVA</a>
+      				<a href="intro.html">C</a>
+      				<a href="../cours3/intro.html">PYTHON</a>
+      				<a href="#">PHP</a>
+      				<a href="#">JS</a>
+    			</div>
+  			</li>
+  			<li class="droite"><a href="#">Insciption</a></li>
+  			<li class="droite"><a href="#">Connexion</a></li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<nav>
+		<img src="../../img/c.png" alt="C icon">
+		<dl>
+			<li><a href="#tit1">Les tableaux dans la mémoire</a></li>
+			<li><a href="#tit2">Définir un tableau</a></li>
+			<li><a href="#tit3">Parcourir un tableau</a></li>
+		</dl>
+	</nav>	
+	<div >
+		<section>
+			<h1>Les tableaux</h1>
+			<p>
+				Ce chapitre est la suite directe des pointeurs et va vous faire comprendre un peu plus leur utilité. Vous comptiez y échapper ? C'est raté ! Les pointeurs sont partout en C, vous avez été prévenus ! <br>Dans ce chapitre, nous apprendrons à créer des variables de type « tableaux ». Les tableaux sont très utilisés en C car ils sont vraiment pratiques pour organiser une série de valeurs. <br>
+				Nous commencerons dans un premier temps par quelques explications sur le fonctionnement des tableaux en mémoire (schémas à l'appui). Ces petites introductions sur la mémoire sont extrêmement importantes : elles vous permettent de comprendre comment cela fonctionne. Un programmeur qui comprend ce qu'il fait, c'est quand même un peu plus rassurant pour la stabilité de ses programmes, non ? <br>
+			</p>
+			<button class="accordion"><span id="tit1">Les tableaux dans la mémoire</span></button>
+			<div class="panel">
+				<p>
+					« Les tableaux sont une suite de variables de même type, situées dans un espace contigu en mémoire. » <br>
+					Bon, je reconnais que ça ressemble un peu à une définition du dictionnaire. Concrètement, il s'agit de « grosses variables » pouvant contenir plusieurs nombres du même type (long,int,char,double…). <br>
+					Un tableau a une dimension bien précise. Il peut occuper 2, 3, 10, 150, 2 500 cases, c'est vous qui décidez. La fig. suivante est un schéma d'un tableau de 4 cases en mémoire qui commence à l'adresse 1600. <br>
+				</p>
+				<p>
+					Lorsque vous demandez à créer un tableau de 4 cases en mémoire, votre programme demande à l'OS la permission d'utiliser 4 cases en mémoire. Ces 4 cases doivent être contiguës, c'est-à-dire les unes à la suite des autres. Comme vous le voyez, les adresses se suivent : 1600, 1601, 1602, 1603. Il n'y a pas de « trou » au milieu. <br>
+					Enfin, chaque case du tableau contient un nombre du même type. Si le tableau est de typeint, alors chaque case du tableau contiendra unint. On ne peut pas faire de tableau contenant à la fois desintet desdoublepar exemple. <br>
+					En résumé, voici ce qu'il faut retenir sur les tableaux. <br>
+					Lorsqu'un tableau est créé, il prend un espace contigu en mémoire : les cases sont les unes à la suite des autres. <br>
+					Toutes les cases d'un tableau sont du même type. Ainsi, un tableau deintcontiendra uniquement desint, et pas autre chose.
+				</p>
+			</div>
+			<button class="accordion"><span id="tit2">Définir un tableau</span></button>
+			<div class="panel">
+				<p>Pour commencer, nous allons voir comment définir un tableau de 4 <span>int</span>:
+					<div class="code">
+						<code>
+							int tableau[4];
+						</code>
+					</div>
+					Voilà, c'est tout. Il suffit donc de rajouter entre crochets le nombre de cases que vous voulez mettre dans votre tableau. Il n'y a pas de limite (à part peut-être la taille de votre mémoire, quand même). <br>
+					Maintenant, comment accéder à chaque case du tableau ? C'est simple, il faut écriretableau[numeroDeLaCase]. <br>
+					Attention : un tableau commence à l'indice n° 0 ! Notre tableau de 4inta donc les indices 0, 1, 2 et 3. Il n'y a pas d'indice 4 dans un tableau de 4 cases ! C'est une source d'erreurs très courantes, souvenez-vous-en. <br>
+					Si je veux mettre dans mon tableau les mêmes valeurs que celles indiquées sur la fig. suivante, je 	devrai donc écrire :
+				</p>
+				<div class="code">
+					<code>
+						int tableau[4]; <br>
+						tableau[0] = 10; <br>
+						tableau[1] = 23; <br>
+						tableau[2] = 505; <br>
+						tableau[3] = 8;
+					</code>
+				</div>
+				<p>
+					En fait, si vous écrivez justetableau, vous obtenez un pointeur. C'est un pointeur sur la première case du tableau. Faites le test : <br>
+					<div class="code">
+						<code>
+							int tableau[4]; <br> printf("%d", tableau);
+						</code>
+					</div>
+					Résultat, on voit l'adresse où se trouve tableau:
+					<div class="code">
+						<code>
+							1600
+						</code>
+					</div>
+					En revanche, si vous indiquez l'indice de la case du tableau entre crochets, vous obtenez la valeur : 
+					<div class="code">
+						<code>
+							int tableau[4]; <br>
+							printf("%d", tableau[0]); <br>
+							10
+						</code>
+					</div>
+					De même pour les autres indices. Notez que commetableauest un pointeur, on peut utiliser le symbole*pour connaître la première valeur :
+					<div class="code">
+						<code>
+							int tableau[4]; <br> printf("%d", *tableau); <br> 10
+						</code>
+					</div>
+					Il est aussi possible d'obtenir la valeur de la seconde case avec*(tableau + 1)(adresse de tableau + 1). <br> Les deux lignes suivantes sont donc identiques : 
+					<div class="code">
+						<code>
+							tableau[1] <span>// Renvoie la valeur de la seconde case (la première case étant 0) </span> <br>
+							*(tableau + 1) <span>// Identique : renvoie la valeur contenue dans la seconde case</span>
+						</code>
+					</div>
+				</p>
+				<p>
+					En clair, quand vous écrivez <span>tableau[0]</span>, vous demandez la valeur qui se trouve à l'adresse tableau + 0 case (c'est-à-dire 1600). <br>
+					Si vous écrivez <span>tableau[1]</span>, vous demandez la valeur se trouvant à l'adresse tableau + 1 case (c'est-à-dire 1601). <br>
+					Et ainsi de suite pour les autres valeurs.
+				</p>
+			</div>
+			<button class="accordion"><span id="tit3">Parcourir un tableau</span></button>
+			<div class="panel">
+				<p>
+					Supposons que je veuille maintenant afficher les valeurs de chaque case du tableau. <br>
+					Je pourrais faire autant deprintfqu'il y a de cases. Mais bon, ce serait répétitif et lourd, et imaginez un peu la taille de notre code si on devait afficher le contenu de chaque case du tableau une à une ! <br>
+					Le mieux est de se servir d'une boucle. Pourquoi pas d'une bouclefor? Les bouclesforsont très pratiques pour parcourir un tableau :
+				</p>
+				<div class="code">
+					<code>
+						int main(int argc, char *argv[]) <br>{ <br>
+						    int tableau[4], i = 0; <br>
+						        tableau[0] = 10; <br>    tableau[1] = 23; <br>    tableau[2] = 505; <br>
+						        tableau[3] = 8; <br>     for (i = 0 ; i < 4 ; i++) <br>    { <br>        printf("%d\n", tableau[i]); <br>    } <br>    return 0; <br> }
+					</code>
+				</div>
+				<h4>Résultat</h4>
+				<div class="code">
+					<code>
+						10 <br> 23 <br> 505 <br> 8
+					</code>
+				</div>
+				<p>
+					Notre boucle parcourt le tableau à l'aide d'une variable appeléei(c'est le nom très original que les programmeurs donnent en général à la variable qui leur permet de parcourir un tableau !). <br>
+					Ce qui est particulièrement pratique, c'est qu'on peut mettre une variable entre crochets. En effet, la variable était interdite pour la création du tableau (pour définir sa taille), mais elle est heureusement autorisée pour « parcourir » le tableau, c'est-à-dire afficher ses valeurs ! <br>
+					Ici, on a mis la variablei, qui vaut successivement 0, 1, 2, et 3. De cette façon, on va donc afficher la valeur de <span> tableau[0],tableau[1],tableau[2]</span> et <span>tableau[3]</span>!
+				</p>
+			</div>
+		</section>
+	</div>
+	<div class="btns">
+		<a href="chap2.html" class="prec"> < Chapitre précédent</a>
+		<a href="quiz2.html" class="suiv">QUIZ > </a>
+	</div>
+</main>
+
+<footer>
+            <div class="informations">
+                    <h3>INFORMATIONS</h3>
+                    <dl>
+                        <li><a href="contact.html">Contactez-nous</a></li>
+                        <li><a href="#">A propos de nous</a></li>
+                        <li><a href="#">Aide en ligne</a></li>
+                    </dl>
+                </div>
+                <div class="contenus">
+                    <h3>CONTENUS</h3>
+                    <dl>
+                        <li><a href="#">Titres</a></li>
+                        <li><a href="#">Paragraphes</a></li>
+                        <li><a href="#">Images</a></li>
+                        <li><a href="#">Vidéos</a></li>
+                    </dl>
+                </div>
+                <div class="suivi-nous">
+                    <h3>SUIVI-NOUS</h3>
+                    <dl>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Google+</a></li>
+                    </dl>
+                </div>
+        <p class="copyright">copyright&copy;2018-2019</p>
+    </footer>
+
+    <script src="../../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>C-INFOcours</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+<header>
+	<nav>
+		<ul>
+		 	<li id="brand"><b>INFOcours</b></li>
+ 			<li id="menu">
+   				<button>Cours<span id="trian"></span></button>
+    			<div id="ssmenu">
+      				<a href="#">JAVA</a>
+      				<a href="intro.html">C</a>
+      				<a href="../cours3/intro.html">PYTHON</a>
+      				<a href="#">PHP</a>
+      				<a href="#">JS</a>
+    			</div>
+  			</li>
+  			<li class="droite"><a href="#">Insciption</a></li>
+  			<li class="droite"><a href="#">Connexion</a></li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<nav>
+		<img src="../../img/c.png" alt="C icon">
+		<dl>
+			<li><a href="#tit1">La condition if... else</a></li>
+			<li><a href="#tit2">Qu'est-ce qu'une boucle ?</a></li>
+			<li><a href="#tit3">La boucle while</a></li>
+		</dl>
+	</nav>	
+	<div >
+		<section>
+			<h1>Conditions et boucles :</h1>
+			<p>
+				Nous avons vu dans le premier chapitre qu'il existait de nombreux langages de programmation. Certains se ressemblent d'ailleurs : un grand nombre d'entre eux sont inspirés du langage C. <br>
+
+				En fait le langage C a été créé il y a assez longtemps, ce qui fait qu'il a servi de modèle à de nombreux autres plus récents. <br>
+				La plupart des langages de programmation ont finalement des ressemblances, ils reprennent les principes de base de leurs aînés. <br>
+
+				En parlant de principes de base : nous sommes en plein dedans. Nous avons vu comment créer des variables, faire des calculs avec (concept commun à tous les langages de programmation !), nous allons maintenant nous intéresser aux conditions. <br>
+				Sans conditions, nos programmes informatiques feraient toujours la même chose ! <br>
+			</p>
+			<button class="accordion"><span id="tit1">La condition if... else</span></button>
+			<div class="panel">
+				<p>
+					Les conditions permettent de tester des variables. On peut par exemple dire « si la variable machin est égale à 50, fais ceci »… Mais ce serait dommage de ne pouvoir tester que l'égalité ! Il faudrait aussi pouvoir tester si la variable est inférieure à 50, inférieure ou égale à 50, supérieure, supérieure ou égale… Ne vous inquiétez pas, le C a tout prévu ! <br> <br>
+					Pour étudier les conditionsif... else, nous allons suivre le plan suivant :
+				</p>
+				<p>
+					<ol>
+						quelques symboles à connaître avant de commencer,
+						<li>le test <span>IF</span></li>
+						<li>le test <span>ELSE</span></li>
+						<li>le test <span>ELSE IF</span></li>
+						<li>le test <span>plusieurs conditions à la fois</span></li>
+						<li>le test <span>quelques erreurs courantes à éviter.</span></li>
+					</ol>
+				</p>
+				<p>
+					Avant de voir comment on écrit une condition de typeif... elseen C, il faut donc que vous connaissiez deux ou trois symboles de base. Ces symboles sont indispensables pour réaliser des conditions. <br>
+					<span>Quelques symboles à connaître</span> <br>
+					Voici un petit tableau de symboles du langage C à connaître par coeur :
+				</p>
+				<table border="2">
+						<tr>
+							<th>Symbole</th>
+							<th>Signification</th>
+						</tr>
+						<tr>
+							<td>==</td>
+							<td>est égal à</td>
+						</tr>
+						<tr>
+							<td>&gt;</td>
+							<td>est supérieur à</td>
+						</tr>
+						<tr>
+							<td>&lt;</td>
+							<td>est inférieur à</td>
+						</tr>
+						<tr>
+							<td>&gt;=</td>
+							<td>est supérieur ou égal à</td>
+						</tr>
+						<tr>
+							<td>&lt;=</td>
+							<td>est inférieur ou égal à</td>
+						</tr>
+						<tr>
+							<td>!=</td>
+							<td>est différent de</td>
+						</tr>
+					</table>
+					<p>
+						Cela nous donne donc à écrire : <br>
+						<div class="code">
+							<code>
+								if (<span>/* Votre condition */</span>) <br>{ <br>
+								<span>// Instructions à exécuter si la condition est vraie</span> <br>
+							}
+							</code>
+						</div>
+						À la place de mon commentaire « Votre condition », on va écrire une condition pour tester une variable. <br>
+						Par exemple, on pourrait tester une variableagequi contient votre âge. Tenez pour s'entraîner, on va tester si vous êtes majeur, c'est-à-dire si votre âge est supérieur ou égal à 18 : <br>
+						<div class="code">
+							<code>
+								if (age >= 18) <br> { <br>  printf ("Vous etes majeur !"); <br> }
+							</code>
+						</div>
+					</p>
+			</div>
+			<button class="accordion"><span id="tit2">Qu'est-ce qu'une boucle ?</span></button>
+			<div class="panel">
+				<p>
+					Je me répète : une boucle est une structure qui permet de répéter les mêmes instructions plusieurs fois. <br>
+					Tout comme pour les conditions, il y a plusieurs façons de réaliser des boucles. Au bout du compte, cela revient à faire la même chose : répéter les mêmes instructions un certain nombre de fois. <br>
+					Nous allons voir trois types de boucles courantes en C :
+					<ol>
+						<li>WHILE</li>
+						<li>DO....WHILE</li>
+						<li>FOR</li>
+					</ol>
+					Voici ce qu'il se passe dans l'ordre :
+					<ol>
+						<li>l'ordinateur lit les instructions de haut en bas (comme d'habitude) ;</li>
+						<li>puis, une fois arrivé à la fin de la boucle, il repart à la première instruction ;</li>
+						<li>il recommence alors à lire les instructions de haut en bas…</li>
+						<li>… et il repart au début de la boucle.</li>
+					</ol>
+					Le problème dans ce système c'est que si on ne l'arrête pas, l'ordinateur est capable de répéter les instructions à l'infini ! Il n'est pas du genre à se plaindre, vous savez : il fait ce qu'on lui dit de faire… Il pourrait très bien se bloquer dans une boucle infinie, c'est d'ailleurs une des nombreuses craintes des programmeurs. <br>
+					Et c'est là qu'on retrouve… les conditions ! Quand on crée une boucle, on indique toujours une condition. Cette condition signifiera « Répète la boucle tant que cette condition est vraie ». <br>
+					Comme je vous l'ai dit, il y a plusieurs manières de s'y prendre. Voyons voir sans plus tarder comment on réalise une boucle de typewhileen C.
+				</p>
+			</div>
+			<button class="accordion"><span id="tit3">La boucle while</span></button>
+			<div class="panel">
+				<p>
+					Voici comment on construit une boucle <span>while</span>:
+				</p>
+				<div class="code">
+					<code>
+						while (<span>/* Condition */</span>) <br>{ <br>    
+						<span>// Instructions à répéter</span> <br>}
+					</code>
+				</div>
+				<p>
+					C'est aussi simple que cela.whilesignifie « Tant que ». On dit donc à l'ordinateur « Tant que la condition est vraie, répète les instructions entre accolades ». <br>
+					Je vous propose de faire un test simple : on va demander à l'utilisateur de taper le nombre 47. Tant qu'il n'a pas tapé le nombre 47, on lui redemande le nombre. Le programme ne pourra s'arrêter que si l'utilisateur tape le nombre 47 (je sais, je sais, je suis diabolique) :
+				</p>
+				<div class="code">
+					<code>
+						int nombreEntre = 0; <br>
+						while (nombreEntre != 47) <br> { <br>
+						    printf("Tapez le nombre 47 ! "); <br>
+						        scanf("%d", &nombreEntre); <br>}
+					</code>
+				</div>
+				<p>Voici maintenant le test que j'ai fait. Notez que j'ai fait exprès de me tromper 2-3 fois avant de taper le bon nombre.</p>
+				<div class="code">
+					<code>
+						Tapez le nombre 47 ! 10 <br>
+						Tapez le nombre 47 ! 27 <br>Tapez le nombre 47 ! 40 <br>
+						Tapez le nombre 47 ! 47 
+					</code>
+				</div>
+				<p>
+					Le programme s'est arrêté après avoir tapé le nombre 47. <br>
+					Cette bouclewhilese répète donc tant que l'utilisateur n'a pas tapé 47, c'est assez simple. <br>
+					Maintenant, essayons de faire quelque chose d'un peu plus intéressant : on veut que notre boucle se répète un certain nombre de fois. <br>
+					On va pour cela créer une variablecompteurqui vaudra 0 au début du programme et que l'on va incrémenter au fur et à mesure. Vous vous souvenez de l'incrémentation ? Ça consiste à ajouter 1 à la variable en faisantvariable++;. <br>
+					Regardez attentivement ce bout de code et, surtout, essayez de le comprendre : <br>
+				</p>
+				<div class="code">
+					<code>
+						int compteur = 0; <br>
+						while (compteur < 10) <br>{ <br>
+						    printf("Salut les étudiants !\n"); <br>
+						        compteur++; <br>}
+					</code>
+				</div>
+				Résultat :
+				<div class="code">
+					<code>
+						Salut les étudiants ! <br>
+						Salut les étudiants ! <br>
+						Salut les étudiants ! <br>
+						Salut les étudiants ! <br>
+						Salut les étudiants ! <br>
+						Salut les étudiants ! <br>
+						Salut les étudiants ! <br>
+						Salut les étudiants ! <br>
+						Salut les étudiants ! <br>
+						Salut les étudiants !
+					</code>
+				</div>
+				Ce code répète 10 fois l'affichage de « Salut les étudiants ! ».
+			</div>
+		</section>
+	</div>
+	<div class="btns">
+		<a href="chap1.html" class="prec"> < Chapitre précédent</a>
+		<a href="chap3.html" class="suiv">Chapitre suivant > </a>
+	</div>
+</main>
+
+<footer>
+            <div class="informations">
+                    <h3>INFORMATIONS</h3>
+                    <dl>
+                        <li><a href="contact.html">Contactez-nous</a></li>
+                        <li><a href="#">A propos de nous</a></li>
+                        <li><a href="#">Aide en ligne</a></li>
+                    </dl>
+                </div>
+                <div class="contenus">
+                    <h3>CONTENUS</h3>
+                    <dl>
+                        <li><a href="#">Titres</a></li>
+                        <li><a href="#">Paragraphes</a></li>
+                        <li><a href="#">Images</a></li>
+                        <li><a href="#">Vidéos</a></li>
+                    </dl>
+                </div>
+                <div class="suivi-nous">
+                    <h3>SUIVI-NOUS</h3>
+                    <dl>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Google+</a></li>
+                    </dl>
+                </div>
+        <p class="copyright">copyright&copy;2018-2019</p>
+    </footer>
+
+    <script src="../../js/script.js"></script>
+</body>
+</html>

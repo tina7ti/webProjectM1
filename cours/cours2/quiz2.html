@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>C-INFOcours</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+<header>
+	<nav>
+		<ul>
+		 	<li id="brand"><b>INFOcours</b></li>
+ 			<li id="menu">
+   				<button>Cours<span id="trian"></span></button>
+    			<div id="ssmenu">
+      				<a href="#">JAVA</a>
+      				<a href="intro.html">C</a>
+      				<a href="../cours3/intro.html">PYTHON</a>
+      				<a href="#">PHP</a>
+      				<a href="#">JS</a>
+    			</div>
+  			</li>
+  			<li class="droite"><a href="#">Insciption</a></li>
+  			<li class="droite"><a href="#">Connexion</a></li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<nav><img src="../../img/c.png" alt="C icon"></nav>
+	<div>
+		<h1>Salut ! C'est votre 2éme évaluation cher(e) étudiant(e). ^_^</h1>
+		<h2>On commence par identifier nos régles:</h2>
+		<ul>
+			<li>Veuillez choisir 1 seule réponse pour chaque question.</li>
+			<li>Chaque question sera noter sur 1 point.</li>
+			<li>A la fin de quiz on vous affiche votre score ainsi que toutes les bonnes réponses (mentionnés en VERT ).</li>
+		</ul>
+	</div>
+	<div id="quiz2">
+		<form>
+			
+			<h2>Question 1: </h2>
+			<p>Comment s'appelle le programme chargé de traduire le code en binaire ?</p>
+			<input type="radio" name="qst1"> <span id="s10"> Un diffuseur </span> <br><br>
+			<input type="radio" name="qst1"> <span id="s11"> Un compilateur </span><br><br>
+			<input type="radio" name="qst1"> <span id="s12"> Un binarisateur </span><br>
+			
+			
+			<h2>Question 2: </h2>
+			<p>Quelle est l'écriture qui nous permet d'inclure un header d'une bibliothéque standard ? </p>
+			
+			<input type="radio" name="qst2" > <span id="s20"> #include &lt;time.h> </span> <br><br>
+			<input type="radio" name="qst2"> <span  id="s21"> #include "time.h" </span><br><br>
+			<input type="radio" name="qst2" > <span id="s22"> #include {time.h} </span><br><br>
+			
+
+			<h2>Question 3: </h2>
+			<p> Le type qui n'existe pas dans le language C</p>
+			<input type="radio" name="qst3"> <span id="s30"> int </span> <br><br>
+			<input type="radio" name="qst3"> <span id="s31"> bool </span><br><br>
+			<input type="radio" name="qst3"> <span id="s32"> long </span><br><br>
+		
+
+			<h2>Question 4: </h2>
+			<p> Un commentaire sur une ligne est introduit par :</p>
+			<input type="radio" name="qst4"> <span id="s40"> \\ </span> <br>
+			<input type="radio" name="qst4"> <span id="s41"> // </span> <br>
+			<input type="radio" name="qst4"> <span id="s42"> /* </span>
+		
+			<div>
+				<p id="dang"></p> <p id="score"></p>
+				<input type="button" name="button1" value="Envoyer mes réponses" onclick="quiz2()">
+			</div>
+		</form>
+	</div>
+	<div class="btns">
+		<a href="chap3.html" class="prec"> < Chapitre précédent</a>
+		<a href="../cours3/intro.html" class="suiv">Cours suivant > </a>
+	</div>
+</main>
+
+<footer>
+            <div class="informations">
+                    <h3>INFORMATIONS</h3>
+                    <dl>
+                        <li><a href="contact.html">Contactez-nous</a></li>
+                        <li><a href="#">A propos de nous</a></li>
+                        <li><a href="#">Aide en ligne</a></li>
+                    </dl>
+                </div>
+                <div class="contenus">
+                    <h3>CONTENUS</h3>
+                    <dl>
+                        <li><a href="#">Titres</a></li>
+                        <li><a href="#">Paragraphes</a></li>
+                        <li><a href="#">Images</a></li>
+                        <li><a href="#">Vidéos</a></li>
+                    </dl>
+                </div>
+                <div class="suivi-nous">
+                    <h3>SUIVI-NOUS</h3>
+                    <dl>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Google+</a></li>
+                    </dl>
+                </div>
+        <p class="copyright">copyright&copy;2018-2019</p>
+    </footer>
+
+    <script src="../../js/script.js"></script>
+</body>
+</html>

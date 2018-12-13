@@ -14,8 +14,8 @@
    				<button>Cours<span id="trian"></span></button>
     			<div id="ssmenu">
       				<a href="#">JAVA</a>
-      				<a href="#">C</a>
-      				<a href="#">PYTHON</a>
+      				<a href="intro.html">C</a>
+      				<a href="../cours3/intro.html">PYTHON</a>
       				<a href="#">PHP</a>
       				<a href="#">JS</a>
     			</div>
@@ -27,31 +27,22 @@
 </header>
 <main>
 	<nav>
-		<img src="../../img/python.png" alt="python icon">
+		<img src="../../img/c.png" alt="C icon">
 		<dl>
 			<li><a href="#tit1">Donner un nom à une variable</a></li>
 			<li><a href="#tit2">Les types de variables</a></li>
-			<li><a href="#tit3">Interpréteur du python</a></li>
+			<li><a href="#tit3">Affecter une valeur à une variable</a></li>
 		</dl>
 	</nav>	
 	<div >
 		<section>
 			<h1>C'est quoi une variable ?</h1>
 			<p>
-				<p>
 					En langage C, une variable est constituée de deux choses : <br>
 
 					<span>une valeur</span> : c'est le nombre qu'elle stocke, par exemple 5 ; <br>
 
 					<span>un nom</span> : c'est ce qui permet de la reconnaître. En programmant en C, on n'aura pas à retenir l'adresse mémoire (ouf !) : à la place, on va juste indiquer des noms de variables. C'est le compilateur qui fera la conversion entre le nom et l'adresse. Voilà déjà un souci de moins.
-				</p>
-
-
-
-
-
-
-
 			</p>
 			<button class="accordion"><span id="tit1">Donner un nom à une variables</span></button>
 			<div class="panel">
@@ -84,27 +75,27 @@
 			<button class="accordion"><span id="tit2">Les types de variables</span></button>
 			<div class="panel">
 				<p>Notre ordinateur, vous pourrez le constater, n'est en fait rien d'autre qu'une (très grosse) machine à calculer. Il ne sait traiter que des nombres. <br>
-					Oui mais voilà, j'ai un scoop ! Il existe plusieurs types de nombres ! Par exemple, il y a les nombres entiers positifs : <br>
+					Oui mais voilà, j'ai un scoop ! Il existe plusieurs types de nombres ! Par exemple, il y a les nombres entiers positifs : <br> <br>
 					45 ; <br>
 					398 ; <br>
-					7650. <br>
-					Mais il y a aussi des nombres décimaux, c'est-à-dire des nombres à virgule : <br>
+					7650. <br> <br>
+					Mais il y a aussi des nombres décimaux, c'est-à-dire des nombres à virgule : <br><br>
 					75,909 ; <br>
 					1,7741 ; <br>
-					9810,7. <br>
-					En plus de ça, il y a aussi des nombres entiers négatifs : <br>
+					9810,7. <br> <br>
+					En plus de ça, il y a aussi des nombres entiers négatifs : <br><br>
 					-87 ; <br>
-					-916. <br>
-					… Et des nombres négatifs décimaux ! <br>
+					-916. <br><br>
+					… Et des nombres négatifs décimaux ! <br> <br>
 					-76,9 ; <br>
-					-100,11. <br>
+					-100,11. <br> <br>
 
 					Votre pauvre ordinateur a besoin d'aide ! Lorsque vous lui demandez de stocker un nombre, vous devez dire de quel type il est. Ce n'est pas vraiment qu'il ne soit pas capable de le reconnaître tout seul, mais… ça l'aide beaucoup à s'organiser, et à faire en sorte de ne pas prendre trop de mémoire pour rien.
 					<br>
 					Lorsque vous créez une variable, vous allez donc devoir indiquer son type. <br>
 						Voici les principaux types de variables existant en langage C :</p>
 		
-					<table>
+					<table border="2">
 						<tr>
 							<th>Type</th>
 							<th>min</th>
@@ -132,11 +123,71 @@
 						</tr>
 
 					</table>
+					<br>
+			</div>
+			<button class="accordion"><span id="tit3">Affecter une valeur à une variable</span></button>
+			<div class="panel">
+				<p>
+					C'est tout ce qu'il y a de plus bête. Si vous voulez donner une valeur à la variablenombreDeVies, il suffit de procéder comme ceci :
+				</p>
+				<div class="code">
+					<code>nombreDeVies = 5;</code>
+				</div>
+				<p>
+					Rien de plus à faire. Vous indiquez le nom de la variable, un signe égal, puis la valeur que vous voulez y mettre. <br>
+					Ici, on vient de donner la valeur 5 à la variablenombreDeVies. <br>
+					Notre programme complet ressemble donc à ceci : 
+				</p>
+				<div class="code">
+					<code>
+						#include &lt;stdio.h&gt; <br>
+						#include &lt;stdlib.h&gt; <br>
+						int main(int argc, char *argv[]) <br>
+						{ <br>
+						  int nombreDeVies; <br>
+						  nombreDeVies = 5; <br> 
+						  return 0; <br>
+						 }
+					</code>
+				</div>
+				<p>On peut s'amuser si on veut à changer la valeur par la suite :</p>
+				<div class="code">
+					<code>
+						int nombreDeVies; <br>
+						nombreDeVies = 5; <br>
+						nombreDeVies = 4; <br>
+						nombreDeVies = 3;
+					</code>
+				</div>
+				<p>
+					Dans cet exemple, la variable va prendre d'abord la valeur 5, puis 4, et enfin 3. Comme votre ordinateur est très rapide, tout cela se passe extrêmement vite. Vous n'avez pas le temps de cligner des yeux que votre variable vient de prendre les valeurs 5, 4 et 3… et ça y est, votre programme est fini. <br>
+					Voici une question très importante que je veux vous soumettre : <br>
+					Quand on déclare une variable, quelle valeur a-t-elle au départ ? <br>
+					En effet, quand l'ordinateur lit cette ligne :
+				</p>
+				<div class="code">
+					<code>
+						int nombreDeVies;
+					</code>
+				</div>
+				<p>
+					il réserve un petit emplacement en mémoire, d'accord. Mais quelle est la valeur de la variable à ce moment-là ? Y a-t-il une valeur par défaut (par exemple 0) ? <br>
+					Eh bien, accrochez-vous : la réponse est non. Non, non et non, il n'y a pas de valeur par défaut. En fait, l'emplacement est réservé mais la valeur ne change pas. On n'efface pas ce qui se trouve dans la « case mémoire ». Du coup, votre variable prend la valeur qui se trouvait là avant dans la mémoire, et cette valeur peut être n'importe quoi ! <br>
+					Si cette zone de la mémoire n'a jamais été modifiée, la valeur est peut-être 0. Mais vous n'en êtes pas sûrs, il pourrait très bien y avoir le nombre 363 ou 18 à la place, c'est-à-dire un reste d'un vieux programme qui est passé par là avant ! <br>
+					Il faut donc faire très attention à ça si on veut éviter des problèmes par la suite. Le mieux est d'initialiser la variable dès qu'on la déclare. En C, c'est tout à fait possible. En gros, ça consiste à combiner la déclaration et l'affectation d'une variable dans la même instruction :
+				</p>
+				<div class="code">
+					<code>int nombreDeVies = 5;</code>
+				</div>
+				<p>Ici, la variablenombreDeViesest déclarée et prend tout de suite la valeur 5. <br>
+				L'avantage, c'est que vous êtes sûrs après que cette variable contient une valeur correcte, et pas du n'importe quoi.</p>
 			</div>
 		</section>
 	</div>
-	<button><a href="chap1.html"> < Chapitre précédent</a></button>
-	<button><a href="chap3.html">Chapitre suivant > </a></button>
+	<div class="btns">
+		<a href="intro.html" class="prec"> < Chapitre précédent</a>
+		<a href="chap2.html" class="suiv">Chapitre suivant > </a>
+	</div>
 </main>
 
 <footer>
