@@ -174,6 +174,11 @@ footer a:hover
 }
 
 /*cours 3 intro*/
+p:first-letter
+{
+	font-size: 1.5em;
+	padding: 1% 0% 1% 2%;
+}
 main
 {
 	display: flex;
@@ -181,7 +186,7 @@ main
 }
 main nav
 {
-	  background-color: #3391FF;
+	background-color: #3391FF;
 	width: 20%;
 	border-radius: 0px 20px 20px 0px;
 	margin-right: 5%;
@@ -278,6 +283,11 @@ main>button
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
+/*cours 2 intro */
+code span
+{
+	color: grey !important;
+}
 /*cours 3 chap 1*/
 p>span
 {
@@ -329,4 +339,18 @@ main nav span
 	padding: 1% 1%;
 	margin: 2% 2%;
 	display: inline-block;
+}
+p#dang
+{
+	padding: 1%;
+	background-color: pink;
+	color: red;
+	font-weight: bold;
+	display: none;
+	border-radius: 8px;
+}
+p#score
+{
+	background-color: green;
+	font-weight: bolder;
 }

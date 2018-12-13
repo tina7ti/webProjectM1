@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
+	<meta charset="utf-8">
 	<title>PYTHON-INFOcours</title>
-	<link rel="stylesheet" type="text/css" href="..\..\css\style.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
 </head>
 <body>
 <header>
@@ -25,14 +26,14 @@
 	</nav>
 </header>
 <main>
-	<nav><img src="..\..\img\python.png" alt="python icon"></nav>
+	<nav><img src="../../img/python.png" alt="python icon"></nav>
 	<div>
 		<h1>Bah, C'est votre 3éme évaluation cher(e) étudiant(e). ^_^</h1>
 		<h2>On commence: (nous croyons que vous avez habitué) mais malgré ça on vous répete nos régles:</h2>
 		<ul>
 			<li>Veuillez choisir 1 seule réponse pour chaque question.</li>
 			<li>Chaque question sera noter sur 1 point.</li>
-			<li>A la fin de quiz on vous affiche votre score ainsi que toutes les bonnes réponses.</li>
+			<li>A la fin de quiz on vous affiche votre score ainsi que toutes les bonnes réponses (mentionnés en vert).</li>
 		</ul>
 	</div>
 	<div class="quiz">
@@ -45,25 +46,25 @@
 					a = 2 <br> b = 3 <br> c = a / b 
 				</code>
 			</div></p>
-			<input type="radio" name="qst1"> <span> int </span> <br><br>
-			<input type="radio" name="qst1"> <span> float </span><br><br>
-			<input type="radio" name="qst1"> <span> string </span><br>
+			<input type="radio" name="qst1"> <span id="s10"> int </span> <br><br>
+			<input type="radio" name="qst1"> <span id="s11"> float </span><br><br>
+			<input type="radio" name="qst1"> <span id="s12"> string </span><br>
 			<hr>
 			<h2>Qustion 3: </h2>
 			<p> Comment copie-t-on parfaitement une liste : <br><br>
 			On a 2 listes (li1,li2) </p><br><br>
-			<input type="radio" name="qst3"> <span> li2 = li1[ : ] </span> <br><br>
-			<input type="radio" name="qst3"> <span> li2 = li1 </span><br><br>
-			<input type="radio" name="qst3"> <span> li2 = li2+li1 </span><br><br>
+			<input type="radio" name="qst3"> <span id="s30"> li2 = li1[ : ] </span> <br><br>
+			<input type="radio" name="qst3"> <span id="s31"> li2 = li1 </span><br><br>
+			<input type="radio" name="qst3"> <span id="s32"> li2 = li2+li1 </span><br><br>
 			
 			</div>
 			<div id="q2">
 			<h2>Qustion 2: </h2>
 			<p>Laquelle entre ces variables est de type <span> string </span> <br> </p>
 			<br><br><br><br><br>
-			<input type="radio" name="qst2"> <span> 2 </span> <br><br>
-			<input type="radio" name="qst2"> <span> 2 + 2 </span><br><br>
-			<input type="radio" name="qst2"> <span> "2" </span><br><br>
+			<input type="radio" name="qst2" > <span id="s20"> 2 </span> <br><br>
+			<input type="radio" name="qst2"> <span  id="s21"> 2 + 2 </span><br><br>
+			<input type="radio" name="qst2" > <span id="s22"> "2" </span><br><br>
 			<hr>
 			<h2>Qustion 4: </h2>
 			<p> Que va afficher ce programme ? x =0
@@ -77,8 +78,12 @@
 				</code>
 				</div>
 			</p>
-			<input type="radio" name="qst4"> <span> 6 </span> <br>
-			<input type="radio" name="qst4"> <span> 9 </span>
+			<input type="radio" name="qst4"> <span id="s40"> 6 </span> <br>
+			<input type="radio" name="qst4"> <span id="s41"> 9 </span>
+			</div>
+			<div>
+				<p id="dang"></p> <p id="score"></p>
+				<input type="button" name="button1" value="Envoyer" onclick="quiz3()">
 			</div>
 		</form>
 	</div>
@@ -119,6 +124,6 @@
         <p class="copyright">copyright&copy;2018-2019</p>
     </footer>
 
-    <script type="text/javascript" src="../../js/script.js"></script>
+    <script src="../../js/script.js"></script>
 </body>
 </html>

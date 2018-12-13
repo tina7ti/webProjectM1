@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>C-INFOcours</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+<header>
+	<nav>
+		<ul>
+		 	<li id="brand"><b>INFOcours</b></li>
+ 			<li id="menu">
+   				<button>Cours<span id="trian"></span></button>
+    			<div id="ssmenu">
+      				<a href="#">JAVA</a>
+      				<a href="#">C</a>
+      				<a href="#">PYTHON</a>
+      				<a href="#">PHP</a>
+      				<a href="#">JS</a>
+    			</div>
+  			</li>
+  			<li class="droite"><a href="#">Insciption</a></li>
+  			<li class="droite"><a href="#">Connexion</a></li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<nav>
+		<img src="../../img/C.png" alt="C icon">
+		<dl>
+			<li><a href="#tit1">Que est ce qu'on va apprendre dans ce cours ?</a></li>
+			<li><a href="#tit2">Un minimum de code</a></li>
+			<li><a href="#tit3">Qu'est ce que main et include ?</a></li>
+			<li><a href="#tit4">Les commentaires.</a></li>
+			<li><a href="#chapitres">LES CHAPITRES</a></li>
+		</dl>
+	</nav>	
+	<div >
+		<article>
+			<h1>C !</h1>
+			<p>
+				Le C est un langage incontournable qui en a inspiré beaucoup d'autres. Inventé dans les années 70, il est toujours d'actualité dans la programmation système et la robotique. Il est plutôt complexe, mais si vous le maîtrisez vous aurez des bases de programmation très solides !
+
+
+			</p>
+		</article>
+		<section>
+			<button class="accordion"><span id="tit1">Que est ce qu'on va apprendre dans ce cours ?</span></button>
+			<div class="panel">
+				
+			<p>Dans ce cours, vous commencerez par découvrir le fonctionnement de la mémoire, des variables, des conditions et des boucles. Puis vous réutiliserez tout ce que vous avez appris pour créer des interfaces graphiques avec la bibliothèque SDL (jeux vidéo, animations audio...). Enfin, vous apprendrez à manipuler les structures de données les plus courantes pour organiser les informations en mémoire : listes, piles, files, tables de hachage...</p>
+			</div>
+			<button class="accordion"><span id="tit2">Un minimum de code</span></button>
+			<div class="panel">
+				<p>Pour n'importe quel programme, il faudra taper un minimum de code. Ce code ne fera rien de particulier mais il est indispensable.
+				C'est ce « code minimum » que nous allons découvrir maintenant. Il devrait servir de base pour la plupart de vos programmes en langage C.</p>
+				<h3>Demandez le code minimal à votre IDE</h3>
+				<p>Selon l'IDE que vous avez choisi dans le chapitre précédent, la méthode pour créer un nouveau projet n'est pas la même. Reportez-vous à ce chapitre si vous avez oublié comment faire.</p>
+				<p>Pour rappel, sous Code::Blocks (qui est l'IDE que je vais utiliser tout au long de ce cours), il faut aller dans le menuFile / New / Project, puis choisirConsole Applicationet sélectionner le langage C.</p>
+				Code::Blocks a donc généré le minimum de code en langage C dont on a besoin. Le voici : <br>
+				<div class="code">
+					<code>
+					#include &lt;stdio.h&gt; <br>
+					#include &lt;stdlib.h&gt;<br>
+					int main() <br>
+					{ <br>
+    					printf("Hello world!\n"); <br>
+    					return 0; <br>
+					}
+					</code>
+				</div>
+			</div>
+			<button class="accordion"><span id="tit3">Qu'est ce que main et include ?</span></button>
+			<div class="panel">
+				<p>
+					Le motincludeen anglais signifie « inclure » en français. Ces lignes demandent d'inclure des fichiers au projet, c'est-à-dire d'ajouter des fichiers pour la compilation. <br>
+					Il y a deux lignes, donc deux fichiers inclus. Ces fichiers s'appellent <span>stdio.h</span> et <span>stdlib.h</span>. Ces fichiers existent déjà, des fichiers source tout prêts. On verra plus tard qu'on les appelle des bibliothèques (certains parlent aussi de librairies mais c'est un anglicisme). En gros, ces fichiers contiennent du code tout prêt qui permet d'afficher du texte à l'écran.
+				</p>
+				<p>
+					Sans ces fichiers, écrire du texte à l'écran aurait été mission impossible. L'ordinateur à la base ne sait rien faire, il faut tout lui dire. Vous voyez la galère dans laquelle on est !
+				</p>
+				<p>Bref, en résumé les deux premières lignes incluent les bibliothèques qui vont nous permettre (entre autres) d'afficher du texte à l'écran assez « facilement ».
+				</p> 
+				Passons à la suite. La suite, c'est tout ça : <br>
+				<div class="code">
+					<code>
+						int main() <br>
+						{<br>
+						    printf("Hello world!\n"); <br>
+						        return 0;<br>
+						    }
+					</code>
+				</div>
+				<p>
+					Ce que vous voyez là, c'est ce qu'on appelle une fonction. Un programme en langage C est constitué de fonctions, il ne contient quasiment que ça. Pour le moment, notre programme ne contient donc qu'une seule fonction.
+				</p>
+				<p>
+					Une fonction permet grosso modo de rassembler plusieurs commandes à l'ordinateur. Regroupées dans une fonction, les commandes permettent de faire quelque chose de précis. Par exemple, on peut créer une fonctionouvrir_fichierqui contiendra une suite d'instructions pour l'ordinateur lui expliquant comment ouvrir un fichier. <br>
+					L'avantage, c'est qu'une fois la fonction écrite, vous n'aurez plus qu'à direouvrir_fichier, et votre ordinateur saura comment faire sans que vous ayez à tout répéter !
+				</p>
+				<p>
+					Sans rentrer dans les détails de la construction d'une fonction (il est trop tôt, on reparlera des fonctions plus tard), analysons quand même ses grandes parties. La première ligne contient le nom de la fonction, c'est le deuxième mot.
+				</p>.
+			</div>
+			<button class="accordion"><span id="tit4">Les commentaires</span></button>
+			<div class="panel">
+				
+			<p>Avant de terminer ce premier chapitre de « véritable » programmation, je dois absolument vous faire découvrir les commentaires. Quel que soit le langage de programmation, on a la possibilité d'ajouter des commentaires à son code. Le langage C n'échappe pas à la règle.</p>
+			<p>
+				Cela signifie taper du texte au milieu de votre programme pour indiquer ce qu'il fait, à quoi sert telle ligne de code, etc. C'est vraiment quelque chose d'indispensable car, même en étant un génie de la programmation, on a besoin de faire quelques annotations par-ci par-là. Cela permet :
+			</p>
+			<p>
+				de vous retrouver au milieu d'un de vos codes source plus tard. On ne dirait pas comme ça, mais on oublie vite comment fonctionnent les programmes qu'on a écrits. Si vous faites une pause ne serait-ce que quelques jours, vous aurez besoin de vous aider de vos propres commentaires pour vous retrouver dans un gros code ;
+			</p>
+			<p>
+				si vous donnez votre projet à quelqu'un d'autre (qui ne connaît a priori pas votre code source), cela lui permettra de se familiariser avec bien plus rapidement ; <br>
+				enfin, ça va me permettre à moi d'ajouter des annotations dans les codes source de ce cours. Et de mieux vous expliquer à quoi peut servir telle ou telle ligne de code. <br>
+				Il y a plusieurs manières d'insérer un commentaire. Tout dépend de la longueur du commentaire que vous voulez écrire. <br>
+				Il y a plusieurs manières d'insérer un commentaire. Tout dépend de la longueur du commentaire que vous voulez écrire. <br>
+				Votre commentaire est court : il tient sur une seule ligne, il ne fait que quelques mots. Dans ce cas, vous devez taper un double slash (//) suivi de votre commentaire. Par exemple : <br>
+			</p>
+			<div class="code">
+				<code>
+					<span>// Ceci est un commentaire</span>
+				</code>
+			</div>
+			<p>
+				Vous pouvez aussi bien écrire un commentaire seul sur sa ligne, ou bien à droite d'une instruction. C'est d'ailleurs quelque chose de très pratique car ainsi, on sait que le commentaire sert à indiquer à quoi sert la ligne sur laquelle il est. Exemple :
+			</p>
+			<div class="code">
+				<code>
+					printf("Bonjour"); <span>// Cette instruction affiche Bonjour à l'écran</span>
+				</code>
+			</div>
+			<p>
+				Votre commentaire est long : vous avez beaucoup à dire, vous avez besoin d'écrire plusieurs phrases qui tiennent sur plusieurs lignes. Dans ce cas, vous devez taper un code qui signifie « début de commentaire » et un autre code qui signifie « fin de commentaire » :
+				<br>pour indiquer le début du commentaire : tapez un slash suivi d'une étoile (/*) ;
+				<br>pour indiquer la fin du commentaire : tapez une étoile suivie d'un slash (*/).
+			</p>
+			</div>
+		</section>
+
+
+
+		<section id="chapitres">
+			<button class="accordion"><span>LES CHAPITRES</span></button>
+			<div class="panel">
+				<ul>
+					<li><a href="chap1.html"><span>Chapitre 1 : </span>Les variables</a></li>
+					<li><a href="chap2.html"><span>Chapitre 2 : </span>Calcules & les variables</a></li>
+					<li><a href="chap3.html"><span>Chapitre 3 : </span>Les listes & les tuples</a></li>
+					<li><a href="chap4.html"><span>Chapitre 4 : </span>Conditions IF & boucles for/while</a></li>
+					<li><a href="quiz3.html"><span>QUIZ : </span>quiz 1</a></li>
+				</ul>
+			</div>
+		</section>
+	</div>
+	<button><a href="chap1.html">Commencez le cours</a></button>
+</main>
+
+<footer>
+            <div class="informations">
+                    <h3>INFORMATIONS</h3>
+                    <dl>
+                        <li><a href="contact.html">Contactez-nous</a></li>
+                        <li><a href="#">A propos de nous</a></li>
+                        <li><a href="#">Aide en ligne</a></li>
+                    </dl>
+                </div>
+                <div class="contenus">
+                    <h3>CONTENUS</h3>
+                    <dl>
+                        <li><a href="#">Titres</a></li>
+                        <li><a href="#">Paragraphes</a></li>
+                        <li><a href="#">Images</a></li>
+                        <li><a href="#">Vidéos</a></li>
+                    </dl>
+                </div>
+                <div class="suivi-nous">
+                    <h3>SUIVI-NOUS</h3>
+                    <dl>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Google+</a></li>
+                    </dl>
+                </div>
+        <p class="copyright">copyright&copy;2018-2019</p>
+    </footer>
+
+    <script type="text/javascript" src="../../js/script.js"></script>
+</body>
+</html>
