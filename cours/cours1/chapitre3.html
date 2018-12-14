@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JAVA-INFOcours</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+	<header>
+	<nav>
+		<ul>
+		 	<li id="brand"><b>INFOcours</b></li>
+ 			<li id="menu">
+   				<button>Cours<span id="trian"></span></button>
+    			<div id="ssmenu">
+      				<a href="presentation_java.html">JAVA</a>
+      				<a href="../cours2/intro.html">C</a>
+      				<a href="../cours3/intro.html">PYTHON</a>
+      				<a href="../cours4/presentation.html">Gérez votre projet informatique facimlement</a>
+      				<a href="#">JS</a>
+    			</div>
+  			</li>
+  			<li class="droite"><a href="#">Insciption</a></li>
+  			<li class="droite"><a href="#">Connexion</a></li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<nav>
+		<img src="../../img/java-png-java-png-clipart-png-image-200.png" alt="java icon">
+		<dl>
+			<li><a href="chapitre1.html">Notions élémentaires</a></li>
+			<li><a href="chapitre2.html">Les méthodes</a></li>
+			<li><a href="chapitre3.html">Les tableaux</a></li>
+			<li><a href="chapitre4.html">Les types non primitifs</a></li>
+			<li><a href="chapitre5.html">Les objets</a></li>
+		</dl>
+	</nav>
+	<div>
+
+		<header>
+			<h1>LES TABLEAUX</h1>
+		</header>
+		<section>		 
+		 	<p>Les tableaux permettent de regrouper un ensemble de valeurs de même type.</p>
+		 		<button class="accordion">TABLEAUX À 1 DIMENSION</button>
+		 		<div class="panel">
+		 			<p>
+		 			Un tableau à 1 dimension est une collection linéaire d’éléments de même type. Chaque case d’un tableau est
+					identifiée par un indice et contient une valeur. Les indices d’un tableau commencent à 0. Il s’ensuit, qu’un
+					tableau de n éléments aura des indices compris entre 0 et n − 1.
+
+		 		</p>
+
+		 		<figure>
+		 			<img src="../../img/tab.PNG" alt="structure tableau">
+		 		</figure>
+		 		
+		 		<p>
+		 			Le type contenu dans les cases du tableau est choisi lors de la déclaration du tableau. En revanche, la taille
+					du tableau, ne fait pas parti de son type et sera définie lors de l’instanciation du tableau. La déclaration d’un
+					tableau se fait avec la syntaxe []
+		 		</p>
+		 		<div class="code"><code>
+		 			int[] tabInt ; <span>// Déclaration d’un tableau d’entiers</span> <br>
+					char[] tabChar ; <span>// Déclaration d’un tableau de caractères</span>
+		 		</code></div>
+		 		<p>L’instanciation quant à elle précise la taille à réserver. Elle se fait avec le mot clé new.</p>
+		 		<div class="code"><code>
+		 			int[] tabInt ; <span>// Déclaration d’un tableau d’entiers</span> <br>
+					tabInt = new int[10]; <span>// Instanciation d’un tableau de 10 entiers</span>
+		 		</code></div>
+		 		<p>
+		 			A noter qu’il est possible, dans le cas de l’initialisation uniquement, de décrire tout le tableau sous la forme
+					d’une liste de valeurs. Cela initialise automatiquement le tableau avec le nombre adéquate de cellules et les
+					valeurs sont stockées dans les différentes cases.
+
+		 		</p>
+		 		</div>
+		 		
+		 		<button class="accordion">TABLEAUX À N DIMENSIONS</button>
+		 		<div class="panel">
+		 			<p>
+		 			Un tableau à 2 dimensions est un cas particulier de tableaux à 1 dimension. En effet, c’est simplement un
+					tableau dont chaque case contient un tableau à 1 dimension d’éléments. Par récurrence, il est donc possible
+					de définir un tableau à n dimensions. Du point de vue de la notation, chaque dimension correspond à un
+					couple de crochets supplémentaires au niveau du type et des accès.
+		 		</p>
+		 		<div class="code">
+		 			<code>
+		 			char[][] T ; <span> // Déclaration d’un tableau à 2 dimensions de caractères</span> <br>
+					T = new char[3][5]; <span>// Instanciation d’un tableau contenant 3 tableaux de 5 caractères chacun. T a donc 3 lignes et 5 colonnes.</span>
+					</code>
+		 		</div>
+		 		<p>
+		 			Les multiples crochets sont lus de gauche à droite, ce qui correspond à regarder les tableaux depuis le plus
+					extérieur vers plus plus intérieur. Ainsi, T.length renvoie 3, la taille du tableau extérieur, T[0].length renvoie
+					5 la taille du tableau contenu dans la première case de T. C’est la même convension qu’en mathématiques
+					pour les matrices, d’abord les lignes, puis les colonnes. Pour finir, comme chaque dimension est un tableau,
+					il s’ensuit que chaque dimension est indicée de 0 à n − 1.
+
+		 		</p>
+		 		<figure>
+		 			<img src="../../img/matrice.PNG" alt="matrice">
+		 		</figure>
+		 	</div>		
+		</section>
+
+	</div>
+	<div class="btns">
+		<a href="chapitre2.html" class="prec"> < Chapitre précédent</a>
+		<a href="chapitre4.html" class="suiv">Chapitre suivant > </a>
+	</div>
+</main>
+
+<footer>
+            <div class="informations">
+                    <h3>INFORMATIONS</h3>
+                    <dl>
+                        <li><a href="contact.html">Contactez-nous</a></li>
+                        <li><a href="#">A propos de nous</a></li>
+                        <li><a href="#">Aide en ligne</a></li>
+                    </dl>
+                </div>
+                <div class="contenus">
+                    <h3>CONTENUS</h3>
+                    <dl>
+                        <li><a href="#">Titres</a></li>
+                        <li><a href="#">Paragraphes</a></li>
+                        <li><a href="#">Images</a></li>
+                        <li><a href="#">Vidéos</a></li>
+                    </dl>
+                </div>
+                <div class="suivi-nous">
+                    <h3>SUIVI-NOUS</h3>
+                    <dl>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Google+</a></li>
+                    </dl>
+                </div>
+        <p class="copyright">copyright&copy;2018-2019</p>
+    </footer>
+
+ <script src="../../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JAVA-INFOcours</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+	<header>
+	<nav>
+		<ul>
+		 	<li id="brand"><b>INFOcours</b></li>
+ 			<li id="menu">
+   				<button>Cours<span id="trian"></span></button>
+    			<div id="ssmenu">
+      				<a href="presentation_java.html">JAVA</a>
+      				<a href="../cours2/intro.html">C</a>
+      				<a href="../cours3/intro.html">PYTHON</a>
+      				<a href="../cours4/presentation.html">Gérez votre projet informatique facimlement</a>
+      				<a href="#">JS</a>
+    			</div>
+  			</li>
+  			<li class="droite"><a href="#">Insciption</a></li>
+  			<li class="droite"><a href="#">Connexion</a></li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<nav>
+		<img src="../../img/java-png-java-png-clipart-png-image-200.png" alt="java icon">
+		<dl>
+			<li><a href="chapitre1.html">Notions élémentaires</a></li>
+			<li><a href="chapitre2.html">Les méthodes</a></li>
+			<li><a href="chapitre3.html">Les tableaux</a></li>
+			<li><a href="chapitre4.html">Les types non primitifs</a></li>
+			<li><a href="chapitre5.html">Les objets</a></li>
+		</dl>
+	</nav>
+	<div>
+
+
+	<header>
+		<h1>Notions élémentaires</h1>
+	</header>
+
+
+	<section>
+		<button class="accordion">QU&#039;EST-CE QU&#039;UN PROGRAMME ?</button>
+		<div class="panel">
+			<p>
+				L&#039;objectif de la programmation est de créer des logiciels ou programmes. Ceux-ci sont constitués d&#039;un ensemble de traitements qui permettent de transformer des données numériques (les entrées) en d&#039;autres données numériques (les sorties). Les données de sortie peuvent être affichées sous une forme graphique (avec 1 des fenêtres comme le fond les programmes tels que Word et Excel) ou plus simplement affichées dans une console?1 sous forme de texte.
+				Que se passe-t-il pour l&#039;ordinateur lorsqu&#039;on exécute un programme ? Il va lire le fichier exécutable du
+				programme comme une suite de 0 et de 1 (codage binaire) et exécuter l’une après l&#039;autre les instructions
+                ainsi codées. Cette suite de 0 et de 1 est appelée langage machine et est directement exécutable par le microprocesseur de l&#039;ordinateur. Or il est très difficile pour un humain de programmer directement en binaire,
+                c&#039;est pourquoi on utilise un langage de programmation écrit en langage textuel dans un fichier source (fichier
+                .java). Le fichier source est ensuite compilé?
+                en langage binaire (fichier .class) puis exécuté pour réaliser les
+                traitements.
+			</p>
+			
+		</div>
+		 <button class="accordion">Les variables</button>
+		 <div class="panel">
+		 	<p>
+		 		Les variables constituent l&#039;aspect le plus important de la programmation, puisqu&#039;elles permettent de stocker
+dans un emplacement mémoire les données et de les transformer en utilisant des opérateurs?
+. On peut se
+représenter une variable comme une étiquette associée à une unique boîte dans laquelle est rangée une valeur
+d’un certain type (entier ou réel, par exemple) :
+		 	</p>
+		 	
+		 	
+		 		<img src="../../img/variables.PNG" alt="variables">
+		 	
+			
+			
+			<p>
+				Avant de pouvoir utiliser une variable, il est nécessaire de la déclarer?
+, c&#039;est-à-dire d’associer la variable à un
+emplacement de la mémoire et de spécifier son type. C’est en fonction du type de la variable que la taille
+de l&#039;emplacement mémoire (en octet, soit 8 bits) et le codage binaire de la valeur seront déterminés. La
+déclaration se fait par une instruction de la forme :
+			</p>
+			<div class="code"><code> typeVariable nomVariable; </code> </div>
+			<p>
+				La variable nomVariable est de type typeVariable. Il lui est associé un emplacement mémoire qui contient une valeur qu&#039;il faut initialiser?
+. Cela se fait en utilisant l&#039;opérateur d&#039;affectation “=” :
+
+			</p>
+			<div class="code"><code>nomVariable = uneValeur;</code> </div>
+
+			<p>
+				L’affectation?
+écrit dans l&#039;emplacement mémoire associé à nomVariable la valeur uneValeur. On dit alors
+que nomVariable “prend la valeur” uneValeur
+			</p>
+
+			<p class="remarq">
+				uneValeur doit être compatible avec le type de nomVariable. Par exemple si typeVariable est un
+entier, uneValeur doit être une valeur entière. On peut faire ici le parallèle entre le type d’une variable
+et l&#039;unité de mesure d’une grandeur physique qui spécifie la nature de la grandeur manipulée.
+
+			</p>
+
+			<p>
+				On peut également faire la déclaration et l&#039;initialisation d’une variable en une seule instruction :
+			</p>
+
+			<div class="code"><code>typeVariable nomVariable = uneValeur;</code></div>
+			<p>
+				Dans la suite, nous allons détailler les quatre types dits “primitifs”? mémoire (contrairement aux types non primitifs que nous verrons dans la section 3), c&#039;est-à-dire que la valeur
+				affectée à la variable est stockée dans l&#039;emplacement mémoire associée à celle-ci. Pour chacun de ces types, nous verrons également les opérateurs que l&#039;on peut appliquer sur des variables de ce type pour transformer leur valeur.
+
+			</p>
+
+			<ol>
+				<li><h3>LES TYPES PRIMITIFS</h3></li>
+				<p>
+					On distingue 4 catégories de types primitifs (entier, réel, booléens, caractères). L&#039;intervalle de valeurs représentables pour chacun des types peut varier en fonction de l&#039;espace mémoire qu&#039;ils occupent.
+				</p>
+				<p>
+					<div class="titres">LES ENTIERS</div> En Java, tous les types permettant de représenter des entiers sont signés. Ainsi, sur n bits. Les valeurs négatives sont encodées en complément à 2. Pour
+					un rappel sur cet encodage, nous vous renvoyons au cours de numération disponible sur la page du CIPC.
+					Les différents types d’entiers sont les suivants :
+				</p>
+				<table border="1">
+			<thead>
+				<tr>
+					<th><p>Nom</p></th>
+					<th><p>Taille</p></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><p>byte</p></td>
+					<td><p>1 octet</p></td>
+				</tr>
+				<tr>
+					<td><p>short</p></td>
+					<td><p>2 Octets</p></td>
+				</tr>
+				<tr>
+					<td><p>int</p></td>
+					<td><p>4 octets</p></td>
+				</tr>
+				<tr>
+
+					<td><p>long</p></td>
+					<td><p>8 octets</p></td>
+				</tr>
+			</tbody>
+		</table>
+
+			
+
+			<p>
+				On peut appliquer des opérateurs arithmétiques (+,-,*,/) à deux variables ou deux expressions de type entier
+(la composition étant possible comme en mathématiques). Le résultat de cette opération est également du
+type entier (ce qui permet la composition).
+
+			</p>
+			<p class="remarq">
+				Lorsque les deux opérandes sont de type entier, l&#039;opérateur / calcule la division entière et l&#039;opérateur %
+calcule le reste de cette division.
+			</p>
+
+			<p>
+				<span class="titres">LES RÉELS</span> La description du codage des réels est décrite dans le cours de numération sur la page du CIPC. En
+Java il existe deux types de représentation pour les nombres réels : simple et double précision (respectivement
+les types float et double).
+
+			</p>
+
+			<table border="1">
+			<thead>
+				<tr>
+					<th><p>Nom</p></th>
+					<th><p>Taille</p></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><p>float</p></td>
+					<td><p>4 octet</p></td>
+				</tr>
+				<tr>
+					<td><p>double</p></td>
+					<td><p>8 Octets</p></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p class="remarq">
+			Lorsqu&#039;au moins une des opérandes est de type réel, l’opérateur / calcule la division réelle.
+		</p>
+
+		<p>
+			<span class="titres">LES BOOLÉENS</span> Un type de variable très utile en informatique est le type booléen, qui prend deux valeurs
+VRAI ou FAUX.
+
+		</p>
+		<table border="1">
+			<thead>
+				<tr>
+					<th><p>Nom</p></th>
+					<th><p>Taille</p></th>
+					<th><p>Valeurs</p></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><p>boolean</p></td>
+					<td><p>1 octet</p></td>
+					<td><p>true / false</p></td>
+				</tr>
+
+			</tbody>
+		</table>
+
+		<p>
+			<span class="titres">LES CARACTÈRES</span> Le type caractère peut correspondre à n&#039;importe quel symbole du clavier (lettre en majuscule ou minuscule, chiffre, ponctuation et symboles).
+
+		</p>
+
+		<table border="1">
+			<thead>
+				<tr>
+					<th><p>Nom</p></th>
+					<th><p>Taille</p></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><p>char</p></td>
+					<td><p>2 octets</p></td>
+				</tr>
+
+			</tbody>
+		</table>
+
+		<p>Pour distinguer la valeur correspondant au caractère a de la variable dénommée a, on utilise l&#039;	apostrophe
+			pour la première.</p>
+		
+		<p>
+			Comme toute donnée numérique, un caractère est encodé sous forme d’une suite de 0 et de 1 que l&#039;on peut
+			interpréter comme un entier non signé. Dans certains contextes, il est utile de manipuler directement ce code.
+			On convertit alors la variable de type <code>char</code> en une variable de type <code>int</code> comme expliqué ci-dessous.
+
+		</p>
+		<li><h3>LES CONVERSIONS</h3></li>
+
+		<p>
+			La conversion (également appelée transtypage) d’un type primitif en un autre se fait de la manière suivante :
+		</p>
+		<div class="code"><code>typeVariableA variableA = (typeVariableA) valeurB</code></div>
+		<p>
+			Si variableA et valeurB ne sont pas du même type, cette instruction affecte à variableA la conversion
+			de la valeur de valeurB dans le type typeVariableA
+		</p>
+
+		<li><h3>LES OPÉRATEURS DE COMPARAISON</h3></li>
+		<p>
+			Les opérateurs de comparaison permettent de comparer deux variables d’un même type primitif (entier, flottant, booléen et caractère) et renvoient une valeur booléenne :
+		</p>
+		<ul>
+			<li>== comparaison d’égalité</li>
+			<li>!= différence</li>
+			<li>< inférieur strict</li>
+			<li><= inférieur ou égal (s’écrit de la même manière dont on le prononce)</li>
+			<li>> supérieur strict</li>
+            <li>>= supérieur ou égal (s’écrit de la même manière dont on le prononce)</li>
+		</ul>
+
+</ol>
+
+		 </div>
+
+		 <button class="accordion">LE PROGRAMME</button>
+		 <div class="panel">
+		 	<p>
+		 		De manière générale, la structure d’un programme simple est toujours la même. Cette structure de base doit être apprise par cœur, car elle constitue le squelette du programme. Il est conseillé, lors de la création d’un programme, de commencer par écrire cette structure. En effet, une fois cette structure créée, le programme est fonctionnel : il peut être compilé? et exécuté?. Bien entendu à ce stade, le programme ne fait strictement rien puisqu’il n’y a aucune instruction, seulement des commentaires.
+		 	</p>
+
+		 	
+	<div class="code"><pre><code>public class Exemple{ //Exemple est le nom du programme
+			// écrit dans le fichier Exemple.java
+			public static void main (String[] args){
+			//bloc d’instructions du programme
+			//exécutées lors du lancement du programme
+			}
+		}</code></pre></div>
+		 	
+<br/><br/>
+		 </div>
+
+
+		 <button class="accordion">LES STRUCTURES DE CONTRÔLE</button>
+		 <div class="panel">
+		 	<p>
+		 		Le principe d’un programme est de modifier le contenu des variables à l’aide des instructions élémentaires
+				que nous venons de voir (affectation et opérateurs). Or, nous pouvons vouloir que ces instructions ne soient
+				réalisées que dans certains cas, ou bien nous pouvons vouloir répéter l’exécution de ces instructions. Ce sont
+				les structures de contrôle qui permettent de spécifier si l’exécution d’un traitement est conditionnée ou bien
+				si elle se fait de manière répétée.
+		 	</p>
+		 	<dl>
+		 		<li><h3>BLOC D’INSTRUCTIONS</h3></li>
+		 		<p>
+		 			Les accolades {} permettent de délimiter un bloc d’instructions, c’est-à-dire un ensemble d’instructions qui
+					vont être exécutées les unes à la suite des autres. Un bloc d’instructions peut, par exemple, être exécuté que
+					lorsqu’une condition est vérifiée ou bien il peut être exécuté plusieurs fois de suite. Ce sont les structures de
+					contrôle conditionnelles et itératives qui permettent d’exprimer cela. Les variables déclarées? dans un bloc
+					sont accessibles à l’intérieur de ce bloc uniquement.
+
+		 		</p>
+
+
+		 		<li><h3>STRUCTURES CONDITIONNELLES</h3></li>
+		 		<p>
+		 			Les structures de contrôle conditionnelles permettent de spécifier à quelles conditions un bloc d’instructions
+					va être exécuté. Cette condition est exprimée par une expression logique.
+		 		</p>
+		 		<p>
+		 			<span class="titres">LA STRUCTURE ALTERNATIVE</span> Le premier type de conditionnelle s’écrit comme suit :
+		 		</p>
+         		 <div class="code">
+<pre><code>if (condition) {// équivalent à (condition == true)
+	// bloc d’instructions exécutées si condition est vraie
+} else {
+// bloc d’instructions exécutées si condition est fausse
+ }</code></pre>
+			</div>
+
+			    <p>
+			    	Cette structure de contrôle exprime une alternative. Or, il est possible de vouloir qu’un bloc soit exécuté sous
+					une certaine condition et que sinon, aucune instruction ne soit exécutée. Dans ce cas, la clause else et son
+					bloc sont supprimés. Les parenthèses autour de condition, qui est variable ou une expression à valeur
+					booléenne, sont obligatoires.
+			    </p>
+			    <p>
+			    	<span class="titres">LA STRUCTURE CHOIX MULTIPLES</span> Le second type de conditionnelle permet de faire plusieurs tests de valeurs
+					sur le contenu d’une même variable. Sa syntaxe est la suivante :
+				<div class="code">
+<pre><code>switch (variable) {
+case valeur1 :
+Liste d’instructions // exécutées si (variable == valeur1)
+break;
+case valeur2 :
+Liste d’instructions // exécutées si (variable == valeur2)
+break;
+...
+case valeurN :
+Liste d’instructions // exécutées si (variable == valeurN)
+break;
+default:
+Liste d’instructions // exécutées sinon
+}</code></pre>
+				</div>	
+					
+
+			    </p>
+			    <p>
+			    	Le mot clé default précède la liste d’instructions qui sont exécutées lorsque variable a une valeur différentes de valeur1,..,valeurN. Le mot clé break indique que la liste d’instructions est terminée.
+			    </p>
+
+		 	</dl>
+
+		 </div>
+	</section>
+</div>
+<div class="btns">
+		<a href="presentation_java.html" class="prec"> < Chapitre précédent</a>
+		<a href="chapitre2.html" class="suiv">Chapitre suivant > </a>
+	</div>
+	
+</main>
+
+<footer>
+            <div class="informations">
+                    <h3>INFORMATIONS</h3>
+                    <dl>
+                        <li><a href="contact.html">Contactez-nous</a></li>
+                        <li><a href="#">A propos de nous</a></li>
+                        <li><a href="#">Aide en ligne</a></li>
+                    </dl>
+                </div>
+                <div class="contenus">
+                    <h3>CONTENUS</h3>
+                    <dl>
+                        <li><a href="#">Titres</a></li>
+                        <li><a href="#">Paragraphes</a></li>
+                        <li><a href="#">Images</a></li>
+                        <li><a href="#">Vidéos</a></li>
+                    </dl>
+                </div>
+                <div class="suivi-nous">
+                    <h3>SUIVI-NOUS</h3>
+                    <dl>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Google+</a></li>
+                    </dl>
+                </div>
+        <p class="copyright">copyright&copy;2018-2019</p>
+    </footer>
+
+
+ <script src="../../js/script.js"></script>
+
+</body>
+</html>

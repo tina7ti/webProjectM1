@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JAVA-INFOcours</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+	<header>
+	<nav>
+		<ul>
+		 	<li id="brand"><b>INFOcours</b></li>
+ 			<li id="menu">
+   				<button>Cours<span id="trian"></span></button>
+    			<div id="ssmenu">
+      				<a href="presentation_java.html">JAVA</a>
+      				<a href="../cours2/intro.html">C</a>
+      				<a href="../cours3/intro.html">PYTHON</a>
+      				<a href="../cours4/presentation.html">Gérez votre projet informatique facimlement</a>
+      				<a href="#">JS</a>
+    			</div>
+  			</li>
+  			<li class="droite"><a href="#">Insciption</a></li>
+  			<li class="droite"><a href="#">Connexion</a></li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<nav>
+		<img src="../../img/java-png-java-png-clipart-png-image-200.png" alt="java icon">
+		<dl>
+			<li><a href="chapitre1.html">Notions élémentaires</a></li>
+			<li><a href="chapitre2.html">Les méthodes</a></li>
+			<li><a href="chapitre3.html">Les tableaux</a></li>
+			<li><a href="chapitre4.html">Les types non primitifs</a></li>
+			<li><a href="chapitre5.html">Les objets</a></li>
+		</dl>
+	</nav>
+	<div>
+
+		<header>
+			<h1>MÉTHODES À PARAMÈTRES DE TYPE NON-PRIMITIF</h1>
+		</header>
+		<section>
+
+			<p>
+				En Java, le passage des paramètres à une méthode se fait par valeur. Dans le cas des types non-primitifs, cette
+				valeur est une adresse. Ainsi, une méthode ne pourra pas modifier l’adresse de la variable, en revanche elle
+				pourra modifier les valeurs stockées à cette adresse.
+
+			</p>
+		 	<button class="accordion">INSTANCIATION DES VARIABLES DE TYPE NON-PRIMITIF DANS UNE MÉTHODE</button>	
+		 	<div class="panel">
+		 		<p>
+		 			L’instanciation d’un objet à l’aide du mot clé new réserve l’emplacement mémoire nécessaire au stockage des
+					valeurs de l’objet et renvoie l’adresse. Ainsi, si cette instruction est effectuée dans une méthode, il faudra
+					penser à renvoyer cette adresse pour pouvoir manipuler l’objet en dehors de la méthode
+		 		</p>
+		 		<p>Prenons l’exemple suivant où l’on souhaite dupliquer un tableau pour pourvoir le modifier tout en conservant l’original :</p>
+
+		 		<figure>
+		 			<img src="../../img/code1.PNG" align="code source">
+		 		</figure>
+		 		
+		 	</div>
+
+		 	<button class="accordion">MODIFICATION DES VALEURS D’UNE VARIABLE DE TYPE NON-PRIMITIF DANS UNE MÉTHODE</button>
+		 	<div class="panel">
+		 		<p>
+		 			Lorsqu’on passe un objet en paramètre d’une méthode, c’est l’adresse de celui-ci qui est affectée au paramètre
+					formel de la méthode. Si la méthode modifie cette valeur (l’adresse), celle-ci ne sera pas modifiée en dehors (le contexte appelant) de la méthode. En revanche, lorsqu’on modifie les valeurs de l’objet, on change
+					directement les valeurs dans les cases mémoires de l’objet et ce changement est alors définitif.
+
+		 		</p>
+		 		<p>Prenons l’exemple suivant où l’on permute les valeurs des indices i et j du tableau :</p>
+
+		 		<figure>
+		 			<img src="../../img/code2.PNG" alt="code source">
+		 		</figure>
+
+		 	</div>
+		</section>
+
+	</div>
+	<div class="btns">
+		<a href="chapitre3.html" class="prec"> < Chapitre précédent</a>
+		<a href="chapitre5.html" class="suiv">Chapitre suivant > </a>
+	</div>
+</main>
+
+<footer>
+            <div class="informations">
+                    <h3>INFORMATIONS</h3>
+                    <dl>
+                        <li><a href="contact.html">Contactez-nous</a></li>
+                        <li><a href="#">A propos de nous</a></li>
+                        <li><a href="#">Aide en ligne</a></li>
+                    </dl>
+                </div>
+                <div class="contenus">
+                    <h3>CONTENUS</h3>
+                    <dl>
+                        <li><a href="#">Titres</a></li>
+                        <li><a href="#">Paragraphes</a></li>
+                        <li><a href="#">Images</a></li>
+                        <li><a href="#">Vidéos</a></li>
+                    </dl>
+                </div>
+                <div class="suivi-nous">
+                    <h3>SUIVI-NOUS</h3>
+                    <dl>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Google+</a></li>
+                    </dl>
+                </div>
+        <p class="copyright">copyright&copy;2018-2019</p>
+    </footer>
+
+ <script src="../../js/script.js"></script>
+</body>
+</html>

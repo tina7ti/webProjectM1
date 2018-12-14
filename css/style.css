@@ -338,14 +338,14 @@ p>span
 	border-radius: 6px / 6px;
 	padding: 0.3% 1%;
 }
-main section div .imgRight
+.imgRight
 {
 	float: right;
 	width: 20%;
 	height: 10%;
 	margin-right: 5%;
 }
-main section div .imgMiddle
+.imgMiddle
 {
 	width: 50%;
 	height: 20%;
@@ -410,4 +410,40 @@ table td
 {
 	padding: 2% 2%;
 	width: 30%;
+}
+/* cours 1*/
+/* cours java */
+#sommaire a{
+
+	text-decoration: none;
+	color: black;
+}
+#sommaire a:hover{
+	
+	font-size: 25px;
+}
+/* LES REMARQUES */
+.remarq{
+	background-color: #F1AA41;
+	border-radius: 10px;
+	padding: 8px;
+}
+/* FIN REMARQUE */
+
+.info{
+	background-color: #8ECCEA;
+	border-radius: 10px;
+	padding: 8px;
+}
+
+.titres{
+	color: blue;
+}
+figcaption{
+	text-align: center;
+}
+hr{
+	max-width: 100%;
+	margin-right: 35%;
+	margin-left: 35%;
 }

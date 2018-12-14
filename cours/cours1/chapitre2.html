@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JAVA-INFOcours</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+	<header>
+	<nav>
+		<ul>
+		 	<li id="brand"><b>INFOcours</b></li>
+ 			<li id="menu">
+   				<button>Cours<span id="trian"></span></button>
+    			<div id="ssmenu">
+      				<a href="presentation_java.html">JAVA</a>
+      				<a href="../cours2/intro.html">C</a>
+      				<a href="../cours3/intro.html">PYTHON</a>
+      				<a href="../cours4/presentation.html">Gérez votre projet informatique facimlement</a>
+      				<a href="#">JS</a>
+    			</div>
+  			</li>
+  			<li class="droite"><a href="#">Insciption</a></li>
+  			<li class="droite"><a href="#">Connexion</a></li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<nav>
+		<img src="../../img/java-png-java-png-clipart-png-image-200.png" alt="java icon">
+		<dl>
+			<li><a href="chapitre1.html">Notions élémentaires</a></li>
+			<li><a href="chapitre2.html">Les méthodes</a></li>
+			<li><a href="chapitre3.html">Les tableaux</a></li>
+			<li><a href="chapitre4.html">Les types non primitifs</a></li>
+			<li><a href="chapitre5.html">Les objets</a></li>
+		</dl>
+	</nav>
+	<div>
+
+		<header>
+			<h1>LES MÉTHODES</h1>
+		</header>
+		<section>
+			<p>
+		 		Une méthode est un bloc d’instructions pouvant être exécutées par un simple appel? de la méthode dans le bloc
+du programme principal (méthode main) ou dans une autre méthode. Les méthodes permettent d’exécuter
+dans plusieurs parties du programme un même bloc d’instructions. On est amené à créer une méthode dans
+deux cas de figure :
+		 	</p>
+		 	<ul>
+		 		<li>Pour regrouper un ensemble d’instructions qui participent à la réalisation d’une même tâche. Cela
+					permet de rendre le programme plus lisible et compréhensible par une autre personne (ou vous-même
+					lors du TP suivant) et de faciliter la mise au point du programme (correction et tests3
+					). A ce blo d’instructions est associé un nom, choisi en rapport avec le traitement réalisé par la méthode.</li>
+				<li>Pour regrouper un ensemble d’instructions qui sont répétées à différents endroits du programme (contrairement aux formes   itératives qui répètent le bloc d’instructions de manière consécutive).</li>
+		 	</ul>
+
+		 	<p>
+		 		Le rôle d’une méthode est de traiter des données. Cela signifie qu’en général, la méthode effectue un traitement à partir des données qui entrent, et renvoie un résultat.
+
+		 	</p>
+		 		<button class="accordion">LES MÉTHODES PRÉDÉFINIES</button>
+		 		<div class="panel">
+		 				<p>
+		 			En Java, il existe de nombreuses méthodes prédéfinies. La plus connue est sans doute la méthode suivante qui permet d’afficher une chaîne de caractères à l’écran 
+		 		</p>
+		 	</div>
+		 	<button class="accordion">LES MÉTHODES PROPRES</button>
+		 	<div class="panel">
+		 		<p>
+		 			<span class="titres">DÉCLARATION D’UNE MÉTHODE</span> La définition d’une méthode s’appelle déclaration
+		 		</p>
+		 		<p>
+		 			<span class="titres">APPEL D’UNE MÉTHODE</span> C’est au moment de l’appel de la méthode que les paramètres formels sont initialisés,
+					c’est-à-dire qu’une valeur leur est affectée. Les paramètres “effectifs”? de l’appel, ceux passés en argument de
+					la méthode au moment de l’appel, sont affectés aux paramètres formels de la méthode (ceux de la définition
+					de la méthode) par position : la valeur du premier paramètre effectif est affectée au premier paramètre formel,
+					et ainsi de suite. Les paramètres effectifs peuvent être des valeurs ou des variables.
+
+		 		</p>
+		 	</div>
+		 		
+		 		
+		 		<button class="accordion">LES MÉTHODES RÉCURSIVES</button>
+		 		<div class="panel">
+		 			<p>
+		 				Nous avons précédemment précisé qu’il était possible qu’une méthode appelle dans son bloc une autre méthode. Il est également possible qu’elle s’appelle elle-même. A priori, l’intérêt peut paraître limité, mais la
+						récursivité permet d’effectuer certains calculs mathématiques, en particulier avec les suites définies par récurrence. Par exemple, on peut calculer la factorielle d’un nombre entier en utilisant la récursivité.
+		 			</p>
+		 		<p>
+		 			pour calculer 4!, il suffit de calculer 3!, puis 2!, et ainsi de
+					suite, jusqu’à un cas directement résolu (sans expression récursive, le cas de base). Nous pouvons alors
+					créer une méthode calculeFactorielle ayant comme paramètre un entier n, et renvoyant l’entier n!.
+					On voit qu’il suffit que la fonction s’appelle elle-même suivant ce même principe pour calculer facilement la
+					factorielle de n’importe quel nombre entier. Cependant, arrivé au calcul de 0!, il est nécessaire que la fonction
+					renvoie directement la valeur 1, sans faire d’appel récursif. En d’autres mots, il ne faut pas que l’appel de
+					calculeFactorielle(0) provoque l’appel de calculeFactorielle(-1). Il renvoie directement 1, afin
+					de ne pas provoquer une infinité d’appels 
+		 		</p>
+		 		</div>
+
+		 		<button class="accordion">UN EXEMPLE</button>
+		 		<div class="panel">
+		 			<p>
+		 				L’exemple suivant présente un programme avec deux méthodes : CelsiusVersFahrenheit convertit valeurAConvertir,
+						une valeur réelle représentant une température en degré Celsius, en une température en degré Fahrenheit. La
+						valeur en Fahrenheit est retournée par la méthode. CelsiusVersKelvin convertit valeurAConvertir,
+						une valeur réelle représentant une température en degré Celsius, en une température en degré Kelvin. La
+						température en Kelvin est affichée et aucune valeur n’est retournée par la méthode.
+						Observez la différence entre les appels des deux méthodes dans le main : la valeur retournée par CelsiusVersFahrenheit
+						est affectée à la variable temperature, puis elle est affichée. La méthode CelsiusVersKelvin est directement appelée, sans affectation de sa valeur de retour, puisque celle-ci n’en n’a pas (mot clé void dans la
+						déclaration).<br/><br/>
+						Le programme considère les températures entières, en degré Celsius, de 0 à 39 inclus. Une fois sur deux,
+						sa conversion en degré Fahrenheit est affichée, l’autre fois c’est sa conversion en degré Kelvin qui est affichée.
+						Notez le changement de valeur de la variable calculeFahrenheit à chaque tour de boucle.
+
+		 			</p>
+
+		 			<figure>
+		 				<img src="../../img/code.PNG" alt="code source">
+		 			</figure>
+		 		
+		 		</div>
+		 	
+
+		</section>
+
+	</div>
+	<div class="btns">
+		<a href="chapitre1.html" class="prec"> < Chapitre précédent</a>
+		<a href="chapitre3.html" class="suiv">Chapitre suivant > </a>
+	</div>
+</main>
+
+<footer>
+            <div class="informations">
+                    <h3>INFORMATIONS</h3>
+                    <dl>
+                        <li><a href="contact.html">Contactez-nous</a></li>
+                        <li><a href="#">A propos de nous</a></li>
+                        <li><a href="#">Aide en ligne</a></li>
+                    </dl>
+                </div>
+                <div class="contenus">
+                    <h3>CONTENUS</h3>
+                    <dl>
+                        <li><a href="#">Titres</a></li>
+                        <li><a href="#">Paragraphes</a></li>
+                        <li><a href="#">Images</a></li>
+                        <li><a href="#">Vidéos</a></li>
+                    </dl>
+                </div>
+                <div class="suivi-nous">
+                    <h3>SUIVI-NOUS</h3>
+                    <dl>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Google+</a></li>
+                    </dl>
+                </div>
+        <p class="copyright">copyright&copy;2018-2019</p>
+    </footer>
+
+
+ <script src="../../js/script.js"></script>
+</body>
+</html>

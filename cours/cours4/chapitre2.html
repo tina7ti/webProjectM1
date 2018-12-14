@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gérez votre projet informatique facimlement-INFOcours</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+	<header>
+	<nav>
+		<ul>
+		 	<li id="brand"><b>INFOcours</b></li>
+ 			<li id="menu">
+   				<button>Cours<span id="trian"></span></button>
+    			<div id="ssmenu">
+      				<a href="../cours1/presentation_java.html">JAVA</a>
+      				<a href="../cours2/intro.html">C</a>
+      				<a href="../cours3/intro.html">PYTHON</a>
+      				<a href="presentation.html">Gérez votre projet informatique facimlement</a>
+      				<a href="#">JS</a>
+    			</div>
+  			</li>
+  			<li class="droite"><a href="#">Insciption</a></li>
+  			<li class="droite"><a href="#">Connexion</a></li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<nav>
+		<img src="../../img/java-png-java-png-clipart-png-image-200.png" alt="java icon">
+		<dl>
+			<li><a href="chapitre1.html">Comprendre les deux grandes familles de méthodologie de projet</a></li>
+			<li><a href="chapitre2.html">Appliquer les méthodologies séquentielles</a></li>
+			<li><a href="chapitre3.html">Appliquer les méthodologies agiles</a></li>
+			<li><a href="quiz4.html">quiz</a></li>
+		</dl>
+	</nav>
+	<div>
+
+
+	<header>
+		<h1>Appliquer les méthodologies séquentielles</h1>
+	</header>
+	<section>
+		
+		<button class="accordion">Etape 1 : définissez le projet</button>
+		<div class="panel">
+			<p>
+				Nous avons vu qu’une approche séquentielle supposait produire en amont tous les documents nécessaires au développement d’un projet. Pour rappel, voici les différentes phases suivies :
+			</p>
+			<ul>
+				<li>Définition du projet : production des spécifications fonctionnelles</li>
+				<li>Conception de l’architecture : production des spécifications techniques</li>
+				<li>Codage : création du produit demandé</li>
+				<li>Recette : tests (automatiques et manuels)</li>
+			</ul>
+			<p>
+				Commençons par réfléchir, avec notre cliente Colette Tatou, aux spécifications fonctionnelles.
+			</p>
+			<img src="../../img/projknov.png" alt="projknov" class="imgMiddle">
+
+			<ol>
+				<li>Présentation</li>
+				<p>
+					Une spécification fonctionnelle décrit la manière dont un produit fonctionnera, entièrement du point de vue de l’utilisateur. Ici nous ne parlons pas de technique mais bien de fonctionnalités. Quel menu ? Quel écran s’affiche lorsque notre utilisateur entre “Nutella” dans le champ de recherche ?<br/><br/>
+
+					Elle précise également quels sont les acteurs impliqués dans le projet et leur champ de responsabilité.
+				</p>
+				<li>Contenu</li>
+				<p>
+					Au même titre qu’un cahier des charges, le contenu des spécifications fonctionnelles dépend en grande partie de l’auteur.<br/><br/>
+
+					Néanmoins, toute spécification fonctionnelle devrait contenir les champs suivants :<br/><br/>
+
+					<ul>
+						<li>Un auteur (de préférence unique, le chef de projet de la maîtrise d’ouvrage)</li>
+						<li>Des scénarios utilisateurs,</li>
+						<li>Un aperçu sous forme de diagramme,</li>
+						<li>Des détails concernant chaque scénario utilisateur.</li>
+					</ul>
+				</p>
+				<p>
+					Pour <a href="https://www.joelonsoftware.com/">Joël Spolsky</a>, le fondateur de Trello et de StackOverFlow (entre autres), les spécifications fonctionnelles sont avant tout un outil d’aide à la décision. Elles doivent décrire tous les scénarios utilisateurs (que se passe-t-il si l’utilisateur oublie son mot de passe ? Ou si la recherche ne donne aucun résultat ?) afin d’aider le plus possible les développeurs. Ces derniers ne devraient pas se poser de questions sur les fonctionnalités mais se concentrer sur les problématiques techniques. Cela les aide à être plus performants et allège les aller-retours avec le client.<br/><br/>
+
+					<ul>
+						<li>Une décharge disant que ce n’est pas la version finale de la spec, qu’elle évoluera. En effet, il préconise une évolution constante du document qui suit l’avancée du projet. Il s’agit d’un parti pris qui peut être très intéressant dans le cadre de projets impliquant peu d’intervenants (une dizaine de développeurs).</li>
+						<li>Des non-buts : non, nous n’allons pas développer cette fonctionnalité. Cela permet de prévenir, en amont, certaines questions.</li>
+						<li>Des questions en suspens : les spécifications étant vues par Joël comme un outil d’aide à la décision, il est important d’y inclure les points restés sans réponse ou à tester.</li>
+						<li>Des annotations pour certaines équipes : elles seront lues par certaines personnes et ignorées par d’autres. Cela permet de centraliser les questions éventuelles. Par exemple, certaines notes concerneront les rédacteurs de la documentation ou les développeurs.</li>
+					</ul>
+				</p>
+				<p>
+					Je vous invite à lire son <a href="http://french.joelonsoftware.com/PainlessSpecs/2.html">excellent article</a> expliquant cette prise de position et à consulter son <a href="https://www.joelonsoftware.com/whattimeisit/">exemple de spécifications fonctionnelles</a>.
+				</p>
+				<p>
+					À l’inverse, les spécifications fonctionnelles des très gros projets seront conséquentes et moins flexibles. Regardez par exemple ce modèle mis à disposition par le conseil de l’Europe. Vous remarquez que la première partie est consacrée à l’historique du projet et aux validations ! Hé oui, dans un très grand projet on a vite fait de perdre la mémoire !
+				</p>
+				<li>Conseils de rédaction</li>
+				<p>
+					<h2>Adaptez-vous à votre audience</h2>
+					Cela peut paraître évident mais vous ne rédigerez pas les mêmes spécifications si votre équipe est composée de 40 développeurs travaillant pour le ministère des finances que si vous officiez chez Google. Ils auront d’ailleurs très certainement un premier document de travail sur lequel vous pourrez vous appuyer.
+				</p>
+				<p>
+					<h2>Keep it stupid, simple</h2>
+					Votre audience a beau être intelligente, elle n’aime pas se poser des questions en lisant vos specs. Pour être efficace, utilisez des phrases courtes qui représentent véritablement votre propos. Évitez les longs paragraphes et, dès que vous le pouvez, préférez un schéma explicatif à une grande description. Tout est plus simple en image !
+				</p>
+				<p>
+					<h2>Soyez drôle</h2>
+					Dans la mesure du raisonnable et en fonction de votre audience, écrivez des specs agréables à lire. En effet, un des grands arguments à l’encontre des specs est que personne ne veut les lire et que, par conséquent, elles ne servent à rien. Mais imaginez si en place et lieu de “l’utilisateur X” vous parlez de Jocelyne Zgara, 20 ans, habitante du merveilleux village Mouilleron-le-captif dans la Loire ? Cela donne tout de suite plus envie de se plonger dans un document de 100 pages, n’est-ce pas ?
+				</p>
+				<p>
+					<h2>Soyez flexible et incluez vos collaborateurs</h2>
+					Dans la mesure du possible, soyez conscient que vos spécifications peuvent évoluer en fonction des retours de votre client et des équipes techniques. Incluez vos collaborateurs pendant le processus de rédaction en leur demandant leur avis et en prenant en compte leurs retours éventuels. Cela les impliquera dans le projet et les motivera pour la suite, tout en vous aidant à améliorer de manière significative vos spécifications.<br/><br/>
+
+					Quand les spécifications fonctionnelles sont rédigées et validées par le client, il est temps de créer les spécifications techniques et de concevoir l’architecture !
+				</p>
+			</ol>
+		</div>
+		 <button class="accordion">Etape 2 : concevez l'architecture du programme</button>
+		 <div class="panel">
+		 	<p>
+		 		Les spécifications techniques décrivent l’implémentation du programme. Quelle va être la base de données ? Son organisation ? Quel langage va-t-on choisir, quel framework ? L’objectif de ce document est de préparer en amont tous les éléments techniques dont les développeurs auront besoin pour coder.
+		 	</p>	 	
+		 	<img src="../../img/projknov2.png" alt="projknov2" class="imgMiddle">
+		 	<p>
+		 		Lorsque le projet suppose la création, à partir de zéro, d’un nouveau programme, les spécifications techniques se concentrent sur tous les éléments nécessaires à cette mise en place.
+		 	</p>
+		 	<p>
+		 		Mais parfois ce nouveau programme s’inscrit dans un système qui existe déjà. Par exemple, ajouter l’inscription à une newsletter sur le site des impôts. Dans ce cas, les spécifications techniques font également lieu de documentation : elles expliquent comment fonctionne le système actuel et comment les développeurs peuvent interagir avec l’existant.
+		 	</p>
+		 	<p>
+		 		Dans tous les cas, la première partie est, en général, dédiée à l’architecture générale du projet. Nous y retrouvons notamment le schéma d’architecture, c’est à dire l’organisation des serveurs qui permettra aux utilisateurs d’accéder aux données. Les parties suivantes entrent dans le détail et varient selon la taille du projet.
+		 	</p>
+		 	<p>
+		 		Je suis certaine que vous mourez d’envie de voir un exemple ! Cela tombe bien, le site du conseil de l’Europe (encore lui !) a mis à disposition un modèle de spécifications techniques important et bien structuré. Je vous invite à le lire puis à revenir vers ce cours.
+		 	</p>
+		 	<ul>
+		 		<li>Architecture technique générale</li>
+		 		<p>
+		 			Si vous ouvrez le modèle de spécifications techniques dont je vous ai donné lien quelques lignes plus haut, vous y retrouverez une présentation générale du projet et un schéma d’architecture (page 6).<br/><br/>
+
+					Nous pourrions également y lire un éventuel schéma UML (pour la base de données) et toute information qui s’appliquerait au projet de manière globale (les langages choisis par exemple).
+		 		</p>
+		 		<li>Batchs / Interfaces</li>
+		 		<p>
+		 			Un batch est un “traitement par lots”. C’est un bien grand mot pour désigner une tâche qui est effectuée automatiquement sur un ensemble de données. Par exemple, envoyer un mail à tous les étudiants de votre promo pour les informer de la prochaine soirée “Video killed the radio star” !
+
+					Ici l’auteur spécifie, notamment, les traitements éventuels des données entrantes (les mails dans notre exemple) et des données sortantes (les messages envoyés).
+		 		</p>
+		 		<li>Description des données</li>
+		 		<p>
+		 			Ici nous détaillons la manière dont nous allons utiliser les données. Par exemple, comment modifie-t-on le nom d’un aliment ? Sous quel format ? Comment Nadine met-elle un aliment en favoris ?
+		 		</p>
+		 		<li>Description du code</li>
+		 		<p>
+		 			Nous voyons dans cette section notamment la version du langage utilisé, du framework et des guides de style (quelle est la règle pour écrire une variable, déclarer une nouvelle fonction, …).
+		 		</p>
+		 		<li>Plateforme matérielle</li>
+		 		<p>
+		 			Cette section se concentre sur l’aspect matériel (hardware) du projet. Attend-on beaucoup de trafic et, par conséquent, doit-on prévoir des performances élevées ? Va-t-il y avoir beaucoup de calculs à traiter ? Quelle mémoire vive est nécessaire ? Etc.
+		 		</p>
+		 		<p>
+		 			Notre projet étant maintenant bien détaillé, nous pouvons passer le relais aux développeurs qui vont se mettre à coder.
+		 		</p>
+		 	</ul>
+		 </div>
+
+		 <button class="accordion">Etapes 3 et 4 : développez et testez</button>
+		 <div class="panel">
+		 	<p>
+		 		Nos développeurs sont sur les starting blocks, les doigts sur leurs claviers, les yeux rivés sur vous ! Vous donnez le top du départ. Prêt·e·s ? … Partez !
+		 	</p> 
+		 	<img src="../../img/projknov3.png" alt="projknov 3 et 4" class="imgMiddle">
+
+		 	<ul>
+		 		<li>Développement</li>
+		 		<h2>Collaborer</h2>
+		 		<p>
+		 			Contrairement au mythe, les développeur·se·s travaillent rarement seul·e·s au fond d’une cave, entourés de cadavres de bières, de pizza froide et de café. Ils travaillent en équipe et sont donc amenés à collaborer les uns avec les autres. Hé oui ! Un développeur est aussi un animal social. ;-)
+		 		</p>
+		 		<p>
+		 			Mais comment collaborer quand on travaille sur un projet partagé par toute une équipe ? Et comment le développeur peut-il être certain que le code sur lequel il travaille est bien la dernière version disponible ?
+		 		</p>
+		 		<p>
+		 			Finalement, nous avons tous connu ce problème. Nous accumulons les versions de différents documents (“Mémoire v1.doc, Mémoire v1 def.doc, Mémoire def def.doc” etc) pour garder une copie de l’ancien, en attendant que notre document soit corrigé ou tout simplement “au cas où”.
+		 		</p>
+		 		<p>
+		 			Les développeurs étant également des êtres pragmatiques, ils ont inventé Git, un outil de gestion de versions. Concrètement, Git vous permet de revenir à une version précédente si vous le souhaitez ainsi que de voir l’auteur de toute modification. Très pratique quand on travaille en équipe !
+		 		</p>
+		 		<h2>Le miroir de la réalité</h2>
+		 		<p>
+		 			Quand un développeur a terminé de développer une fonctionnalité il l’envoie sur un serveur de test (parfois appelé “staging” ou “préprod” pour les intimes). Il s’agit d’un environnement qui ressemble à 100% à celui de production.
+		 		</p>
+		 		<li>Recette</li>
+		 		<p>
+		 			La période de recette peut être assez longue pour les projet fonctionnant en séquentiel. En effet, il faut tester toutes les fonctionnalités dans les moindres détails ! Elles doivent correspondre point pour point aux spécifications fonctionnelles et techniques qui ont été signées précédemment.<br/><br/>
+
+					Les acteurs qui interviennent pendant cette étape s’appellent les responsables qualité (ou QA managers). Ils sont responsables de la vérification.<br/><br/>
+
+					Contrairement à ce que nous pourrions imaginer, la majorité des tests est automatique, effectuée par un robot 🤖 (mais codée par un humain !). Il existe deux sortes de tests : les tests unitaires et les tests d’intégration.<br/><br/>
+		 		</p>
+		 		<h2>Tests unitaires</h2>
+		 		<p>
+		 			Les tests unitaires vérifient qu’une petite partie d’une fonctionnalité est bien implémentée. Par exemple, nous pouvons vérifier qu’un numéro de téléphone sous la forme “0000000000” sera bien refusé par le système et ne sera pas enregistré dans la base de données. Vous pouvez lire un exemple de test unitaire dans cet article : Unit Testing in Ruby.
+		 		</p>
+		 		<h2>Tests d’intégration</h2>
+		 		<p>
+		 			Les tests d’intégration ont pour but de vérifier que les fonctionnalités sont bien interconnectées et que l’ensemble est homogène. Chaque fonctionnalité ayant probablement été développée par un développeur différent, il est nécessaire de vérifier qu’elles communiquent bien entre elles et qu’il n’y a pas de bug.
+
+					Si notre programme s’insère dans un autre système, les tests d’intégration vont également vérifier que l’un et l’autre s’agencent harmonieusement et que notre programme ne crée pas de troubles dans l’ancien système.
+
+					Prenons un exemple. Imaginons que nous ajoutons une boutique sur le site de la NASA. C’est une révolution : vous pouvez désormais réserver un aller pour la Lune (personne ne parle du retour…) et payer en ligne.
+
+					Nous commençons par tester que l’utilisateur ne peut pas rentrer un faux numéro de carte bleue. Il s’agit d’un test unitaire.
+
+					Puis nous vérifions que la fonctionnalité “ajouter un produit dans le panier” interagit bien avec la fonctionnalité “payer via Paypal”. Nous faisons cela via les tests fonctionnels.
+
+					Enfin, nous vérifions que notre nouvelle boutique est bien intégrée au site officiel et qu’elle ne génère pas de nouveaux bugs. Ceci est également fait via des tests fonctionnels.
+		 		</p>
+		 		<h2>Tests manuels</h2>
+		 		<p>
+		 			Certaines équipes font également des tests manuels, c’est-à-dire qu’ils vont exécuter eux-mêmes les scénarios utilisateurs. Par exemple, la personne effectuant la recette va ajouter “voyage sur la lune” au panier, cliquer sur ce dernier, payer en carte bancaire et quitter le site.
+		 		</p>
+		 		<li>Livraison</li>
+		 		<p>
+		 			Quand tous les tests sont positifs, on livre le projet au client. C’est ensuite à lui de décider s’il met en ligne lui-même ou s’il fait appel à la même équipe.
+		 		</p>
+		 		<img src="../../img/14809573389271_gestion-projets-8.png" alt="iamge" class="imgMiddle">
+		 		<p>
+		 			Cette partie du projet devrait être la plus valorisante. Pourtant, c’est assez rarement le cas lorsque notre projet s’organise autour de méthodologies séquentielles. En effet, notre client découvre le rendu à la toute fin et souvent après une longue période de temps. Ses idées ont pu changer, il ne pensait pas que ce qu’il avait imaginé ressemblerait à ça dans la vraie vie du monde véritable.
+		 		</p>
+		 		<p>
+		 			De plus, les fonctionnalités peuvent être plus ou moins bien écrites et, par conséquent, applicables. Suivre les spécifications à la lettre peut créer des programmes bancales, d’autant plus si aucune personne technique n’a été consultée.
+		 		</p>
+		 		<p>
+		 			Alors comment intégrer les retours du client au fur et à mesure ? Vous connaissez déjà la réponse. Hé oui, souhaitons la bienvenue aux méthodologies agiles !
+		 		</p>
+		 	</ul>			 	
+		 </div>
+	</section>
+</div>
+	<div class="btns">
+        <a href="chapitre1.html" class="prec"> < Chapitre précédent</a>
+        <a href="chapitre3.html" class="suiv">Chapitre suivant > </a>
+    </div>
+</main>
+
+<footer>
+            <div class="informations">
+                    <h3>INFORMATIONS</h3>
+                    <dl>
+                        <li><a href="contact.html">Contactez-nous</a></li>
+                        <li><a href="#">A propos de nous</a></li>
+                        <li><a href="#">Aide en ligne</a></li>
+                    </dl>
+                </div>
+                <div class="contenus">
+                    <h3>CONTENUS</h3>
+                    <dl>
+                        <li><a href="#">Titres</a></li>
+                        <li><a href="#">Paragraphes</a></li>
+                        <li><a href="#">Images</a></li>
+                        <li><a href="#">Vidéos</a></li>
+                    </dl>
+                </div>
+                <div class="suivi-nous">
+                    <h3>SUIVI-NOUS</h3>
+                    <dl>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Google+</a></li>
+                    </dl>
+                </div>
+        <p class="copyright">copyright&copy;2018-2019</p>
+    </footer>
+
+<script src="../../js/script.js"></script>
+</body>
+</html>

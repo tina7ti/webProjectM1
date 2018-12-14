@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gérez votre projet informatique facimlement-INFOcours</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+	<header>
+	<nav>
+		<ul>
+		 	<li id="brand"><b>INFOcours</b></li>
+ 			<li id="menu">
+   				<button>Cours<span id="trian"></span></button>
+    			<div id="ssmenu">
+      				<a href="../cours1/presentation_java.html">JAVA</a>
+      				<a href="../cours2/intro.html">C</a>
+      				<a href="../cours3/intro.html">PYTHON</a>
+      				<a href="presentation.html">Gérez votre projet informatique facimlement</a>
+      				<a href="#">JS</a>
+    			</div>
+  			</li>
+  			<li class="droite"><a href="#">Insciption</a></li>
+  			<li class="droite"><a href="#">Connexion</a></li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<nav>
+		<img src="../../img/java-png-java-png-clipart-png-image-200.png" alt="java icon">
+		<dl>
+			<li><a href="chapitre1.html">Comprendre les deux grandes familles de méthodologie de projet</a></li>
+			<li><a href="chapitre2.html">Appliquer les méthodologies séquentielles</a></li>
+			<li><a href="chapitre3.html">Appliquer les méthodologies agiles</a></li>
+			<li><a href="quiz4.html">quiz</a></li>
+		</dl>
+	</nav>
+	<div>
+	<header>
+		<h1>Comprendre les deux grandes familles de méthodologie de projet</h1>
+	</header>
+	<section>
+
+		<button class="accordion">Cadrez un projet avec un cahier des charges</button>
+		<div class="panel">
+			<p>
+				<ul>
+					<li>Le cahier des charges</li>
+					<p>
+						Un cahier des charges est un document qui explique les besoins et les attentes du client. Ce dernier le rédige et l’envoie à la personne qui réalisera le projet : prestataire externe, agence ou développeur en interne. Le plus souvent, le prestataire externe questionne le client sur le cahier des charges pour être sûr d’avoir bien compris les attentes de son client. Le cahier des charges peut être modifié en conséquence afin d’y indiquer le budget, les contraintes éventuelles et les deadlines.
+					</p>
+					<p>
+						Quand les deux parties sont d’accord sur le contenu, elles signent un contrat qui se base sur le cahier des charges. C’est pourquoi un cahier des charges est dit contractuel. Le client peut se retourner contre le prestataire si ce dernier n’a pas réalisé ses engagements. À l’inverse, le prestataire peut poursuivre le client s’il ne respecte pas les conditions de paiement.
+					</p>
+					<figure>
+						<img src="../../img/cahier_charge.png" alt="Le cahier des charges : un socle !" class="imgMiddle">
+						<hr/>
+						<figcaption>Le cahier des charges : un socle !</figcaption>
+					</figure>
+
+					<p>
+						Prenons un exemple. Disons que vous et moi travaillons dans une agence spécialisée dans les projets digitaux, Miroir Noir. La startup Pur Beurre vient de nous contacter :
+					</p>
+					<pre>
+De : colette@purbeurre.com
+
+A : hey@miroirnoir.com
+
+Objet : Plateforme pour amateurs de Nutella
+
+Bonjour,
+
+Nous sommes une jeune startup et nous aimerions réaliser une plateforme web pour nos clients. Ils viennent régulièrement dans le restaurant que nous avons fondé il y a quelques années, à Montmartre, et nous aimerions leur proposer un service complémentaire : Pur Beurre. Cette plateforme permettra à nos clients de manger mieux en leur proposant un substitut plus sain à l’aliment qu’ils auront proposé. Autrement dit, quand Jean-Philippe entrera “Nutella”, notre gentil robot lui proposera une “pâte aux noisettes et au sucre de Cannes”.  
+
+Vous trouverez plus de détails dans le cahier des charges en pièce-jointe.
+
+Je reste à votre disposition pour de plus amples détails.
+
+Cordialement,
+
+Colette Tatou</pre>
+					<a href="https://docs.google.com/document/d/1wOSDUdCN5QV4lSXIQhDFFk_bmDXrEU72qMrmIMxJWYY/edit">Lire le cahier des charges</a>
+
+					<p>
+						Ce cahier des charges est assez succint mais ce n'est pas toujours le cas. Les plus grands projets font l’objet d’un cahier des charges bien plus détaillé et approfondi, notamment lorsqu’il s’agit d’une entreprise publique qui est soumise aux appels d’offres. Dans le cahier des charges d’un grand projet, nous retrouvons en général ces quatre parties :
+					</p>
+
+					<ul>
+						<li><b>Contexte</b>. Génèse du projet, objectifs, responsables. Procédures de validation, …</li>
+						<li><b>Besoins fonctionnels, techniques et organisationnels</b>, ainsi que les contraintes.</li>
+						<li><b>Prestations</b> et livrables attendus.</li>
+						<li><b>Contexte de la réponse.</b> Planning de l’appel d’offres, règles de sélection, … C’est surtout important dans le cadre d’un appel d’offres.</li>
+					</ul>
+
+					<p>
+						Le cahier des charges peut également inclure les spécifications fonctionnelles et techniques (dont nous parlerons dans le prochain chapitre). Cela dépend des projets !
+					</p>
+					<p>
+						Revenons à notre exemple : Pur Beurre. Après un premier rendez-vous fructueux, nous nous sommes mis d’accord sur un budget et avons signé le cahier des charges. Il est temps de passer à l’étape suivante : la planification du projet !
+					</p>
+					
+					<li>Pourquoi planifier un projet ?</li>
+					<p>
+						C’est vrai ça, pourquoi ne pas se mettre à coder tout de suite ? Après tout nous avons déjà les esquisses, la deadline et la charte graphique. Pourquoi perdre du temps à organiser le projet ?
+					</p>
+
+					<ul>
+						<li><b>Communication.</b> Avant tout, car cela vous permet d’aller dans le détail du programme demandé. Avant de planifier, il faut en effet aller plus loin que le cahier des charges et approfondir les fonctionnalités. Nous allons donc engager un dialogue avec le client en amont afin de valider avec lui que nous allons bien réaliser ce qu’il souhaite. Vous vous rendrez vite compte que cela vous fera gagner du temps (et éviter les cheveux blancs).</li>
+						<li><b>Sérénité.</b> Que vous travailliez seul ou en équipe, planifier un projet vous aide également à vous concentrer sur l’essentiel pendant la phase de production. Vous n’avez pas envie de vous demander tous les matins : “que manque-t-il à mon programme ?”, n’est-ce pas ?</li>
+						<li><b>Qualité.</b> Enfin, vos développeurs produiront du code de meilleure qualité car leur coordination sera facilitée.</li>
+					</ul>
+
+					<p>Cela fait beaucoup de points positifs ! Planifions notre projet Pur Beurre alors ! </p>
+					<p>
+						Il existe deux grandes familles de méthodologies de projet : celles dites séquentielles et les méthodes agiles. Découvrons-les rapidement dans les deux prochains chapitres !
+					</p>
+				</ul>
+			</p>
+			
+		</div>
+		 <button class="accordion">Utilisez des méthodologies séquentielles</button>
+		 <div class="panel">
+		 	<p>
+		 		Un projet informatique est développé conjointement par deux équipes : la maîtrise d’ouvrage  et la maîtrise d’oeuvre.
+		 	</p>
+		 	<ul>
+		 		<li>La <strong>maîtrise d’ouvrage (MOA)</strong> est le client ou le représentant des utilisateurs. Si nous faisons un parallèle avec une maison, ce serait la personne qui passe commande. « Je veux une maison jaune avec un toit rouge et un lutin qui hoche la tête béatement ».</li>
+		 		<li>La <strong>maîtrise d’œuvre (MOE)</strong> sera l’équipe chargée de réaliser la vision de la maîtrise d’ouvrage. Face à la demande précédente, elle répondra certainement « Nous utiliserons de la brique et une dalle en béton. La peinture sera sans ammoniaque. Quant au lutin… Ce n’est pas vraiment de notre domaine, désolé ».</li>
+		 	</ul>
+		 	<p>
+		 		Il arrive parfois que le client ne soit pas formé en gestion de projet et qu’il fasse appel à des prestataires dont c’est le métier. Nous parlons alors d’assistance à maîtrise d’ouvrage (AMOA).
+		 	</p>
+		 	<p>
+		 		Bien. Nous savons un peu mieux qui intervient sur le projet. Voyons maintenant les différentes phases et les documents produits.
+		 	</p>
+		 	<ul>
+		 		<li>Etape 1 : définition du projet</li>
+		 		<p>
+		 			La maîtrise d’ouvrage écrit les spécifications fonctionnelles (“requirements” en anglais). Il s’agit d’un (long) document détaillant point par point tous les comportements de l’application. Nous pouvons le voir comme la Bible du projet : développeurs, chefs de projet, rédacteurs, bref, tout le monde y aura recours en cas de doute. Il faut le peaufiner !<br/><br/>
+
+					Nous les verrons en détail un peu plus tard dans la partie suivante.
+		 		</p>
+		 		<li>Etape 2 : conception de l’architecture</li>
+		 		<p>
+		 			Une fois que les spécifications fonctionnelles sont écrites, la maîtrise d’oeuvre écrit les spécifications techniques et conçoit l’architecture globale de l’application.<br/><br/>
+
+					À la différence des spécifications fonctionnelles, qui se concentrent sur l’utilisation de l’application, les spécifications techniques ont pour objectif de définir le cadre technique du projet. Plus ou moins poussées, elles seront une base de travail solide pour les développeurs.
+		 		</p>
+		 		<li>Etape 3 : écriture du code</li>
+		 		<p>
+		 			C’est au tour des développeurs d’entrer sur la scène ! Ils se basent sur les spécifications et sur le diagramme pour produire le code demandé.
+		 		</p>
+		 		<li>Etape 4 : recette</li>
+		 		<p>
+		 			La dernière phase a pour objectif de vérifier que l’application fonctionne comme il se doit. Des tests manuels peuvent être effectués mais, en règle générale, nous préférons utiliser les pouvoirs de l’informatique pour automatiser au maximum ces vérifications. Nous utilisons notamment des tests unitaires.
+		 		</p>
+		 		<p>
+		 			Chaque test unitaire a pour but de vérifier qu’une partie de l’application produit bien le résultat attendu quand un certain événement a lieu. Nous pouvons vérifier, par exemple, que le formulaire n’est pas envoyé si l’utilisateur n’a pas renseigné son prénom. Automatiser les tests fait gagner beaucoup de temps !<br/><br/>
+
+					Puis le maître d’ouvrage réalise des tests de recette, c’est-à-dire qu’il va tester manuellement que l’application correspond à ce qui a été demandé.
+		 		</p>
+		 		<p>
+		 			Une méthodologie de projet séquentielle permet de réaliser ces phases les unes après les autres dans un ordre chronologique. L’objectif de chaque phase est avant tout un document à remettre, plus que des fonctionnalités. Le logiciel n’est testé qu’à la fin et le client commence à voir les résultats du travail de préparation parfois plusieurs mois après le démarrage du projet.
+		 		</p>
+
+		 	</ul>
+		 	<figure>
+		 		<img src="../../img/prj_seq.png" alt="Un projet séquentiel est à suivre point par point !" class="imgMiddle">
+		 		<hr/>
+		 		<figcaption>Un projet séquentiel est à suivre point par point !</figcaption>
+		 	</figure>
+		 	
+		 </div>
+
+		 <button class="accordion">Entrez dans le monde des méthodologies agiles</button>
+		 <div class="panel">
+		 	<p>
+		 		Les méthodes agiles ont commencé leur apparition dans les usines Toyota, dans les années 50, à travers le Lean Software (d’où vient le Kanban). Vous voyez, ce n’est pas tout récent !
+		 	</p>
+		 	<p>
+		 		Scott Ambler, dans agilemodeling.com, propose la définition suivante :<br/><br/>
+
+				Une méthode agile est une approche itérative et incrémentale pour le développement de logiciel, réalisé de manière très collaborative par des équipes responsabilisées appliquant un cérémonial minimal qui produisent, dans un délai contraint, un logiciel de grande qualité répondant aux besoins changeants des utilisateurs.
+		 	</p>
+		 	<ul>
+		 		<li>Une approche itérative et incrémentale (et adaptative)</li>
+		 		<h2>Itératif</h2>
+		 		<p>
+		 			L’itération est le principe de répéter un processus plusieurs fois dans le but d’améliorer un résultat.<br/><br/>
+
+					Prenons un exemple concret !<br/><br/>
+
+					Lorsque vous apprenez à faire du vélo, vous commencez par rouler avec les petites roues. Vous savez donc pédaler seul·e, c’est bien, mais vous prenez de la place et vous n’êtes pas très rapide. Vous avez d’ailleurs fait un croche-pattes malheureux à la pauvre Hind en passant près d’elle. Vous avez beau lui expliquer que ce n’est pas de votre faute (« ce sont les petites roues ! »), elle vous en veut.<br/><br/>
+
+					Vos parents vous disent alors que vous feriez moins de malheureux et que vous iriez plus vite sans les petites roues.<br/><br/>
+
+					Vous recommencez alors avec une seule petite roue. Vous n’allez toujours pas assez vite mais, au moins, vous prenez moins de place en largeur.<br/><br/>
+
+					Vous tombez, vous vous faites mal mais, quelques écorchures plus tard, vous enlevez l’autre petite roue. Le résultat est presque satisfaisant. Vous continuez le même processus jusqu’à être capable de poursuivre les pigeons dans les rues d’Aix en Provence. Ah, la belle vie ! Objectif atteint !<br/><br/>
+		 		</p>
+		 		<p>
+		 			Dans le monde du développement, nous utilisons cette approche pour améliorer une fonctionnalité. Nous sommes pragmatiques et nous savons bien que rien n’est parfait la première fois. Une fonctionnalité a besoin d’être testée dans des conditions réelles pour s’adapter à ses utilisateurs et pour révéler des bugs éventuels (la case à cocher n’apparaît pas sur Internet Explorer 5 par exemple
+		 		</p>
+		 		<h2>Incrémental</h2>
+		 		<p>
+		 			Un processus incrémental permet de construire un produit petit à petit en le découpant en pièces détachées. Elles sont le plus souvent indépendantes les unes des autres mais ont pour caractéristiques d’améliorer le produit.<br/><br/>
+
+		 			Reprenons l’exemple du vélo. À quoi sert-il ? À se déplacer. Nous pouvons par conséquent découper la conception du vélo en plusieurs sous-produits :
+
+		 			<ul>
+		 				<li>Un monocycle. L’utilisateur se déplace mais n’a pas une grande maîtrise de la direction.</li>
+		 				<li>Un monocycle avec une roue avant. L’utilisateur a une meilleure maîtrise de la direction mais l’objet est encombrant et peu maniable.</li>
+		 				<li>Un vélo avec guidon. L’utilisateur maîtrise la direction et l’objet est plus compact mais il est plus difficile de s’arrêter car nous sommes penchés en avant.</li>
+		 				<li>Un vélo avec des freins. L’utilisateur se déplace avec aisance et peut s’arrêter en cas de danger. Objectif atteint !</li>
+		 			</ul>
+		 		</p>
+		 		<p>
+		 			Adaptée à l’informatique, cette approche incrémentale incite les responsables de produit à se concentrer sur les fonctionnalités essentielles et les développeurs à mettre en production régulièrement.
+		 		</p>
+		 		<p>
+		 			Suivre une approche incrémentale et itérative suppose une grande communication avec ses utilisateurs et une certaine humilité. Votre produit sera d’abord très minimaliste et s’améliorera en fonction des retours. Puis vous ajouterez de nouvelles fonctionnalités qui, à chaque étape, feront l’objet de modifications.
+		 		</p>
+		 		<p>
+		 			Une méthode incrémentale et itérative mettra en œuvre les quatre phases vues plus haut (définition, conception, code et test) pour chaque incrément, donc pour chaque nouvelle fonctionnalité. Le responsable du produit communiquera alors avec les utilisateurs pour connaître les modifications éventuelles à apporter lors d’une itération ultérieure.
+		 		</p>
+		 		<p>
+		 			Les intérêts sont multiples. Outre le fait que vous communiquez régulièrement avec vos utilisateurs, vous avez un réel sentiment de satisfaction. Votre produit s’améliore au jour le jour, concrètement, et vous avez l’impression de passer moins de temps à écrire de la paperasse.
+		 		</p>
+
+		 		<li>Des équipes responsabilisées</li>
+		 		<p>
+		 			Un des principes des méthodes agiles, sur lesquels nous reviendrons plus tard, est le rôle actif de l’équipe produit. Les membres sont choisis avec soin pour leur complémentarité et leur motivation. Les méthodologies agiles prônent le pragmatisme, la simplicité et l’efficacité. C’est pourquoi chaque membre de l’équipe choisit lui-même la tâche sur laquelle il souhaite travailler et doit être capable de communiquer sur son travail.
+		 		</p>
+		 		<li>Un cérémonial minimal</li>
+		 		<p>
+		 			L’accent est mis sur le produit avant tout et non sur les réunions : un produit bancal qui a pourtant des spécifications parfaites n’en restera pas moins un produit inutilisable.<br/><br/>
+
+					Produire des fonctionnalités, oui, mais de bonne qualité. C’est pourquoi les méthodes agiles insistent sur la collaboration entre les différentes parties prenantes du projet. Les réunions sont conservées mais tout est mis en œuvre pour qu’elles soient le plus efficaces possible. De même, la collaboration entre développeurs est grandement recommandée à travers de la programmation en binôme par exemple (“pair programming” en anglais).
+		 		</p>
+		 		<li>Des utilisateurs aux besoins changeants</li>
+		 		<p>
+		 			Ceci est peut-être le point le plus révolutionnaire : le projet est complètement centré sur l’utilisateur ! L’objectif n’est plus de produire des documents qui aideront le projet à avancer mais bien de produire les fonctionnalités que l’utilisateur attend au plus vite et le plus qualitativement possible. L’utilisateur évolue et notre service doit refléter ses usages.<br/><br/>
+
+					Jim Highsmith, un des signataires du Manifeste Agile (que nous verrons en détail plus tard), définit d’ailleurs l’agilité par rapport au changement :
+					<blockquote>
+						L‘agilité est la capacité à favoriser le changement et à y répondre en vue de s’adapter au mieux à un environnement turbulent.
+					</blockquote>
+		 		</p>
+		 		<p class="remarq">
+		 			Attention, cela ne veut pas dire qu’une équipe agile dira oui à tout le monde et implémentera toutes les fonctionnalités ! Mais il lui sera plus facile d’intégrer des changements et de modifier l’ordre de priorité des tâches que dans une équipe qui suit une approche séquentielle.
+		 		</p>
+		 		<p>
+		 			Bien ! Vous avez désormais un bon aperçu des deux approches. Entrons maintenant dans le détail ! Nous allons commencer par les méthodologies de projet séquentielles car les méthodes agiles leurs empruntent certains concepts.
+		 		</p>
+		 	</ul>
+		 			 	
+		 </div>
+	</section>
+</div>
+	<div class="btns">
+        <a href="presentation.html" class="prec"> < Chapitre précédent</a>
+        <a href="chapitre2.html" class="suiv">chapitre suivant > </a>
+    </div>
+</main>
+
+<footer>
+            <div class="informations">
+                    <h3>INFORMATIONS</h3>
+                    <dl>
+                        <li><a href="contact.html">Contactez-nous</a></li>
+                        <li><a href="#">A propos de nous</a></li>
+                        <li><a href="#">Aide en ligne</a></li>
+                    </dl>
+                </div>
+                <div class="contenus">
+                    <h3>CONTENUS</h3>
+                    <dl>
+                        <li><a href="#">Titres</a></li>
+                        <li><a href="#">Paragraphes</a></li>
+                        <li><a href="#">Images</a></li>
+                        <li><a href="#">Vidéos</a></li>
+                    </dl>
+                </div>
+                <div class="suivi-nous">
+                    <h3>SUIVI-NOUS</h3>
+                    <dl>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Google+</a></li>
+                    </dl>
+                </div>
+        <p class="copyright">copyright&copy;2018-2019</p>
+    </footer>
+
+
+<script src="../../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JAVA-INFOcours</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+	<header>
+	<nav>
+		<ul>
+		 	<li id="brand"><b>INFOcours</b></li>
+ 			<li id="menu">
+   				<button>Cours<span id="trian"></span></button>
+    			<div id="ssmenu">
+      				<a href="presentation_java.html">JAVA</a>
+      				<a href="../cours2/intro.html">C</a>
+      				<a href="../cours3/intro.html">PYTHON</a>
+      				<a href="../cours4/presentation.html">Gérez votre projet informatique facimlement</a>
+      				<a href="#">JS</a>
+    			</div>
+  			</li>
+  			<li class="droite"><a href="#">Insciption</a></li>
+  			<li class="droite"><a href="#">Connexion</a></li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<nav>
+		<img src="../../img/java-png-java-png-clipart-png-image-200.png" alt="java icon">
+		<dl>
+			<li><a href="chapitre1.html">Notions élémentaires</a></li>
+			<li><a href="chapitre2.html">Les méthodes</a></li>
+			<li><a href="chapitre3.html">Les tableaux</a></li>
+			<li><a href="chapitre4.html">Les types non primitifs</a></li>
+			<li><a href="chapitre5.html">Les objets</a></li>
+		</dl>
+	</nav>
+	<div>
+
+		<header>
+			<h1>LES OBJETS</h1>
+		</header>
+		<section>
+
+			<p>
+				Les différentes valeurs d’un objet son appelées attributs?. Pour accéder à la valeur d’un attribut, on utilise la syntaxe suivante :
+			</p>
+			<div class="code">
+				<code>
+					<span>//accès à la valeur de l’attribut</span> <br>
+					TypeAttribut monAttribut = monObjet.nomAttribut; <br>
+					<span>//affectation d’une valeur à l’attribut</span> <br>
+					monObjet.nomAttribut = valeurAttribut;
+				</code>
+			</div>
+		 	
+		 	<p>
+		 		Il peut exister des méthodes spécifiques permettant d’interroger ou de transformer les valeurs des attributs d’un objet. Pour appeler? une méthode sur un objet, on utilise la syntaxe suivante :
+		 	</p>
+
+		 	<div class="code"><code>TypeRetour valeurRetour = monObjet.nomMethode(parametre_1,.., parametre_N);</code></div>
+
+		 	<p class="remarq">
+		 		Si une méthode n’accède pas ou ne modifie pas les attributs de l’objet, on dit que cette méthode est static.
+				La déclaration de la méthode est précédée du mot clé static. L’appel de la méthode se fait comme expliqué dans la section 2.
+
+		 	</p> 	
+		 	<button class="accordion">L’OBJET PRÉDÉFINI <span>STRING</span></button>	
+		 	<div class="panel">
+		 		<p>
+		 			Il existe de nombreux objets prédéfinis en Java. Nous allons dans cette section présenter l’un d’entre eux, incontournable : le type “chaîne de caractères”, appelé String. Cet objet est le seul qui sera réellement manipulé en première année.
+		 		</p>
+		 		<p>
+		 			Une chaîne de caractères représente un texte. C’est une collection linéaire de caractères qu’il n’est pas possible de modifier une fois que l’objet a été instancié et initialisé. Ces opérations se font selon la syntaxe :
+		 		</p>
+
+		 		<div class="code">
+		 			<code>
+		 			<span>//Déclaration, instanciation et initialisation</span> <br>
+					String ecole = new String("INSA-Lyon");
+					</code>
+				</div>
+
+		 		<p>
+		 			Comme le type String est très utilisé, une particularité de ce type est que l’on accède à l’attribut principal de l’objet, la chaîne de caractères, comme si c’était un type primitif :
+		 		</p>
+		 		<div class="code">
+		 			<code>
+		 				System.out.println(ecole); <span>// affiche "INSA-Lyon"</span>
+		 			</code>
+		 		</div>
+
+		 		<p>
+		 			Les objets de type String sont fournis avec un grand nombre de méthodes permettant une manipulation
+					facile de ces objets. Les quatre principales méthodes permettent d’accéder à chaque caractère de la chaîne, de connaître le nombre de caractères de la chaîne (sa longueur), d’extraire une partie de la chaîne et de comparer le contenu de deux chaînes :
+		 		</p>
+
+		 		<ul>
+		 			<li>char charAt(int n) : cette méthode prend en paramètre un entier n et renvoie le n+ 1 ème caractère de la chaîne (le premier caractère est à l’indice 0 et le n + 1 ème à l’indice n).</li>
+		 			<li>int length() : cette méthode renvoie la longueur de la chaîne de caractères.</li>
+		 			<li>• String substring(int debut, int fin) : cette méthode renvoie un objet de type String qui
+					contient la sous-chaîne de caractères commençant à l’indice debut et se terminant à l’indice fin-1.</li>
+		 			<li>equals(String s) : cette méthode renvoie une variable de type booléen qui vaut vrai si et seulement si la chaîne de caractères s est la même que la chaîne de caractères de l’objet sur lequel on appelle la méthode</li>
+		 		</ul>
+		 		
+		 	</div>
+
+		 	<button class="accordion">LES OBJETS PROPRES</button>
+		 	<div class="panel">
+		 		<p>
+		 			On peut également définir ses propres objets. C’est ce que nous allons apprendre à faire ici, en illustrant notre propos sur l’exemple du début de section.
+
+		 		</p>
+		 		<p>
+		 			<span class="titres">LES CLASSES</span> Les classes permettent de définir des types ou des catégories d’objets (on pourra prendre la
+					métaphore du moule des objets). Elles contiennent la description des objets, (ex : les abonnés), c’est-à-dire qu’elles définissent les attributs et les méthodes communes aux objets d’un certain type.
+		 		</p>
+
+		 		<p>
+		 			Les objets construits à partir de ces classes sont des instances. Les instances sont des éléments créés depuis une classe : un abonné particulier. La syntaxe de déclaration d’une classe est :
+
+		 		</p>
+				<div class="code">
+					<code>
+						class NomType { <br>
+						<span> 
+							// le corps de la classe vient ici <br>
+							// les attributs <br>
+						// les méthodes </span> <br>}
+		 			</code>
+		 		</div>
+		 		<p>
+		 			<span class="titres">LE CONSTRUCTEUR</span> Toute classe doit contenir au moins une méthode particulière appelé constructeur. Cette
+					méthode porte le même nom que la classe et est appelée lorsque l’on instancie un nouvel objet. C’est
+					cette fonction qui généralement initialise les valeurs des attributs. Cette méthode ne renvoie aucune valeur.
+		 		</p>
+		 		<p>
+		 			Il peut exister plusieurs constructeurs qui se distinguent par leurs paramètres formels. Ainsi, en fonction
+					des paramètres effectifs (nombre de paramètres ou types des paramètres) passés au constructeur au moment de l’appel, l’un ou l’autre des constructeurs sera appelé. Par exemple, l’instruction Abonne() déclenchera l’exécution du premier constructeur, alors que l’instruction Abonne("Dupond", "Luc",4,0) déclenchera l’exécution du second constructeur qui instancie les attributs aux valeurs correspondant à l’abonné
+					Luc Dupond.
+
+		 		</p>
+
+		 	</div>
+		</section>
+
+	</div>
+	<div class="btns">
+		<a href="chapitre4.html" class="prec"> < Chapitre précédent</a>
+		<a href="quiz1.html" class="suiv">QUIZ > </a>
+	</div>
+</main>
+
+<footer>
+            <div class="informations">
+                    <h3>INFORMATIONS</h3>
+                    <dl>
+                        <li><a href="contact.html">Contactez-nous</a></li>
+                        <li><a href="#">A propos de nous</a></li>
+                        <li><a href="#">Aide en ligne</a></li>
+                    </dl>
+                </div>
+                <div class="contenus">
+                    <h3>CONTENUS</h3>
+                    <dl>
+                        <li><a href="#">Titres</a></li>
+                        <li><a href="#">Paragraphes</a></li>
+                        <li><a href="#">Images</a></li>
+                        <li><a href="#">Vidéos</a></li>
+                    </dl>
+                </div>
+                <div class="suivi-nous">
+                    <h3>SUIVI-NOUS</h3>
+                    <dl>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Google+</a></li>
+                    </dl>
+                </div>
+        <p class="copyright">copyright&copy;2018-2019</p>
+    </footer>
+ <script src="../../js/script.js"></script>
+</body>
+</html>
