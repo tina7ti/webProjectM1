@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>C-INFOcours</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+<header>
+	<nav>
+		<ul>
+		 	<li id="brand"><b>INFOcours</b></li>
+ 			<li id="menu">
+   				<button>Cours<span id="trian"></span></button>
+    			<div id="ssmenu">
+      				<a href="#">JAVA</a>
+      				<a href="intro.html">C</a>
+      				<a href="../cours3/intro.html">PYTHON</a>
+      				<a href="presentation.html">Gérez votre projet informatique facimlement</a>
+      				<a href="../cours5/presentation.html">Prenez le contrôle à distance d'un poste Linux/Windows avec VNC</a>
+    			</div>
+  			</li>
+  			<li class="droite"><a href="#">Insciption</a></li>
+  			<li class="droite"><a href="#">Connexion</a></li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<nav><img src="../../img/gp.png" alt="gp icon"></nav>
+	<div>
+		<h1>Salut ! C'est votre 4éme évaluation cher(e) étudiant(e). ^_^</h1>
+		<h2>Nos régles:</h2>
+		<ul>
+			<li>Veuillez choisir 1 seule réponse pour chaque question.</li>
+			<li>Chaque question sera noter sur 1 point.</li>
+			<li>A la fin de quiz on vous affiche votre score ainsi que toutes les bonnes réponses (mentionnés en VERT ).</li>
+		</ul>
+	</div>
+	<div id="quiz4">
+		<form>
+			<h2>Question 1</h2>
+			<label for="qst1"><b>Les méthodologies de projet agile sont apparues...</b></label><br/><br/>
+			<input type="radio" name="qst1" ><span id="s10">... très récemment, il y a à peine 5 ans. C'est tendance !</span><br/><br/>
+			<input type="radio" name="qst1" ><span id="s11">... il y a un moment, dans les années 50.</span><br/><br/>
+
+			<h2>Question 2</h2>
+			<label for="qst2"><b>Dans un projet Agile, les développeurs sont responsables et le produit est très important.</b></label><br/><br/>
+			<input type="radio" name="qst2" value="1" ><span id="s20">Vrai</span><br/><br/>
+			<input type="radio" name="qst2" value="2" ><span id="s21">Faux</span><br/><br/>
+		
+			<h2>Question 3</h2>
+			<label for="qst3"><b>Le cahier des charges est un document...</b></label><br/><br/>
+			<input type="radio" name="qst3" ><span id="s30">... contractuel.</span><br/><br/>
+			<input type="radio" name="qst3" ><span id="s31">... assommant.</span><br/><br/>
+			<input type="radio" name="qst3" ><span id="s32">... conflictuel.</span><br/><br/>
+
+			<h2>Question 4</h2>
+			<label for="qst4"><b>La maîtrise d'ouvrage (MOA) est un autre terme pour désigner :</b></label><br/><br/>
+			<input type="radio" name="qst4" ><span id="s40">Le client</span><br/><br/>
+			<input type="radio" name="qst4" ><span id="s41">Le prestataire</span><br/><br/>
+
+		
+			<div>
+				<p id="dang"></p> <p id="score"></p>
+				<input type="button" name="button1" value="Envoyer mes réponses" onclick="quiz2()">
+			</div>
+		</form>
+	</div>
+	<div class="btns">
+		<a href="chapitre3.html" class="prec"> < Chapitre précédent</a>
+		<a href="../cours5/presentation.html" class="suiv">Cours suivant > </a>
+	</div>
+</main>
+
+<footer>
+            <div class="informations">
+                    <h3>INFORMATIONS</h3>
+                    <dl>
+                        <li><a href="contact.html">Contactez-nous</a></li>
+                        <li><a href="#">A propos de nous</a></li>
+                        <li><a href="#">Aide en ligne</a></li>
+                    </dl>
+                </div>
+                <div class="contenus">
+                    <h3>CONTENUS</h3>
+                    <dl>
+                        <li><a href="#">Titres</a></li>
+                        <li><a href="#">Paragraphes</a></li>
+                        <li><a href="#">Images</a></li>
+                        <li><a href="#">Vidéos</a></li>
+                    </dl>
+                </div>
+                <div class="suivi-nous">
+                    <h3>SUIVI-NOUS</h3>
+                    <dl>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Google+</a></li>
+                    </dl>
+                </div>
+        <p class="copyright">copyright&copy;2018-2019</p>
+    </footer>
+
+    <script src="../../js/script.js"></script>
+</body>
+</html>
+
+
+	
+			
+
+			

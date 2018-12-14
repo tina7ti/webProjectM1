@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>JAVA-INFOcours</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+<header>
+	<nav>
+		<ul>
+		 	<li id="brand"><b>INFOcours</b></li>
+ 			<li id="menu">
+   				<button>Cours<span id="trian"></span></button>
+    			<div id="ssmenu">
+      				<a href="presentation_java.html">JAVA</a>
+      				<a href="../cours2/intro.html">C</a>
+      				<a href="../cours3/intro.html">PYTHON</a>
+      				<a href="../cours4/presentation.html">Gérez votre projet informatique facimlement</a>
+      				<a href="../cours5/presentation.html">Prenez le contrôle à distance d'un poste Linux/Windows avec VNC</a>
+    			</div>
+  			</li>
+  			<li class="droite"><a href="#">Insciption</a></li>
+  			<li class="droite"><a href="#">Connexion</a></li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<nav><img src="../../img/java.png" alt="java icon"></nav>
+	<div>
+		<h1>Salut ! C'est votre 1éme évaluation cher(e) étudiant(e). ^_^</h1>
+		<h2>On commence par identifier nos régles:</h2>
+		<ul>
+			<li>Veuillez choisir 1 seule réponse pour chaque question.</li>
+			<li>Chaque question sera noter sur 1 point.</li>
+			<li>A la fin de quiz on vous affiche votre score ainsi que toutes les bonnes réponses (mentionnés en VERT ).</li>
+		</ul>
+	</div>
+	<div id="quiz5">
+		<form>
+			<h2>Question 1</h2>
+			<label for="qst1"><b>Qu’est-ce qu’un IDE ?</b></label><br/><br/>
+			<input type="radio" name="qst1" ><span id="s10">Un environnement permettant de développer des programmes.</span><br/><br/>
+			<input type="radio" name="qst1" ><span id="s11">Un outil permettant d’exécuter des programmes écrits en Java.</span><br/><br/>
+			<input type="radio" name="qst1" ><span id="s12">Une instruction du langage Java.</span><br/><br/>
+			<input type="radio" name="qst1" ><span id="s13">Un site web référençant les fonctionnalités d’un langage de programmation.</span><br/><br/>
+
+			
+			<h2>Question 2</h2>
+			<label for="qst2"><b>Qu’est-ce qu’une variable ?</b></label><br/><br/>
+			<input type="radio" name="qst2" value="1" ><span id="s20">Un conteneur permettant de stocker des données (entier, caractère, booléen…)</span><br/><br/>
+			<input type="radio" name="qst2" value="2" ><span id="s21">Une instruction du langage Java</span><br/><br/>
+			<input type="radio" name="qst2" value="3" ><span id="s22">Une entité permettant de manipuler des nombres</span><br/><br/>
+
+			<h2>Question 3</h2>
+			<label for="qst3"><b>Quel est la valeur de la variable ci-dessous :</b></label><br/><br/>
+			<div class="code">
+				<code> int entier = 0xFE; </code>
+			</div>
+			<input type="radio" name="qst3" ><span id="s30">Rien, cette variable est mal initialisée.
+</span><br/><br/>
+			<input type="radio" name="qst3" ><span id="s31">ien, FE n’est pas un entier mais des caractères !</span><br/><br/>
+			<input type="radio" name="qst3" ><span id="s32">254</span><br/><br/>
+
+			<h2>Question 4</h2>
+			<label for="qst4"><b>Que faut-il absolument faire lorsque vous utilisez des objets présents dans des packages autres que java.lang ?</b></label><br/><br/>
+			<input type="radio" name="qst4" ><span id="s40">Rien de particulier</span><br/><br/>
+			<input type="radio" name="qst4" ><span id="s41">Il faut importer tout le package.</span><br/><br/>
+			<input type="radio" name="qst4" ><span id="s42">Il faut importer la classe dont vous avez besoin.</span><br/><br/>
+
+		
+			<div>
+				<p id="dang"></p> <p id="score"></p>
+				<input type="button" name="button1" value="Envoyer mes réponses" onclick="quiz5()">
+			</div>
+		</form>
+	</div>
+	<div class="btns">
+		<a href="chapitre5.html" class="prec"> < Chapitre précédent</a>
+		<a href="../cours2/intro.html" class="suiv">Cours suivant > </a>
+	</div>
+</main>
+
+<footer>
+            <div class="informations">
+                    <h3>INFORMATIONS</h3>
+                    <dl>
+                        <li><a href="contact.html">Contactez-nous</a></li>
+                        <li><a href="#">A propos de nous</a></li>
+                        <li><a href="#">Aide en ligne</a></li>
+                    </dl>
+                </div>
+                <div class="contenus">
+                    <h3>CONTENUS</h3>
+                    <dl>
+                        <li><a href="#">Titres</a></li>
+                        <li><a href="#">Paragraphes</a></li>
+                        <li><a href="#">Images</a></li>
+                        <li><a href="#">Vidéos</a></li>
+                    </dl>
+                </div>
+                <div class="suivi-nous">
+                    <h3>SUIVI-NOUS</h3>
+                    <dl>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Google+</a></li>
+                    </dl>
+                </div>
+        <p class="copyright">copyright&copy;2018-2019</p>
+    </footer>
+
+    <script src="../../js/script.js"></script>
+</body>
+</html>
+
+
+	
+			
+
+			

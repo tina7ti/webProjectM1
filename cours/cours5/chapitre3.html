@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Prenez le contrôle à distance d'un poste Linux/Windows avec VNC - chapitre 3</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+	<header>
+	<nav>
+		<ul>
+		 	<li id="brand"><b>INFOcours</b></li>
+ 			<li id="menu">
+   				<button>Cours<span id="trian"></span></button>
+    			<div id="ssmenu">
+      				<a href="../cours1/presentation_java.html">JAVA</a>
+      				<a href="../cours2/intro.html">C</a>
+      				<a href="../cours3/intro.html">PYTHON</a>
+      				<a href="../cours4/presentation.html">Gérez votre projet informatique facimlement</a>
+      				<a href="presentation.html">Prenez le contrôle à distance d'un poste Linux/Windows avec VNC</a>
+    			</div>
+  			</li>
+  			<li class="droite"><a href="#">Insciption</a></li>
+  			<li class="droite"><a href="#">Connexion</a></li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<nav>
+		<img src="../../img/vnc.png" alt="vnc icon">
+		<dl>
+			<li><a href="chapitre1.html">Découvrez les technologies de prise de contrôle avec VNC</a></li>
+			<li><a href="chapitre2.html">Installez et configurez un serveur TightVNC</a></li>
+			<li><a href="chapitre3.html">Installez et configurez le client VNC</a></li>
+			<li><a href="quiz5.html">Quiz</a></li>
+		</dl>
+	</nav>
+	<div>
+
+
+	<header>
+		<h1>Installez et configurez le client VNC</h1>
+	</header>
+	<section>
+		<p>
+			Cette troisième partie est consacrée au client VNC. Vous apprendrez à installer un client VNC et à vous connecter au serveur pour prendre le contrôle à distance du poste Windows ou Linux.
+		</p>
+	
+		<button class="accordion">1. Installez et lancez un client VNC</button>
+		<div class="panel">
+			<p>
+				Pour rappel, le client VNC est le programme à installer sur la machine avec laquelle vous souhaitez prendre le contrôle à distance du poste cible. Ce programme doit être compatible avec le serveur installé sur ce poste cible pour s’y connecter et échanger l’environnement de bureau.<br/><br/>
+
+				Dans un premier temps, je vous propose de rester dans le périmètre de TightVNC. En effet, l’équipe de développement met à disposition un client VNC librement et gratuitement sous la forme d’un fichier archive ZIP contenant l’application TightVNC VIEWER en Java (fichier .jar). Le grand avantage de cette option consiste à utiliser le même client VNC sur Windows et Linux. Il suffit simplement qu’un environnement d’exécution Java soit installé (JRE), ce qui est très souvent le cas.
+			</p>
+			<h2>Configuration du client</h2>
+			<p>
+				Une fois téléchargée et décompressée, cette archive nous propose l’accès au client via le fichier tightvnc-jviewver.jar sous Windows (à gauche) ou sous Linux (à droite).
+			</p>
+			<figure>
+				<img src="../../img/15380638894292_image41.png" alt="Contenu des fichiers téléchargés avec TightVNC Viewer" class="imgMiddle">
+				<figcaption>
+					Contenu des fichiers téléchargés avec TightVNC Viewer
+				</figcaption>
+			</figure>
+			<p>
+				Le champ « Remote Host » doit contenir soit l’adresse IP du serveur en écoute, ou son nom réseau si celui-ci peut être résolu par un quelconque DNS interne ou externe.<br/><br/>
+
+				Le champ « Port » doit contenir le port d’écoute du serveur. Attention, comme vous avez pu le constater lors du chapitre 1 (Installation), le port d’écoute par défaut d’un serveur TightVNC surWindows est 5900 et celui par défaut d’un serveur sous Linux est 5901.
+			</p>
+
+			<ul>
+				<li>Le type d’encodage des données transférées entre le serveur et le client, par défaut positionné à « Tight » (Cf Chapitre 1 partie 3) correspondant à la compression native de TightVNC permettant d’optimiser les flux sur des réseaux à faibles débit. Vous pouvez également trouver une valeur « Raw » dans ces options, permettant de mettre la priorité sur la qualité des flux dans le cas de réseau à fort débit.</li>
+
+				<li>Le format des couleurs, positionné par défaut à « Server’s default » permettant de récupérer la valeur transmise par le serveur ;</li>
+
+				<li>Quelques réglages spécifiques concernant la compression des données le format des images ;</li>
+
+				<li>La possibilité de restreindre le partage en lecture seule ;</li>
+
+				<li>Et quelques options concernant la gestion du curseur de la souris.</li>
+			</ul>
+		</div>
+
+		 <button class="accordion">Sécurisez votre connexion VNC avec SSH</button>
+		 <div class="panel">
+		 	<p>Vous avez téléchargé, installé et configuré votre logiciel VNC. Il est temps désormais de se pencher sur la sécurité.</p>
+		 	<p class="remarq">
+		 		Si la saisie du mot de passe de connexion est cryptée par TightVNC lors de la prise de contrôle à distance, le reste du flux transmis entre le serveur et le client ne l’est pas. Un petit malin sniffant le réseau pourrait alors capturer les trames de votre prise de contrôle à distance et rejouer toutes les manipulations que vous auriez effectuées !
+		 	</p>
+		 	<h2>Activez le tunnel SSH sur votre machine</h2>
+		 	<p>
+		 		La solution la plus simple pour sécuriser ce flux est de passer par un tunnel SSH. Cette opération est possible lorsque le serveur TightVNC héberge un service SSH.<br/><br/>
+
+				Sous Linux, le serveur OpenSSH existe depuis de nombreuses années et reste la référence pour le service SSH. Généralement il est même installé par défaut sur les postes Linux.<br/><br/>
+
+				Sous Windows, depuis la mise à jour de Septembre 2017 de Windows 10, il est possible d’installer et d’activer un serveur et un client SSH dérivé également de OpenSSH.<br/><br/>
+
+				Cette opération s’effectue depuis le panneau de configuration, dans l’onglet « Applications » et sur le lien « Gérer les fonctionnalités facultatives ».<br/><br/>
+		 	</p>
+
+		 	<h2>Qu'est ce que le Tunneling SSH ?</h2>
+		 	<p>
+		 		Le processus de « Tunneling SSH » consiste globalement à initier en premier lieu une connexion ssh sécurisée car cryptée entre le client et le serveur, généralement sur le port TCP 22. Une fois cette connexion établie, le client VNC va rediriger son port de connexion vers le port SSH du serveur. Le flux entre le client VNC et le serveur sera donc encapsulé dans le flux SSH entre ces deux machines.
+		 	</p>
+		 	<p>
+		 		La plupart des clients VNC supportent le tunnel SSH pour se connecter au serveur. C’est aussi le cas du client Java de TightVNC, il suffit de cocher la case concernée et d’indiquer l’adresse et le port SSH du serveur.
+		 	</p>
+		 	<p>
+		 		A noter qu’il faudra alors renseigner deux mots de passe distincts :
+		 		<ul>
+		 			<li>Le mot de passe de la connexion SSH ;</li>
+
+					<li>Le mot de passe de la connexion VNC.</li>
+		 		</ul>
+		 	</p>
+		 </div>
+	</section>
+</div>
+	<div class="btns">
+        <a href="chapitre2.html" class="prec"> < Chapitre précédent</a>
+        <a href="quiz5.html" class="suiv">QUIZ > </a>
+    </div>
+</main>
+
+<footer>
+            <div class="informations">
+                    <h3>INFORMATIONS</h3>
+                    <dl>
+                        <li><a href="contact.html">Contactez-nous</a></li>
+                        <li><a href="#">A propos de nous</a></li>
+                        <li><a href="#">Aide en ligne</a></li>
+                    </dl>
+                </div>
+                <div class="contenus">
+                    <h3>CONTENUS</h3>
+                    <dl>
+                        <li><a href="#">Titres</a></li>
+                        <li><a href="#">Paragraphes</a></li>
+                        <li><a href="#">Images</a></li>
+                        <li><a href="#">Vidéos</a></li>
+                    </dl>
+                </div>
+                <div class="suivi-nous">
+                    <h3>SUIVI-NOUS</h3>
+                    <dl>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Google+</a></li>
+                    </dl>
+                </div>
+        <p class="copyright">copyright&copy;2018-2019</p>
+    </footer>
+
+
+
+<script src="../../js/script.js"></script>
+
+</body>
+</html>

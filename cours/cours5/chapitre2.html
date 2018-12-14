@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Prenez le contrôle à distance d'un poste Linux/Windows avec VNC - chapitre 2</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+	<header>
+	<nav>
+		<ul>
+		 	<li id="brand"><b>INFOcours</b></li>
+ 			<li id="menu">
+   				<button>Cours<span id="trian"></span></button>
+    			<div id="ssmenu">
+      				<a href="../cours1/presentation_java.html">JAVA</a>
+      				<a href="../cours2/intro.html">C</a>
+      				<a href="../cours3/intro.html">PYTHON</a>
+      				<a href="../cours4/presentation.html">Gérez votre projet informatique facimlement</a>
+      				<a href="presentation.html">Prenez le contrôle à distance d'un poste Linux/Windows avec VNC</a>
+    			</div>
+  			</li>
+  			<li class="droite"><a href="#">Insciption</a></li>
+  			<li class="droite"><a href="#">Connexion</a></li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<nav>
+		<img src="../../img/vnc.png" alt="vnc icon">
+		<dl>
+			<li><a href="chapitre1.html">Découvrez les technologies de prise de contrôle avec VNC</a></li>
+			<li><a href="chapitre2.html">Installez et configurez un serveur TightVNC</a></li>
+			<li><a href="chapitre3.html">Installez et configurez le client VNC</a></li>
+			<li><a href="quiz5.html">Quiz</a></li>
+		</dl>
+	</nav>
+	<div>
+	<header>
+		<h1>Installez et configurez un serveur TightVNC</h1>
+	</header>
+	<section>
+		<p>
+			Les processus d’installation du serveur TightVNC sur Windows et sur Linux diffèrent beaucoup. Je vais donc vous présenter les deux méthodes de manière distincte.<br/><br/>
+
+			Vous pouvez utiliser les flèches à droite des titres pour afficher ou masquer uniquement la section (Installation sous Windows ou Installation sous Linux) vous concernant. 
+		</p>
+		<button class="accordion">Installez TightVNC sous Windows et Linux</button>
+		<div class="panel">
+			<h2>Installation et configuration sous Linux</h2>
+			<p>
+				TigthVNC est disponible sous Linux sous la forme de package. Ces packages varient en fonction de la distribution choisie. Je vous propose le processus d’installation sur une distribution Debian 9.4 Strech.
+			</p>
+			<h3>Installation de TightVNC sous Linux</h3>
+			<p>Pour installer TightVNC sous Debian, lancez la commande suivante en tant que root :</p>
+			<p class="code">
+				<code>
+					apt-get install tightvncserver
+				</code>
+			</p>
+
+			<p>
+				L’installation se fait de manière « silencieuse » (sans poser de questions) et consiste simplement sur Linux à déposer les fichiers binaires suivants sur le disque :
+			</p>
+			<p class="code">
+				<code>
+					/usr/bin/Xtightvnc <br/>
+					/usr/bin/tightvncconnect<br/>
+					/usr/bin/tightvncpasswd<br/>
+					/usr/bin/tightvncserver
+				</code>
+			</p>
+			<h3>Démarrage du serveur</h3>
+			<p>
+				Pour vérifier si le processus d’installation s’est bien passé, vous pouvez lancer le serveur TightVNC avec la commande suivante (toujours sous root) :
+			</p>
+			<p class="code">
+				<code>
+					tightvncserver
+				</code>
+			</p>
+			
+			<p>
+				Lancée sans option, cette commande démarre le serveur TightVNC sur la première session graphique disponible. Le serveur vous propose au passage de saisir le mot de passe de connexion.
+			</p>
+			<h3>Vérifier que le serveur a démarré</h3>
+			<p>Pour vérifier que le serveur est bien démarré, lancez la commande suivante :</p>
+			<p class="code">
+				<code>
+					ps –edf | grep tightvnc
+				</code>
+			</p>
+			<p>
+				Cette commande permet d’afficher également toutes les options passées en paramètre du programme telles que par exemple, le port en écoute, la résolution de l’affichage et l’échantillonnage des couleurs ou le fichier de stockage du mot de passe de connexion
+			</p>
+
+			<h3>Vérifier les ports d'écoute</h3>
+			<p>
+				Pour vérifier quels sont les ports d’écoute ouverts par le serveur TightVNC, lancez la commande suivante : 
+			</p>
+			<p class="code">
+				<code>
+					netstat -lptun | grep tightvnc
+				</code>
+			</p>
+
+			<h2>Installation et configuration sous Windows</h2>
+			<h3>Installons TightVNC sous Windows</h3>
+			<p>
+				TightVNC est disponible au téléchargement depuis l’adresse suivante :<a href="https://www.tightvnc.com/download.php">https://www.tightvnc.com/download.php</a>.
+			</p>
+			<p>
+				La méthode la plus simple est de télécharger le fichier compatible pour l’installateur Windows avec l’extension .msi en fonction de l’architecture de votre serveur. Il y a de grandes chances aujourd’hui qu’elle soit 64-bit. <br/><br/>
+
+				Le fichier .msi s’exécute sous la forme d’un didacticiel vous guidant pendant les étapes de l’installation.<br/><br/>
+
+				Le programme d’installation propose 3 options classiques :
+
+				<ul>
+					<li>L’installation typique, tout se passe de manière automatique avec les composants et leurs valeurs par défaut (partie serveur, partie cliente, mot de passe, emplacement sur le disque, etc.) ;</li>
+					<li>L’installation personnalisée, ici le programme demande confirmation et de chaque étape ;</li>
+					<li>L’installation complète, identique à la première option, mais en incluant tous les composants disponibles. </li>
+				</ul>
+
+			</p>
+
+
+		</div>
+
+		<button class="accordion">Démarrez le serveur VNC automatiquement</button>
+		<div class="panel">
+			<p>
+				Dans la grande majorité des cas, il sera nécessaire de configurer le serveur TightVNC pour démarrer automatiquement avec l’ordinateur, et ce afin d’être sûr de pouvoir prendre le contrôle à distance de la machine et éviter d’expliquer à l’utilisateur comment le démarrer par téléphone, ce qui n’est jamais simple. Je vous propose donc d’appliquer ce démarrage automatique sous Windows et Linux.
+			</p>
+			<h2>Démarrez automatiquement TightVNC sous Windows</h2>
+			<p>
+				Nous avons vu lors du chapitre précédent qu’il est possible d’installer le serveur TightVNC directement en tant que service Windows. Avec cette méthode, TightVNC sera lancé automatiquement à chaque démarrage de la machine.<br/><br/>
+
+				Cependant, si vous n’avez pas coché l’option lors du processus d’installation il est toujours possible après coup d’enregistrer TightVNC en tant que service depuis les raccourcis ajoutés dans le menu Windows.<br/><br/>
+
+				Windows sollicitera une confirmation pour ces deux actions, qui sont également disponibles via les options des lignes de commande TightVNC comme je vous le montrerai dans le chapitre suivant.
+			</p>
+
+			<h2>Démarrez automatiquement TightVNC sous Linux</h2>
+
+			<p>
+				Le processus d’installation de TightVNC avec les packages (Debian ou CentOS) ne fait finalement que déposer les fichiers binaires des programmes dans l’arborescence du système d’exploitation. Il est nécessaire de créer et de configurer le service pour lancer TightVNC de manière automatique.<br/><br/>
+
+				Cette opération se décompose en deux étapes :
+
+				<ol>
+					<li>La création du script de gestion du service TightVNC.</li>
+					<li>L'inscription du service dans la cible de démarrage</li>
+				</ol>
+			</p>
+				<h3>Créez le script de gestion du service TightVNC</h3>
+				<p>
+					En règle générale ce script spécifique se situe sous l’arborescence <code>/usr/local/bin</code>.
+				</p>
+				<p>
+					Je vous propose donc de créer le fichier  /usr/local/bin/vncserver  et d’y ajouter les lignes suivantes :
+				</p>
+				<div class="code">
+					<code>
+						#!/bin/bash<br/>
+PATH="$PATH:/usr/bin/"<br/>
+DISPLAY="1"<br/>
+DEPTH="24"<br/>
+GEOMETRY="1280x1204"<br/>
+OPTIONS="-depth ${DEPTH} -geometry ${GEOMETRY} :${DISPLAY}"<br/><br/>
+
+case "$1" in<br/>
+start)<br/>
+/usr/bin/tightvncserver ${OPTIONS}<br/>
+;;<br/><br/>
+
+stop)<br/>
+/usr/bin/tightvncserver -kill :${DISPLAY}<br/>
+;;<br/><br/>
+
+restart)<br/>
+$0 stop<br/>
+$0 start<br/>
+;;<br/>
+esac<br/>
+exit 0<br/>
+					</code>
+				</div>
+				<p>Pour rendre exécutable ce script, lancez la commande suivante :</p>
+				<div class="code">
+					<code>
+						chmod +x /usr/local/bin/vncserver 
+					</code>
+				</div>
+
+
+				<h3>Inscrivez le service dans la cible de démarrage</h3>
+				<p>
+					La seconde étape consiste à créer un fichier nommé « service unit » permettant d’indiquer à notre machine Linux de démarrer le serveur TightVNC automatiquement. La encore il s’agit de créer un fichier nommé  <code>/lib/systemd/system/vncserver.service</code>  contenant les lignes suivantes :
+				</p>
+				<div class="code">
+					<code>
+						[Unit]<br/>
+Description=TigthVNC Service Unit<br/><br/>
+
+[Service]<br/>
+Type=forking<br/>
+ExecStart=/usr/local/bin/vncserver start<br/>
+ExecStop=/usr/local/bin/vncserver stop<br/>
+ExecReload=/usr/local/bin/vncserver restart<br/>
+User=root<br/><br/>
+
+[Install]<br/>
+WantedBy=multi-user.target<br/>
+					</code>
+				</div>
+
+			
+		</div>
+
+		 <button class="accordion">Identifiez les différents outils VNC</button>
+		 <div class="panel">
+			<h2>Sous Windows</h2>
+			<p>
+				Sous Windows ou Linux, TightVNC dispose de commandes disponibles depuis un shell permettant d’exécuter les actions de base comme le configurer, le démarrer ou encore l’arrêter. Le shell est l’interface entre l’homme et l’ordinateur qui, associé à un interpréteur de commandes, permet d’interagir avec le système d’exploitation.
+			</p>
+			<p>
+				Vous pouvez constater la liste des options disponibles en ligne de commande. Par exemple pour démarrer le serveur TightVNC comme un service système, il faudrait lancer la commande suivante :
+			</p>
+			<p>
+				Cependant l’option  -controlservice  possède également des sous-options intéressantes. Il est en effet possible de passer des commandes sur l’instance en cours d’exécution de TightVNC via cette option. Attention lorsque le panneau de configuration est protégé par un mot de passe, vous devrez passer en paramètre un fichier texte contenant ce mot de passe aux lignes de commande. Par exemple :
+			</p>
+			<div class="code">
+				<code>
+					C:\>"C:\Program Files\TightVNC\tvnserver.exe" -controlservice -disconnectall -passfile "C:\Program Files\TightVNC\Password.txt"
+				</code>
+			</div>
+			<p>
+				Nous avons étudié ici les options disponibles en ligne de commande pour TightVNC serveur sous Windows et pu constaté qu’elles permettent non seulement de gérer le service Windows associé (le démarrer, l’arrêter, l’ajouter ou le supprimer) mais également le comportement du service en cour d’exécution (déconnecter tous les clients à l’instant t par exemple). Le fait de pouvoir exécuter ces opérations de manière non interactive sans passer par l’interface graphique est indispensable dans l’optique de les automatiser.
+			</p>
+		 </div>
+	</section>
+</div>
+	<div class="btns">
+        <a href="chapitre1.html" class="prec"> < Chapitre précédent</a>
+        <a href="chapitre3.html" class="suiv">Chapitre suivant > </a>
+    </div>
+</main>
+
+<footer>
+            <div class="informations">
+                    <h3>INFORMATIONS</h3>
+                    <dl>
+                        <li><a href="contact.html">Contactez-nous</a></li>
+                        <li><a href="#">A propos de nous</a></li>
+                        <li><a href="#">Aide en ligne</a></li>
+                    </dl>
+                </div>
+                <div class="contenus">
+                    <h3>CONTENUS</h3>
+                    <dl>
+                        <li><a href="#">Titres</a></li>
+                        <li><a href="#">Paragraphes</a></li>
+                        <li><a href="#">Images</a></li>
+                        <li><a href="#">Vidéos</a></li>
+                    </dl>
+                </div>
+                <div class="suivi-nous">
+                    <h3>SUIVI-NOUS</h3>
+                    <dl>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Google+</a></li>
+                    </dl>
+                </div>
+        <p class="copyright">copyright&copy;2018-2019</p>
+    </footer>
+
+
+
+<script src="../../js/script.js"></script>
+
+</body>
+</html>

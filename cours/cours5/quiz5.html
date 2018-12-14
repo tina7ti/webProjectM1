@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>VNC-INFOcours</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+<header>
+	<nav>
+		<ul>
+		 	<li id="brand"><b>INFOcours</b></li>
+ 			<li id="menu">
+   				<button>Cours<span id="trian"></span></button>
+    			<div id="ssmenu">
+      				<a href="../cours1/presentation_java.html">JAVA</a>
+      				<a href="../cours2/intro.html">C</a>
+      				<a href="../cours3/intro.html">PYTHON</a>
+      				<a href="../cours4/presentation.html">Gérez votre projet informatique facimlement</a>
+      				<a href="presentation.html">Prenez le contrôle à distance d'un poste Linux/Windows avec VNC</a>
+    			</div>
+  			</li>
+  			<li class="droite"><a href="#">Insciption</a></li>
+  			<li class="droite"><a href="#">Connexion</a></li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<nav><img src="../../img/vnc.png" alt="vnc icon"></nav>
+	<div>
+		<h1>Salut ! C'est votre 5éme évaluation cher(e) étudiant(e). ^_^</h1>
+		<h2>On vous rappelle pas de nos régles : </h2>
+		<ul>
+			<li>Veuillez choisir 1 seule réponse pour chaque question.</li>
+			<li>Chaque question sera noter sur 1 point.</li>
+			<li>A la fin de quiz on vous affiche votre score ainsi que toutes les bonnes réponses (mentionnés en VERT ).</li>
+		</ul>
+	</div>
+	<div id="quiz4">
+		<form>
+			<h2>Question 1</h2>
+			<label for="qst1"><b>Que veut dire l'acronyme VNC ?</b></label><br/><br/>
+			<input type="radio" name="qst1" ><span id="s10">Virtual Network Computing</span><br/><br/>
+			<input type="radio" name="qst1" ><span id="s11">Viewer Network Computing</span><br/><br/>
+			<input type="radio" name="qst1" ><span id="s12">Virtual Netviewer Computing</span><br/><br/>
+			<input type="radio" name="qst1" ><span id="s13">Virtual Network Computer</span><br/><br/>
+
+			<h2>Question 2</h2>
+			<label for="qst2"><b>Le laboratoire qui a créé le code original de VNC a décidé de le difuser en OpenSource. Quelle a été la conséquence principale de cette décision ? </b></label><br/><br/>
+			<input type="radio" name="qst2" value="1" ><span id="s20">Tous les logiciels VNC sont payants</span><br/><br/>
+			<input type="radio" name="qst2" value="2" ><span id="s21">Disposition aujourd'hui de différents logiciels VNC dont certains sont aussi gratuits</span><br/><br/>
+			<input type="radio" name="qst2" value="3" ><span id="s22">Il n'existe plus qu'une seule solution implémentant le code original de VNC</span><br/><br/>
+
+			<h2>Question 3</h2>
+			<label for="qst3"><b>Donnez le principal avantage du couplage RFB + VNC parmi les suivants :</b></label><br/><br/>
+			<input type="radio" name="qst3" ><span id="s30">VNC permet de s'affranchir des systèmes d'exploitation.</span><br/><br/>
+			<input type="radio" name="qst3" ><span id="s31">VNC permet de se passer de Remote Frame Buffer.</span><br/><br/>
+			<input type="radio" name="qst3" ><span id="s32">VNC améliore la bande passante du réseau</span><br/><br/>
+
+			<h2>Question 4</h2>
+			<label for="qst4"><b>Quel avantage principal amène la solution TightVNC par rapport à d'autres ?</b></label><br/><br/>
+			<input type="radio" name="qst4" ><span id="s40">Elle est gratuite</span><br/><br/>
+			<input type="radio" name="qst4" ><span id="s41">Elle est cross-plateforme compatible</span><br/><br/>
+			<input type="radio" name="qst4" ><span id="s42">Elle met à disposition un client et un serveur</span><br/><br/>
+
+		
+			<div>
+				<p id="dang"></p> <p id="score"></p>
+				<input type="button" name="button1" value="Envoyer mes réponses" onclick="quiz4()">
+			</div>
+		</form>
+	</div>
+	<div class="btns">
+		<a href="chapitre3.html" class="prec"> < Chapitre précédent</a>
+	</div>
+</main>
+
+<footer>
+            <div class="informations">
+                    <h3>INFORMATIONS</h3>
+                    <dl>
+                        <li><a href="contact.html">Contactez-nous</a></li>
+                        <li><a href="#">A propos de nous</a></li>
+                        <li><a href="#">Aide en ligne</a></li>
+                    </dl>
+                </div>
+                <div class="contenus">
+                    <h3>CONTENUS</h3>
+                    <dl>
+                        <li><a href="#">Titres</a></li>
+                        <li><a href="#">Paragraphes</a></li>
+                        <li><a href="#">Images</a></li>
+                        <li><a href="#">Vidéos</a></li>
+                    </dl>
+                </div>
+                <div class="suivi-nous">
+                    <h3>SUIVI-NOUS</h3>
+                    <dl>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Google+</a></li>
+                    </dl>
+                </div>
+        <p class="copyright">copyright&copy;2018-2019</p>
+    </footer>
+
+    <script src="../../js/script.js"></script>
+</body>
+</html>
+
+
+	
+			
+
+			

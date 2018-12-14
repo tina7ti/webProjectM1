@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Prenez le contrôle à distance d'un poste Linux/Windows avec VNC - chapitre 1</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+	<header>
+	<nav>
+		<ul>
+		 	<li id="brand"><b>INFOcours</b></li>
+ 			<li id="menu">
+   				<button>Cours<span id="trian"></span></button>
+    			<div id="ssmenu">
+      				<a href="../cours1/presentation_java.html">JAVA</a>
+      				<a href="../cours2/intro.html">C</a>
+      				<a href="../cours3/intro.html">PYTHON</a>
+      				<a href="../cours4/presentation.html">Gérez votre projet informatique facimlement</a>
+      				<a href="presentation.html">Prenez le contrôle à distance d'un poste Linux/Windows avec VNC</a>
+    			</div>
+  			</li>
+  			<li class="droite"><a href="#">Insciption</a></li>
+  			<li class="droite"><a href="#">Connexion</a></li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<nav>
+		<img src="../../img/vnc.png" alt="vnc icon">
+		<dl>
+			<li><a href="chapitre1.html">Découvrez les technologies de prise de contrôle avec VNC</a></li>
+			<li><a href="chapitre2.html">Installez et configurez un serveur TightVNC</a></li>
+			<li><a href="chapitre3.html">Installez et configurez le client VNC</a></li>
+			<li><a href="quiz5.html">Quiz</a></li>
+		</dl>
+	</nav>
+	<div>
+
+
+	<header>
+		<h1>Découvrez les technologies de prise de contrôle avec VNC</h1>
+	</header>
+	<section>
+		<button class="accordion">Identifier les avantages de la prise de contrôle à distance</button>
+		<div class="panel">
+			<p>
+				Dans cette première partie, nous allons faire connaissance avec les technologies VNC, pour Virtual Network Computing, qui permettent de prendre le contrôle d'un ordinateur à distance. 
+			</p>
+			<ul>
+				<li>Améliorez le support informatique</li>
+				<p>
+					Vous êtes technicien de support informatique. Vous gérez un parc conséquent de postes de travail et vos utilisateurs ont un système de relève d'anomalie ou de demande d'assistance sous la forme de ticket. Dans tous les cas conduisant à une intervention directement sur le poste, les systèmes de prise de contrôle à distance se révèlent très profitables.
+				</p>
+				<p>
+					<h3>Une intervention plus rapide</h3>
+					Le bénéfice le plus important de ces technologies est l'intervention directe, à distance et immédiate sur le poste cible. Mais, en conséquence,
+				</p>
+				<p>
+					<h3>Un service plus facile côté utilisateur</h3>
+					Concrètement, il est souvent laborieux pour un utilisateur de devoir expliquer son besoin ou problème par écrit avec un vocabulaire qu'il ne maîtrise pas. A l'inverse, il est très efficace pour lui d'en faire une démonstration en temps réel à une équipe de maintenance qui peut intervenir immédiatement et de manière interactive. Cette technique évite de nombreux échanges inutiles que ce soit pour la description du problème, ou encore pour la vérification de la correction.<br/><br/>
+
+					Avec le contrôle à distance vous intervenez quasiment dans les mêmes conditions qu'un support personnalisé où vous êtes physiquement à côté de l'utilisateur.
+				</p>
+				<li>Les utilités dans votre vie privée</li>
+				<p>
+					D'un point de vue privé, les prises de contrôle à distance sont toutes aussi utiles. Si vous êtes le cador en informatique de la famille, elles vous permettent d'intervenir sur l'ordinateur de Papy qui n'arrive plus à lancer Skype, ou encore sur celui de votre petite soeur qui est infecté par un virus.<br/><br/>
+
+					Mais ces technologies vous permettent également de prendre le contrôle de votre ordinateur connecté à Internet depuis n'importe quel endroit, afin de récupérer tel ou tel fichier que vous avez oublié en partant... 😉
+				</p>
+			</ul>
+		</div>
+		 <button class="accordion">Découvrez le fonctionnement de la prise de contrôle à distance</button>
+		 <div class="panel">
+		 	<p>
+		 		Il existe différentes techniques de prise de contrôle à distance, je vais vous présenter celles mettant en oeuvre Virtual Network Computing ou VNC pour les intimes… 
+		 	</p>
+		 	<p>
+		 		la fermeture de ce laboratoire, l'équipe de développement de VNC a souhaité poursuivre sur une version open source du projet. C'est grâce à cette démarche que vous disposez aujourd'hui de plusieurs logiciels VNC libres et gratuits.<br/><br/>
+
+				A noter cependant que « VNC » est une marque déposée aux Etats Unis depuis 2013 par RealVNC, la société créée par cette même équipe projet.<br/><br/>
+
+				VNC utilise le protocole RFB (Remote Framebuffer) pour partager le bureau d'un environnement graphique. Ce protocole est basé sur le Framebuffer (ou mémoire tampon d'une image, en bon français...) contenu dans les cartes vidéos des ordinateurs. Chaque pixel qui doit s'afficher sur l'écran est défini de manière précise, notamment au niveau des informations de couleurs le caractérisant, dans ce Framebuffer.
+		 	</p>
+		 	<figure>
+		 		<img src="../../img/15380467289261_image36.png" alt="Framebuffer de la carte vidéo" class="imgMiddle">
+		 		<hr/>
+		 		<figcaption>Framebuffer de la carte vidéo</figcaption>
+		 	</figure>
+
+		 	<h2>Les 3 composants d'une prise de contrôle avec VNC</h2>
+		 	<p>
+		 		Pour prendre le contrôle à distance d'un poste Windows / Linux, il faut 3 composants indispensables. 
+		 	</p>
+		 	<ol>
+		 		<li>Le <b>serveur VNC</b> installé sur la machine cible de la prise de contrôle ;</li>
+		 		<li>Le <b>client VNC</b> installé sur la machine avec laquelle vous souhaitez prendre le contrôle ;</li>
+		 		<li>Un protocole d'échange, <b>RFB</b>.</li>
+		 	</ol>
+		 	<h3>Le serveur VNC</h3>
+		 	<p class="info">
+		 		Le serveur VNC est un logiciel qui s'installe directement sur la machine que vous souhaitez contrôler à distance. Petit moyen mnémotechnique : pensez au fait qu'il se trouve sur le poste qui « sert » les images de son ordinateur au client.
+		 	</p>
+		 	<p>
+		 		Ce logiciel ouvre un port sur le réseau permettant au client de s'y connecter. Vous devez donc disposer des droits d'exécuter un programme ouvrant un port sur cette machine. En règle générale, ce port est configuré par défaut sur 5900. 
+		 	</p>
+		 	<h3>Le client VNC</h3>
+		 	<p class="info">
+		 		Le client VNC est un logiciel qui s'installe et s'exécute sur l'ordinateur qui va se connecter au serveur pour le contrôler. Il est donc sur le poste qui reçoit les images qui lui sont servies par le serveur.
+		 	</p>
+		 	<p>
+		 		Lors de cette connexion, vous allez indiquer à ce client l'adresse IP (ou le nom de domaine résolu) du serveur, ainsi que son port d'écoute, en général 5900.
+		 	</p>
+		 	<h3>La communication grâce au protocole RFB</h3>
+		 	<p>
+		 		Le serveur enverra par la suite des informations directement issues du Framebuffer de la carte vidéo, représentant le bureau graphique.<br/><br/>
+
+				Le client enverra toutes les informations d'interaction avec le matériel sur ce bureau, comme par exemple, déplacement du pointeur de la souris, le click sur le bouton gauche, ou encore la frappe sur une touche du clavier.
+
+		 	</p>
+		 	<figure>
+		 		<img src="../../img/15384920330272_01.png" alt="Les 3 composants de la prise de contrôle avec VNC" class="imgMiddle">
+		 		<hr/>
+		 		<figcaption>Les 3 composants de la prise de contrôle avec VNC</figcaption>
+		 	</figure>
+
+		 	<p>
+		 		Il existe également quelques options intéressantes, telles que le mot de passe de protection pour se connecter au serveur, ou encore la compression des pixels pour optimiser la bande passante. Ces options sont éventuellement proposées en fonction des différents logiciels VNC du marché, je vous propose de les résumer dans le chapitre suivant.
+		 	</p>
+		 	
+		 </div>
+
+		 <button class="accordion">Identifiez les différents outils VNC</button>
+		 <div class="panel">
+		 	<ul>
+		 		<li>Découvrez quelques solutions client/serveur VNC</li>
+		 		<p>
+		 			Comme nous avons pu le voir, VNC s'affranchit des contraintes du systèmes d’exploitation et des architectures. Ainsi chaque éditeur ou même chaque personne le souhaitant peut tout à fait développer un binôme client/serveur et proposer ses solutions à partir des codes sources originaux diffusés sous Licence GPL.
+		 		</p>
+		 		<p>
+		 			Il existe donc quelques variétés de clients/serveurs VNC sur le marché, certains spécialisés pour un système particulier (Apple, Windows, etc.) d’autres proposant, en plus de la prise de contrôle, des fonctionnalités supplémentaires, comme le transfert de fichier, différents types de compression ou encore le partage de connexions existantes. Vous trouverez ci dessous une liste non exhaustives des solutions les plus connues
+		 		</p>
+		 		<h3>RealVNC, la solution historique</h3>
+		 		<p>
+		 			A l'origine de la création du protocole RFB et des premiers logiciels VNC, l'équipe projet issue du Laboratoire a créé son entreprise RealVNC et la suite logicielle du même nom. Dans un premier temps, le client et le serveur RealVNC étaient libres et gratuits, aujourd'hui la société propose différents abonnements avec assistances pour déployer la solution RealVNC Connect (le serveur) et RealVNC Viewer (le client).<br/>
+
+					Voici les 3 types d'abonnements que propose RealVNC :
+					<ul>
+						<li>L'abonnement Home est gratuit mais restreint à une utilisation non commerciale. Il nécessite un compte en ligne et donc un accès à Internet obligatoirement, et est limité à 5 ordinateurs distants et 3 utilisateurs.</li>
+						<li>L'abonnement Professional nécessite également un compte en ligne et propose l'accès à un ordinateur distant pour 36€ par an.</li>
+						<li>L'abonnement Enterprise supporte lui des connexions directes, c'est à dire sans compte en ligne pour un ordinateur pour 49 Euros par an</li>
+					</ul>
+		 		</p>
+
+		 		<li>Quelle solution choisirons-nous pour ce cours ?</li>
+		 		<p>
+		 			Il serait dommage de ne pas trouver de logiciel compatible avec les systèmes Windows et Linux. Je vous propose donc d'utiliser TightVNC pour ce cours : de cette manière, vous avez un cours valable pour les différents systèmes d’exploitation et un outil interopérable !
+		 		</p>
+		 		<p class="info">
+		 			Le nom « Tight » de ce logiciel provient du fait qu'il réalise une opération de compression (tight-encoding) à la volée des données graphiques à transmettre au client, permettant ainsi une optimisation de la prise de contrôle à distance dans un environnement réseau à faible bande passante. Pratique pour votre commercial en itinérance ou pour votre grand-père en bout de ligne ADSL !
+		 		</p>
+		 		<p>
+		 			Le site internet de référence : http://www.tightvnc.com/ met à disposition les codes source C++ du logiciel pour Windows sous la forme d'une archive ZIP. Et la plupart des distributions Linux proposent ce logiciel directement sous la forme de package (par exemple tightvncserver pour Debian et tigervnc-server pour Centos).<br/><br/>
+
+					TightVNC propose également un client VNC sous la forme d'un logiciel Java qui peut être exécuté sur les systèmes Windows, macOS et Linux disposant de Java SE version 1.6.
+		 		</p>
+		 	</ul>
+		 </div>
+	</section>
+</div>
+	<div class="btns">
+        <a href="presentation.html" class="prec"> < Chapitre précédent</a>
+        <a href="chapitre2.html" class="suiv">Chapitre suivant > </a>
+    </div>
+</main>
+
+<footer>
+            <div class="informations">
+                    <h3>INFORMATIONS</h3>
+                    <dl>
+                        <li><a href="contact.html">Contactez-nous</a></li>
+                        <li><a href="#">A propos de nous</a></li>
+                        <li><a href="#">Aide en ligne</a></li>
+                    </dl>
+                </div>
+                <div class="contenus">
+                    <h3>CONTENUS</h3>
+                    <dl>
+                        <li><a href="#">Titres</a></li>
+                        <li><a href="#">Paragraphes</a></li>
+                        <li><a href="#">Images</a></li>
+                        <li><a href="#">Vidéos</a></li>
+                    </dl>
+                </div>
+                <div class="suivi-nous">
+                    <h3>SUIVI-NOUS</h3>
+                    <dl>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Google+</a></li>
+                    </dl>
+                </div>
+        <p class="copyright">copyright&copy;2018-2019</p>
+    </footer>
+
+
+
+<script src="../../js/script.js"></script>
+
+</body>
+</html>
